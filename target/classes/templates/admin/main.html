@@ -120,19 +120,18 @@
     </script>
 </head>
 <body class="easyui-layout">
-<div region="north" style="height: 82px;background-color: #daeef5; display: flex; align-items: center;">
+<div region="north" style="height: 82px;background-color: #daeef5">
     <table style="padding: 2px" width="100%">
         <tr>
             <td width="50%">
                 <img alt="logo" src="/static/images/logo.png" style="height: 65px"/>
             </td>
             <td valign="bottom" align="right" width="50%">
-                <span style="font-size: 20px"><strong>欢迎：</strong><span th:text="${session.currentUserNickName}" style="color: blue"></span></span>
+                <span style="font-size: 20px">&nbsp;&nbsp;<strong>欢迎：</strong><span th:text="${session.currentUserNickName}" style="color: blue"></span></span>
             </td>
         </tr>
     </table>
 </div>
-
 
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
