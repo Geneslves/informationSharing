@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
- * @author LeDao
+ * @author
  */
 @SpringBootApplication
 @MapperScan("com.ledao.mapper")

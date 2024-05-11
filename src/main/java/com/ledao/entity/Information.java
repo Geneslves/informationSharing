@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * 消息实体类
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2021-01-13 2:20
  */

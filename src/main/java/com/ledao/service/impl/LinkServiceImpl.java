@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 友情链接Service接口实现类
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2021-01-04 1:43
  */

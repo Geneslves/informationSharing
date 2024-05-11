@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * 登录界面生成验证码
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2020-09-09 09:50
  */

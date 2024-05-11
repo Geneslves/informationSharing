@@ -17,7 +17,7 @@ import java.util.*;
 /**
  * 每天23点自动删除已被删除文章中的图片
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2020-09-23 11:27
  */

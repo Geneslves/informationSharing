@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 文章类型Mapper接口
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2021-01-03 21:59
  */

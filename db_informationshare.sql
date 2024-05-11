@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 11/05/2024 19:21:47
+ Date: 11/05/2024 20:46:38
 */
 
 SET NAMES utf8mb4;
@@ -194,9 +194,9 @@ CREATE TABLE `t_link`  (
 -- ----------------------------
 -- Records of t_link
 -- ----------------------------
-INSERT INTO `t_link` VALUES (1, '宠物医院管理系统', 'http://pethospital.zoutl.cn', 2);
-INSERT INTO `t_link` VALUES (2, 'LeDao的博客', 'http://www.zoutl.cn', 1);
-INSERT INTO `t_link` VALUES (3, '进销存管理系统', 'http://jxc.zoutl.cn', 3);
+INSERT INTO `t_link` VALUES (4, '百度', 'https://www.baidu.com', 1);
+INSERT INTO `t_link` VALUES (5, 'bing', 'https://www.bing.com', 2);
+INSERT INTO `t_link` VALUES (6, 'GitHub', 'https://www.github.com', 3);
 
 -- ----------------------------
 -- Table structure for t_user

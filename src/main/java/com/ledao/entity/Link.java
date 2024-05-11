@@ -3,7 +3,7 @@ package com.ledao.entity;
 /**
  * 友情链接实体类
  *
- * @author LeDao
+ * @author
  * @company
  * @create 2021-01-04 1:28
  */

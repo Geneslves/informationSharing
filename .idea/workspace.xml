@@ -4,24 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化" />
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_informationshare.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/InformationsharingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/InformationsharingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/conf/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/conf/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/DrawImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/DrawImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleTypeAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleTypeAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/CommentAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/CommentAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/DownloadMessageAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/DownloadMessageAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/InformationAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/InformationAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/LinkAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/LinkAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/ArticleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/ArticleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/DownloadMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/DownloadMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Information.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/PageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/PageBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/lucene/ArticleIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/lucene/ArticleIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/DownloadMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/DownloadMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/InformationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/InformationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/LinkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/LinkMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/quartz/DeleteInvalidImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/quartz/DeleteInvalidImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/DownloadMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/DownloadMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/InformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/InformationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/DownloadMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/DownloadMessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/InformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/InformationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/LinkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/util/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/util/PageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/util/PageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/beian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/downloadCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/downloadCode.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/informationSharing" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Geneslves"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Geneslves&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "git@github.com:Geneslves/informationSharing.git",
+    "url": "https://github.com/Geneslves/informationSharing.git",
     "accountId": "955c478f-c218-4c48-8eef-abfb6366abee"
   }
 }]]></component>
@@ -35,11 +104,13 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2gJrAap8fgS2asPjDcQbdBQ1NlY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,9 +118,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.InformationsharingApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "G:/a_null",
     "node.js.detected.package.eslint": "true",
@@ -57,7 +134,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -88,6 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685457795255</updated>
       <workItem from="1715426380236" duration="3426000" />
+      <workItem from="1715430916221" duration="2336000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -121,6 +199,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="初始化" />
     <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
