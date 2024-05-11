@@ -1,6 +1,6 @@
 ### 项目地址
 
-GitHub地址：https://github.com/a6678696/InformationSharing
+GitHub地址：https://github.com/Geneslves/informationSharing.git
 
 ### 使用的技术
 
