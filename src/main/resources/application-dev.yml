@@ -30,9 +30,9 @@ spring:
     # host不配置会注入失败
     host: smtp.qq.com
     #自己的邮箱
-    username: 1203007469@qq.com
+    username: 3409526013@qq.com
     #授权码
-    password: aaaaaaaaaaaaaaaaaa
+    password: vufmjrdjgybmchag
     default-encoding: utf-8
     protocol: smtp
     properties:

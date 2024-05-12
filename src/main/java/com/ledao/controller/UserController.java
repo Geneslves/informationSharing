@@ -242,7 +242,7 @@ public class UserController {
         System.out.println("mailCode:" + mailCode);
         SimpleMailMessage message = new SimpleMailMessage();
         // 发件人
-        message.setFrom("1203007469@qq.com");
+        message.setFrom("3409526013@qq.com");
         //收件人
         message.setTo(email);
         // 主题
