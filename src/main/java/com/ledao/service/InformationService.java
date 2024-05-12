@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * @author
  * @company
- * @create 2021-01-13 2:33
+ * @create 2024-01-13 2:33
  */
 public interface InformationService {
 

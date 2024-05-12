@@ -1,4 +1,4 @@
--- auto Generated on 2021-01-03
+-- auto Generated on 2024-01-03
 -- DROP TABLE IF EXISTS t_article;
 CREATE TABLE t_article(
 	id INT (11) NOT NULL AUTO_INCREMENT COMMENT '编号',

@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author
  * @company
- * @create 2021-01-16 21:15
+ * @create 2024-01-16 21:15
  */
 @RestController
 @RequestMapping("/admin/articleType")

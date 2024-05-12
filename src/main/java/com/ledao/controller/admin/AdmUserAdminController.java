@@ -2,8 +2,11 @@ package com.ledao.controller.admin;
 
 import com.ledao.entity.PageBean;
 import com.ledao.entity.User;
+import com.ledao.service.AdmUserService;
 import com.ledao.service.UserService;
+import com.ledao.service.impl.AdmUserServiceImpl;
 import com.ledao.util.StringUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,11 +25,13 @@ import java.util.Map;
  * @create 2024-01-02 2:02
  */
 @RestController
-@RequestMapping("/admin/user")
-public class UserAdminController {
+@RequestMapping("/admin/admuser")
+public class AdmUserAdminController {
 
     @Resource
-    private UserService userService;
+    private AdmUserService admUserService;
+    @Autowired
+    private AdmUserServiceImpl admuserService;
 
     /**
      * 下拉框模糊查询
@@ -40,7 +45,7 @@ public class UserAdminController {
             q = "";
         }
         String removeUserName = "admin";
-        List<User> userList = userService.findByName(StringUtil.formatLike(q));
+        List<User> userList = admUserService.findByName(StringUtil.formatLike(q));
         Iterator iterator = userList.iterator();
         if (iterator.hasNext()) {
             User user = (User) iterator.next();
@@ -71,11 +76,11 @@ public class UserAdminController {
         map.put("roleName", user.getRoleName());
         map.put("isOff", user.getIsOff());
         map.put("key", 1);
-        List<User> userList = userService.list(map);
+        List<User> userList = admuserService.list(map);
         for (User user1 : userList) {
             user1.setPassword(user1.getPassword());
         }
-        Long total = userService.getTotal(map);
+        Long total = admuserService.getTotal(map);
         resultMap.put("rows", userList);
         resultMap.put("total", total);
         return resultMap;
@@ -90,7 +95,7 @@ public class UserAdminController {
     @RequestMapping("/save")
     public Map<String, Object> save(User user) {
         Map<String, Object> resultMap = new HashMap<>(16);
-        User user1 = userService.findByEmail(user.getEmail());
+        User user1 = admuserService.findByEmail(user.getEmail());
         //当id为空时,添加用户
         if (user.getId() == null) {
             //邮箱被注册
@@ -103,7 +108,7 @@ public class UserAdminController {
                     resultMap.put("success", false);
                     resultMap.put("errorInfo", "密码和确认密码不一样,请重新输入!!");
                 } else {
-                    User user2 = userService.findByUserName(user.getUserName());
+                    User user2 = admuserService.findByUserName(user.getUserName());
                     //用户名被注册
                     if (user2 != null) {
                         resultMap.put("success", false);
@@ -111,13 +116,13 @@ public class UserAdminController {
                     } else {
                         resultMap.put("success", true);
                         user.setPassword(user.getPassword());
-                        userService.add(user);
+                        admuserService.add(user);
                     }
                 }
             }
         } else {
             //要修改的用户原来的信息
-            User user3 = userService.findById(user.getId());
+            User user3 = admuserService.findById(user.getId());
             //邮箱被注册并且修改后的邮箱和之前的邮箱不相同
             if (user1 != null && (!user.getEmail().equals(user3.getEmail()))) {
                 resultMap.put("success", false);
@@ -130,7 +135,7 @@ public class UserAdminController {
                 } else {
                     resultMap.put("success", true);
                     user.setPassword(user.getPassword());
-                    userService.update(user);
+                    admUserService.update(user);
                 }
             }
         }
@@ -149,7 +154,7 @@ public class UserAdminController {
         String[] idsStr = ids.split(",");
         for (int i = 0; i < idsStr.length; i++) {
             int id = Integer.parseInt(idsStr[i]);
-            userService.deleteById(id);
+            admuserService.deleteById(id);
         }
         resultMap.put("success", true);
         return resultMap;
@@ -165,9 +170,9 @@ public class UserAdminController {
     @RequestMapping("/modifyOff")
     public Map<String, Object> modifyOff(Integer id, Integer isOff) {
         Map<String, Object> resultMap = new HashMap<>(16);
-        User user = userService.findById(id);
+        User user = admuserService.findById(id);
         user.setIsOff(isOff);
-        userService.update(user);
+        admuserService.update(user);
         resultMap.put("success", true);
         return resultMap;
     }
@@ -182,9 +187,9 @@ public class UserAdminController {
     @RequestMapping("/modifyRoleType")
     public Map<String, Object> modifyRoleType(Integer id, String roleName) {
         Map<String, Object> resultMap = new HashMap<>(16);
-        User user = userService.findById(id);
+        User user = admuserService.findById(id);
         user.setRoleName(roleName);
-        userService.update(user);
+        admuserService.update(user);
         resultMap.put("success", true);
         return resultMap;
     }
@@ -200,7 +205,7 @@ public class UserAdminController {
     @RequestMapping("/addOrReducePoints")
     public Map<String, Object> addOrReducePoints(Integer id, Integer status, Integer points) {
         Map<String, Object> resultMap = new HashMap<>(16);
-        User user = userService.findById(id);
+        User user = admuserService.findById(id);
         //加积分
         if (status == 1) {
             user.setPoints(user.getPoints() + points);
@@ -215,7 +220,7 @@ public class UserAdminController {
                 resultMap.put("errorInfo", "用户当前剩余积分少于要扣除的积分,不能扣除积分!");
             }
         }
-        userService.update(user);
+        admuserService.update(user);
         return resultMap;
     }
 }

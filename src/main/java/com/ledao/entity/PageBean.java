@@ -5,7 +5,7 @@ package com.ledao.entity;
  *
  * @author
  * @company
- * @create 2021-01-09 14:22
+ * @create 2024-01-09 14:22
  */
 public class PageBean {
 

@@ -1,4 +1,4 @@
--- auto Generated on 2021-01-13
+-- auto Generated on 2024-01-13
 -- DROP TABLE IF EXISTS int_formation;
 CREATE TABLE int_formation(
 	id INT (11) NOT NULL AUTO_INCREMENT COMMENT '编号',

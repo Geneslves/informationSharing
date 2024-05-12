@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  *
  * @author
  * @company
- * @create 2021-01-14 1:58
+ * @create 2024-01-14 1:58
  */
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)

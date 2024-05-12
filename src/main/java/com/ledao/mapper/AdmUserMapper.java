@@ -12,7 +12,7 @@ import java.util.Map;
  * @company
  * @create 2024-01-02 0:34
  */
-public interface UserMapper {
+public interface AdmUserMapper {
 
     /**
      * 分页分条件查询用户

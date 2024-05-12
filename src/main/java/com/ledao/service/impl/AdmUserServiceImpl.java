@@ -1,7 +1,9 @@
 package com.ledao.service.impl;
 
 import com.ledao.entity.User;
+import com.ledao.mapper.AdmUserMapper;
 import com.ledao.mapper.UserMapper;
+import com.ledao.service.AdmUserService;
 import com.ledao.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -14,56 +16,56 @@ import java.util.Map;
  *
  * @author
  * @company
- * @create 2024-01-02 1:58
+ * @create
  */
-@Service("userService")
-public class UserServiceImpl implements UserService {
+@Service("admuserService")
+public class AdmUserServiceImpl implements AdmUserService {
 
     @Resource
-    private UserMapper userMapper;
+    private AdmUserMapper admUserMapper;
 
     @Override
     public List<User> list(Map<String, Object> map) {
-        return userMapper.list(map);
+        return admUserMapper.list(map);
     }
 
     @Override
     public Long getTotal(Map<String, Object> map) {
-        return userMapper.getTotal(map);
+        return admUserMapper.getTotal(map);
     }
 
     @Override
     public Integer add(User user) {
-        return userMapper.add(user);
+        return admUserMapper.add(user);
     }
 
     @Override
     public Integer update(User user) {
-        return userMapper.update(user);
+        return admUserMapper.update(user);
     }
 
     @Override
     public Integer deleteById(Integer id) {
-        return userMapper.deleteById(id);
+        return admUserMapper.deleteById(id);
     }
 
     @Override
     public User findByUserName(String userName) {
-        return userMapper.findByUserName(userName);
+        return admUserMapper.findByUserName(userName);
     }
 
     @Override
     public User findById(Integer id) {
-        return userMapper.findById(id);
+        return admUserMapper.findById(id);
     }
 
     @Override
     public User findByEmail(String email) {
-        return userMapper.findByEmail(email);
+        return admUserMapper.findByEmail(email);
     }
 
     @Override
     public List<User> findByName(String userName) {
-        return userMapper.findByName(userName);
+        return admUserMapper.findByName(userName);
     }
 }

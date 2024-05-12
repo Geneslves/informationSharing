@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * @author
  * @company
- * @create 2021-01-03 23:38
+ * @create 2024-01-03 23:38
  */
 public interface ArticleMapper {
 

@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * @author
  * @company
- * @create 2021-01-03 22:13
+ * @create 2024-01-03 22:13
  */
 @Service("articleTypeService")
 public class ArticleTypeServiceImpl implements ArticleTypeService {

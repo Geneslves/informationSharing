@@ -15,7 +15,7 @@ import java.util.Random;
  *
  * @author
  * @company
- * @create 2020-09-09 09:50
+ * @create 2024-09-09 09:50
  */
 @Controller
 public class DrawImageController {

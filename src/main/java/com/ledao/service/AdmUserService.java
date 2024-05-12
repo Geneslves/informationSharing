@@ -1,4 +1,4 @@
-package com.ledao.mapper;
+package com.ledao.service;
 
 import com.ledao.entity.User;
 
@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 用户Mapper接口
+ * 用户Service接口
  *
  * @author
  * @company
- * @create 2024-01-02 0:34
+ * @create 2024-01-02 1:57
  */
-public interface UserMapper {
+public interface AdmUserService {
 
     /**
      * 分页分条件查询用户

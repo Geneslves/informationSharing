@@ -5,7 +5,7 @@ package com.ledao.entity;
  *
  * @author
  * @company
- * @create 2021-01-03 21:24
+ * @create 2024-01-03 21:24
  */
 public class ArticleType {
 

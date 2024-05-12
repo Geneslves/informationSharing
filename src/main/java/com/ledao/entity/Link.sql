@@ -1,4 +1,4 @@
--- auto Generated on 2021-01-04
+-- auto Generated on 2024-01-04
 -- DROP TABLE IF EXISTS t_link;
 CREATE TABLE t_link(
 	id INT (11) NOT NULL AUTO_INCREMENT COMMENT '编号',

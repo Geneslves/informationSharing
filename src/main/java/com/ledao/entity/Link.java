@@ -5,7 +5,7 @@ package com.ledao.entity;
  *
  * @author
  * @company
- * @create 2021-01-04 1:28
+ * @create 2024-01-04 1:28
  */
 public class Link {
 
