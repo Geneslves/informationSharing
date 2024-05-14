@@ -85,4 +85,6 @@ public interface UserMapper {
      * @return
      */
     List<User> findByName(String userName);
+
+//    User addPoints(Integer points);
 }

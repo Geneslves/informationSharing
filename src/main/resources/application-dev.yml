@@ -45,9 +45,13 @@ spring:
             enable: true #一定要开启ssl,不然会503 验证失败的（开启加密验证）
 
 #用户头像图片存储地址
-userImageFilePath: C://Java/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22/webapps/InformationSharing/static/images/userImage/
+userImageFilePath: G:/Pictures/Image/userImage/
 #文章图片存储地址
-articleImageFilePath: C://Java/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22/webapps/InformationSharing/static/images/articleImage/
+articleImageFilePath: G:/Pictures/Image/articleImage/
+##用户头像图片存储地址
+#userImageFilePath: C://Java/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22/webapps/InformationSharing/static/images/userImage/
+##文章图片存储地址
+#articleImageFilePath: C://Java/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22-windows-x64/apache-tomcat-9.0.22/webapps/InformationSharing/static/images/articleImage/
 
 #mybatis配置
 mybatis:

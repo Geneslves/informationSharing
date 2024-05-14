@@ -153,7 +153,6 @@
                 }
             });
         }
-
         function modifyRoleType() {
             var selectedRows = $("#dg").datagrid("getSelections");
             if (selectedRows.length != 1) {
@@ -161,29 +160,65 @@
                 return;
             }
             var id = selectedRows[0].id;
-            var roleName = selectedRows[0].roleName;
             var userName = selectedRows[0].userName;
-            if (roleName == "普通用户") {
-                var str = "VIP用户";
-            } else if (roleName == "VIP用户") {
-                var str = "普通用户";
-            }
-            $.messager.confirm("系统提示", "确定要将用户名为<span style='color: red'>" + userName + "</span>的用户设置为<span style='color: red'>" + str + "</span>吗?", function (r) {
+            var currentRole = selectedRows[0].roleName;
+
+            // 创建单选框，并设置样式使得内容水平排列
+            var roleRadios = $("<div style='display: flex; flex-direction: row;'><label style='margin-right: 20px;'><input type='radio' name='role' value='普通用户'>普通用户</label><label style='margin-right: 20px;color:#04f448'><input type='radio' name='role' value='VIP用户'>VIP用户</label><label style='color: red;'><input type='radio' name='role' value='管理员'>管理员</label></div>");
+
+            // 移除当前用户的角色类型
+            roleRadios.find("input[value='" + currentRole + "']").parent().remove();
+
+            // 弹出对话框
+            $.messager.confirm("系统提示", "请选择要设置的用户类型:", function (r) {
                 if (r) {
+                    var selectedRole = roleRadios.find("input[name='role']:checked").val();
                     $.post("/admin/user/modifyRoleType", {
                         id: id,
-                        roleName: roleName == "普通用户" ? "VIP用户" : "普通用户"
+                        roleName: selectedRole
                     }, function (result) {
                         if (result.success) {
                             $("#dg").datagrid("reload");
-                            $.messager.alert("系统提示", "已经成功将该用户设置为" + str);
+                            $.messager.alert("系统提示", "已经成功将用户" + userName + "设置为" + selectedRole);
                         } else {
                             $.messager.alert("系统提示", result.errorInfo);
                         }
-                    })
+                    });
                 }
-            });
+            }).append(roleRadios); // 将单选框添加到对话框中
         }
+
+
+        // function modifyRoleType() {
+        //     var selectedRows = $("#dg").datagrid("getSelections");
+        //     if (selectedRows.length != 1) {
+        //         $.messager.alert("系统提示", "请选择一个用户！");
+        //         return;
+        //     }
+        //     var id = selectedRows[0].id;
+        //     var roleName = selectedRows[0].roleName;
+        //     var userName = selectedRows[0].userName;
+        //     if (roleName == "普通用户") {
+        //         var str = "VIP用户";
+        //     } else if (roleName == "VIP用户") {
+        //         var str = "普通用户";
+        //     }
+        //     $.messager.confirm("系统提示", "确定要将用户名为<span style='color: red'>" + userName + "</span>的用户设置为<span style='color: red'>" + str + "</span>吗?", function (r) {
+        //         if (r) {
+        //             $.post("/admin/user/modifyRoleType", {
+        //                 id: id,
+        //                 roleName: roleName == "普通用户" ? "VIP用户" : "普通用户"
+        //             }, function (result) {
+        //                 if (result.success) {
+        //                     $("#dg").datagrid("reload");
+        //                     $.messager.alert("系统提示", "已经成功将该用户设置为" + str);
+        //                 } else {
+        //                     $.messager.alert("系统提示", result.errorInfo);
+        //                 }
+        //             })
+        //         }
+        //     });
+        // }
 
         function openAddOrReducePointsDialog(status) {
             $('#userNameAddOrReducePoints').textbox('readonly', true);
@@ -237,7 +272,7 @@
 
         function formatRoleName(val, row) {
             if (val == "普通用户") return "普通用户";
-            if (val == "VIP用户") return "<span style='color: red'>VIP用户</span>";
+            if (val == "VIP用户") return "<span style='color: #25e407'>VIP用户</span>";
         }
     </script>
 </head>

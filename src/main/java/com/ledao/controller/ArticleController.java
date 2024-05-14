@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -83,6 +84,13 @@ public class ArticleController {
             mav.addObject("mainPage", "page/writeArticle");
             mav.addObject("mainPageKey", "#b");
             mav.setViewName("index");
+
+            // 为用户添加2积分
+            article.setUser(userService.findById(article.getUserId()));
+            Integer points = 2;
+            Integer userId = article.getUserId(); // 获取文章发布者的用户 ID
+            articleService.addPoints(points, userId);
+
             return mav;
         } else {
             Article trueArticle = articleService.findById(article.getId());

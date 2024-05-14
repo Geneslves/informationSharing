@@ -1,6 +1,7 @@
 package com.ledao.mapper;
 
 import com.ledao.entity.Article;
+import com.ledao.entity.User;
 
 import java.util.List;
 import java.util.Map;
@@ -61,4 +62,6 @@ public interface ArticleMapper {
      * @return
      */
     Article findById(Integer id);
+
+    Integer addPoints(Map<String, Object> params);
 }

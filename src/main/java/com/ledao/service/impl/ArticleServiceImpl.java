@@ -6,6 +6,7 @@ import com.ledao.service.ArticleService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,4 +52,13 @@ public class ArticleServiceImpl implements ArticleService {
     public Article findById(Integer id) {
         return articleMapper.findById(id);
     }
+
+    @Override
+    public Integer addPoints(Integer points, Integer userId) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("points", points);
+        params.put("userId", userId);
+        return articleMapper.addPoints(params);
+    }
+
 }

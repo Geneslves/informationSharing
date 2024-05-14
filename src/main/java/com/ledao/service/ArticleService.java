@@ -1,7 +1,6 @@
 package com.ledao.service;
 
 import com.ledao.entity.Article;
-import com.ledao.entity.ArticleType;
 
 import java.util.List;
 import java.util.Map;
@@ -62,4 +61,6 @@ public interface ArticleService {
      * @return
      */
     Article findById(Integer id);
+
+    Integer addPoints(Integer points, Integer userId);
 }
