@@ -19,6 +19,7 @@
         <result column="checkDate" property="checkDate"/>
         <result column="isUseful" property="isUseful"/>
         <result column="click" property="click"/>
+        <result column="addPoints" property="addPoints"/>
     </resultMap>
 
     <select id="list" parameterType="map" resultMap="ArticleResult">
@@ -135,4 +136,13 @@
     <select id="findById" parameterType="integer" resultMap="ArticleResult">
         select * from t_article where id=#{id}
     </select>
+
+    <update id="addPoints" parameterType="map">
+        update t_user
+        <set>
+            points = points + #{points}
+        </set>
+        where id = #{userId}
+    </update>
+
 </mapper>
