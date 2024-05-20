@@ -12,24 +12,25 @@
     <script type="text/javascript">
         var url;
 
-        function searchArticleType() {
+        function searchNotice() {
             $("#dg").datagrid('load',{
-                "name": $("#s_name").val()
+                "title": $("#s_title").val()
             });
         }
 
         function resetValue() {
-            $("#name").val("");
-            $("#remark").val("");
-            $("#sortNum").val("");
+
+            $("#title").val("");
+            $("#content").val("");
+            $("#time").val("");
         }
 
-        function closeArticleTypeDialog() {
+        function closeNoticeDialog() {
             $("#dlg").dialog("close");
             resetValue();
         }
 
-        function saveArticleType() {
+        function saveNotice() {
             $("#fm").form("submit", {
                 url: url,
                 onSubmit: function () {
@@ -49,24 +50,25 @@
             });
         }
 
-        function openArticleTypeAddDialog() {
-            $("#dlg").dialog("open").dialog("setTitle", "添加资源类别信息");
-            url = "/admin/articleType/save";
+
+        function openNoticeAddDialog() {
+            $("#dlg").dialog("open").dialog("setTitle", "添加公告");
+            url = "/admin/notice/save";
         }
 
-        function openArticleTypeModifyDialog() {
+        function openNoticeModifyDialog() {
             var selectedRows = $("#dg").datagrid("getSelections");
             if (selectedRows.length != 1) {
                 $.messager.alert("系统提示", "请选择一条要修改的数据！");
                 return;
             }
             var row = selectedRows[0];
-            $("#dlg").dialog("open").dialog("setTitle", "修改资源类别信息");
+            $("#dlg").dialog("open").dialog("setTitle", "修改公告");
             $("#fm").form("load", row);
-            url = "/admin/articleType/save?id=" + row.id;
+            url = "/admin/notice/save?id=" + row.id;
         }
 
-        function deleteArticleType() {
+        function deleteNotice() {
             var selectedRows = $("#dg").datagrid("getSelections");
             if (selectedRows.length == 0) {
                 $.messager.alert("系统提示", "请选择要删除的数据！");
@@ -79,7 +81,7 @@
             var ids = strIds.join(",");
             $.messager.confirm("系统提示", "您确定要删除这<span style='color: red'>" + selectedRows.length + "</span>条数据吗?", function (r) {
                 if (r) {
-                    $.post("/admin/articleType/delete", {ids: ids}, function (result) {
+                    $.post("/admin/notice/delete", {ids: ids}, function (result) {
                         if (result.success) {
                             $.messager.alert("系统提示", "数据已成功删除！");
                             $("#dg").datagrid("reload");
@@ -95,9 +97,9 @@
 
             $("#dg").datagrid({
                 onDblClickRow: function (index, row) {
-                    $("#dlg").dialog("open").dialog("setTitle", "修改资源类别信息");
+                    $("#dlg").dialog("open").dialog("setTitle", "修改公告");
                     $("#fm").form("load", row);
-                    url = "/admin/articleType/save?id=" + row.id;
+                    url = "/admin/notice/save?id=" + row.id;
                 }
             });
 
@@ -113,30 +115,30 @@
     </script>
 </head>
 <body style="margin: 1px">
-<table id="dg" title="资源类别管理" class="easyui-datagrid"  striped="true"
+<table id="dg" title="公告管理" class="easyui-datagrid"  striped="true"
        fitColumns="true" pagination="true" rownumbers="true"
-       url="/admin/articleType/list" fit="true" toolbar="#tb">
+       url="/admin/notice/list" fit="true" toolbar="#tb">
     <thead>
     <th field="cb" checkbox="true" align="center"></th>
     <th field="id" width="20" align="center" hidden="hidden">编号</th>
-    <th field="name" width="50" align="center">名称</th>
-    <th field="remark" width="50" align="center">描述</th>
-    <th field="sortNum" width="50" align="center">排列顺序</th>
-    <th field="num" width="50" align="center" formatter="formatNum">博客数量</th>
+    <th field="title" width="50" align="center">标题</th>
+    <th field="content" width="50" align="center">内容</th>
+    <th field="time" width="50" align="center">时间</th>
+<!--    <th field="num" width="50" align="center" formatter="formatNum">博客数量</th>-->
     </thead>
 </table>
 
 <div id="tb">
     <div>
-        <a href="javascript:openArticleTypeAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
-        <a href="javascript:openArticleTypeModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit"
+        <a href="javascript:openNoticeAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
+        <a href="javascript:openNoticeModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit"
            plain="true">修改</a>
-        <a href="javascript:deleteArticleType()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+        <a href="javascript:deleteNotice()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
     </div>
-    <div>
-        &nbsp;资源类别名称：&nbsp;<input type="text" id="s_name" size="20" onkeydown="if(event.keyCode==13) searchArticleType()"/>
-        <a href="javascript:searchArticleType()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
-    </div>
+<!--    <div>-->
+<!--        &nbsp;资源类别名称：&nbsp;<input type="text" id="s_title" size="20" onkeydown="if(event.keyCode==13) searchNotice()"/>-->
+<!--        <a href="javascript:searchNotice()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>-->
+<!--    </div>-->
 </div>
 
 
@@ -147,28 +149,28 @@
             <tr>
                 <td valign="top">名称:</td>
                 <td>
-                    <input id="name" name="name" class="easyui-validatebox" required="true" style="width: 250px">
+                    <input id="title" name="title" class="easyui-validatebox" required="true" style="width: 250px">
                 </td>
             </tr>
             <tr>
                 <td valign="top">描述:</td>
                 <td>
-                    <input id="remark" name="remark" class="easyui-validatebox" required="true" style="width: 250px">
+                    <input id="content" name="content" class="easyui-validatebox" required="true" style="width: 250px">
                 </td>
             </tr>
-            <tr>
-                <td valign="top">排列顺序:</td>
-                <td>
-                    <input id="sortNum" name="sortNum" class="easyui-validatebox" required="true" style="width: 250px">
-                </td>
-            </tr>
+<!--            <tr>-->
+<!--                <td valign="top">排列顺序:</td>-->
+<!--                <td>-->
+<!--                    <input id="sortNum" name="sortNum" class="easyui-validatebox" required="true" style="width: 250px">-->
+<!--                </td>-->
+<!--            </tr>-->
         </table>
     </form>
 </div>
 
 <div id="dlg-buttons">
-    <a href="javascript:saveArticleType()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-    <a href="javascript:closeArticleTypeDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+    <a href="javascript:saveNotice()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
+    <a href="javascript:closeNoticeDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
 </div>
 </body>
 </html>

@@ -144,5 +144,10 @@
         </set>
         where id = #{userId}
     </update>
-
+<!--    <select id="getArticleById" parameterType="int" resultType="com.ledao.entity.Article">-->
+<!--        SELECT * FROM t_article WHERE id = #{id}-->
+<!--    </select>-->
+<!--    <select id="getAllArticles" resultType="com.ledao.entity.Article">-->
+<!--        SELECT * FROM t_article-->
+<!--    </select>-->
 </mapper>

@@ -5,87 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/RecommendationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/NoticeAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/NoticeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/NoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/RecommendationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/NoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/NoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/noticeManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Notice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/personMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/personMessage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/articleImage/20210117224856.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/articleImage/20240117224856.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/articleImage/20210118141517.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/articleImage/20240118141517.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210107021707.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240107021707.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210108235216.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240108235216.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210111025503.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240111025503.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210111025655.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240111025655.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210111025751.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240111025751.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210113053514.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240113053514.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20210114225430.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240114225430.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/InformationsharingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/InformationsharingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/ServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/DrawImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/DrawImageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/indexFirst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/indexFirst.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/articleTypeManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/articleTypeManage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/AdmUserAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/AdmUserAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleTypeAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleTypeAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/CommentAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/CommentAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/DownloadMessageAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/DownloadMessageAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/InformationAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/InformationAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/LinkAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/LinkAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/UserAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/UserAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/ArticleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/ArticleType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/DownloadMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/DownloadMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Information.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Information.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Link.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Link.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/PageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/PageBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/lucene/ArticleIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/lucene/ArticleIndex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/AdmUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/AdmUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Notice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleTypeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/CommentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/DownloadMessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/DownloadMessageMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/InformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/InformationMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/LinkMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/LinkMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/quartz/DeleteInvalidImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/quartz/DeleteInvalidImage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/AdmUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/AdmUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/ArticleTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/ArticleTypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/DownloadMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/DownloadMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/InformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/InformationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/LinkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/LinkService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/AdmUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/AdmUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/ArticleTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/ArticleTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/DownloadMessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/DownloadMessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/InformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/InformationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/LinkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/LinkServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/util/DateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/util/PageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/util/PageUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ledao/informationsharing/InformationsharingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ledao/informationsharing/InformationsharingApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/downloadCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/downloadCode.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,13 +45,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="AnnotationType" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -137,31 +90,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.InformationsharingApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/JavaProgram/informationSharing/src/main/resources/mybatis/mapper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.InformationsharingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/JavaProgram/informationSharing/src/main/resources/mybatis/mapper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ledao.entity" />
@@ -172,11 +125,11 @@
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ledao.service.impl" />
-      <recent name="com.ledao.mapper" />
-      <recent name="com.ledao.entity" />
       <recent name="com.ledao.controller.admin" />
+      <recent name="com.ledao.service" />
+      <recent name="com.ledao.service.impl" />
       <recent name="com.ledao.controller" />
+      <recent name="com.ledao.entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -209,6 +162,9 @@
       <workItem from="1715430916221" duration="4322000" />
       <workItem from="1715484525448" duration="23109000" />
       <workItem from="1715563415942" duration="28041000" />
+      <workItem from="1716124664651" duration="1289000" />
+      <workItem from="1716181802904" duration="10266000" />
+      <workItem from="1716192086875" duration="12949000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />

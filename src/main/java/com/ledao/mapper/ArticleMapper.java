@@ -2,6 +2,7 @@ package com.ledao.mapper;
 
 import com.ledao.entity.Article;
 import com.ledao.entity.User;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -64,4 +65,10 @@ public interface ArticleMapper {
     Article findById(Integer id);
 
     Integer addPoints(Map<String, Object> params);
+
+    @Select("SELECT * FROM t_article WHERE id = #{id}")
+    Article getArticleById(Integer id);
+
+    @Select("SELECT * FROM t_article")
+    List<Article> getAllArticles();
 }
