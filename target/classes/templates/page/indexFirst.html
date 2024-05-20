@@ -4,6 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/layui/layui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajax({
+                url: "/admin/notice/latest",
+                type: "GET",
+                success: function(response) {
+                    if (response.success) {
+                        $("#notice-title").text(response.notice.title);
+                        $("#notice-content").text(response.notice.content);
+                    } else {
+                        $("#notice-title").text("暂无公告");
+                        $("#notice-content").text("");
+                    }
+                },
+                error: function() {
+                    $("#notice-title").text("公告获取失败");
+                    $("#notice-content").text("");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div id="b">
@@ -111,13 +135,12 @@
         </div>
         <!--公告-->
         <div class="layui-col-md3" style="margin-top: 5px">
-            <!--条件检索-->
             <div style="margin-top: 2px;margin-right: 5px">
                 <blockquote class="layui-elem-quote" style="border-color: red">
-                    <strong><i class="layui-icon layui-icon-reply-fill"
-                               style="font-size: 16px;color: red">公告</i></strong>
+                    <strong><i class="layui-icon layui-icon-reply-fill" style="font-size: 16px;color: red">公告</i></strong>
                     <hr class="layui-bg-red">
-                    <span style="color: red">本网站为个人项目,仅用于展示</span>
+                    <span id="notice-title" style="color: red">加载中...</span>
+                    <p id="notice-content" style="color: red"></p>
                 </blockquote>
             </div>
         </div>
