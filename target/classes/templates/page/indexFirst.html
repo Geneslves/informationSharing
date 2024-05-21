@@ -1,39 +1,13 @@
 <!DOCTYPE html>
-<!--suppress ALL-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="/static/layui/css/layui.css">
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/layui/layui.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $.ajax({
-                url: "/admin/notice/latest",
-                type: "GET",
-                success: function(response) {
-                    if (response.success) {
-                        $("#notice-title").text(response.notice.title);
-                        $("#notice-content").text(response.notice.content);
-                    } else {
-                        $("#notice-title").text("暂无公告");
-                        $("#notice-content").text("");
-                    }
-                },
-                error: function() {
-                    $("#notice-title").text("公告获取失败");
-                    $("#notice-content").text("");
-                }
-            });
-        });
-    </script>
+    <title>资源管理</title>
 </head>
 <body>
 <div id="b">
     <!--内容-->
     <div>
-
         <!--左边内容-->
         <div class="layui-col-md9" style="margin-top: 5px">
             <!--条件检索-->
@@ -135,14 +109,18 @@
         </div>
         <!--公告-->
         <div class="layui-col-md3" style="margin-top: 5px">
-            <div style="margin-top: 2px;margin-right: 5px">
-                <blockquote class="layui-elem-quote" style="border-color: red">
-                    <strong><i class="layui-icon layui-icon-reply-fill" style="font-size: 16px;color: red">公告</i></strong>
-                    <hr class="layui-bg-red">
-                    <span id="notice-title" style="color: red">加载中...</span>
-                    <p id="notice-content" style="color: red"></p>
-                </blockquote>
-            </div>
+            <blockquote class="layui-elem-quote" style="border-color: #1e9fff">
+                <strong><i class="layui-icon layui-icon-notice" style="font-size: 16px">最新公告</i></strong>
+                <hr class="layui-bg-blue">
+                <div th:if="${latestNotice != null}">
+                    <p><strong>标题:</strong> <span th:text="${latestNotice.title}"></span></p>
+                    <p><strong>内容:</strong> <span th:text="${latestNotice.content}"></span></p>
+                    <p><strong>时间:</strong> <span th:text="${latestNotice.time}"></span></p>
+                </div>
+                <div th:if="${latestNotice == null}">
+                    <p>暂无公告</p>
+                </div>
+            </blockquote>
         </div>
         <!--友情链接-->
         <div class="layui-col-md12">

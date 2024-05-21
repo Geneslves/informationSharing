@@ -9,13 +9,6 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 文章类型Service接口实现类
- *
- * @author
- * @company
- * @create 2024-01-03 22:13
- */
 @Service("noticeService")
 public class NoticeServiceImpl implements NoticeService {
 
@@ -51,9 +44,4 @@ public class NoticeServiceImpl implements NoticeService {
     public Integer deleteById(Integer id) {
         return noticeMapper.deleteById(id);
     }
-
-//    @Override
-//    public List<Notice> findByName(String name) {
-//        return noticeMapper.findByName(name);
-//    }
 }

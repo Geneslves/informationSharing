@@ -5,6 +5,9 @@ import com.ledao.entity.PageBean;
 import com.ledao.service.ArticleService;
 import com.ledao.service.NoticeService;
 import com.ledao.util.StringUtil;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,15 +18,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 后台资源类型Controller层
- *
- * @author
- * @company
- * @create 2024-01-16 21:15
- */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 @RestController
 @RequestMapping("/admin/notice")
+@Controller
 public class NoticeAdminController {
 
     @Resource
@@ -32,14 +31,6 @@ public class NoticeAdminController {
     @Resource
     private ArticleService articleService;
 
-    /**
-     * 分页分条件查询资源类型
-     *
-     * @param notice
-     * @param page
-     * @param rows
-     * @return
-     */
     @RequestMapping("/list")
     public Map<String, Object> list(Notice notice, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "rows", required = false) Integer rows) {
         PageBean pageBean = new PageBean(page, rows);
@@ -59,12 +50,6 @@ public class NoticeAdminController {
         return resultMap;
     }
 
-    /**
-     * 添加或修改资源类型
-     *
-     * @param notice
-     * @return
-     */
     @RequestMapping("/save")
     public Map<String, Object> save(Notice notice) {
         Map<String, Object> resultMap = new HashMap<>(16);
@@ -81,6 +66,7 @@ public class NoticeAdminController {
         }
         return resultMap;
     }
+
     /**
      * 删除资源类型(可批量删除)
      *

@@ -4,8 +4,12 @@ import com.ledao.entity.*;
 import com.ledao.service.*;
 import com.ledao.util.PageUtil;
 import com.ledao.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -67,6 +71,8 @@ public class IndexController implements CommandLineRunner, ServletContextListene
     @Resource
     private InformationService informationService;
 
+    @Resource
+    private NoticeService noticeService;
     /**
      * 首页地址
      *
@@ -91,6 +97,9 @@ public class IndexController implements CommandLineRunner, ServletContextListene
             map.put("articleTypeId", articleTypeId);
             mav.addObject("articleTypeId", articleTypeId);
         }
+        // 加载公告数据
+        List<Notice> noticeList = noticeService.list(map);
+        mav.addObject("latestNotice", noticeList.size() > 0 ? noticeList.get(0) : null); // 获取最新公告
         List<Article> articleList = articleService.list(map);
         for (Article article : articleList) {
             article.setUser(userService.findById(article.getUserId()));
@@ -125,7 +134,6 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         application.setAttribute("articleListHot", articleListHot);
         application.setAttribute("linkList", linkList);
     }
-
     /**
      * 跳转到用户登录页面
      *
