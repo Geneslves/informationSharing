@@ -1,6 +1,9 @@
 package com.ledao.mapper;
 
 import com.ledao.entity.DownloadMessage;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -12,6 +15,7 @@ import java.util.Map;
  * @company
  * @create 2024-01-10 20:32
  */
+@Mapper
 public interface DownloadMessageMapper {
 
     /**
@@ -45,4 +49,13 @@ public interface DownloadMessageMapper {
      * @return
      */
     Integer deleteById(Integer id);
+
+    @Select("SELECT * FROM t_download_message WHERE articleId = #{articleId}")
+    List<DownloadMessage> findByArticleId(@Param("articleId") int articleId);
+
+    @Select("SELECT * FROM t_download_message WHERE userId = #{userId}")
+    List<DownloadMessage> findByUserId(@Param("userId") int userId);
+
+    @Select("SELECT DISTINCT articleId FROM t_download_message WHERE articleId NOT IN (SELECT articleId FROM t_download_message WHERE userId = #{userId})")
+    List<Integer> findArticlesNotDownloadedByUser(@Param("userId") int userId);
 }

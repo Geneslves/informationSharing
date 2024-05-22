@@ -2,6 +2,7 @@ package com.ledao.mapper;
 
 import com.ledao.entity.Article;
 import com.ledao.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -66,9 +67,14 @@ public interface ArticleMapper {
 
     Integer addPoints(Map<String, Object> params);
 
-    @Select("SELECT * FROM t_article WHERE id = #{id}")
-    Article getArticleById(Integer id);
+    @Select("<script>" +
+            "SELECT * FROM t_article WHERE id IN " +
+            "<foreach item='id' index='index' collection='ids' open='(' separator=',' close=')'>" +
+            "#{id}" +
+            "</foreach>" +
+            "</script>")
+    List<Article> findArticlesByIds(@Param("ids") List<Integer> ids);
 
-    @Select("SELECT * FROM t_article")
-    List<Article> getAllArticles();
+    @Select("SELECT * FROM t_article ORDER BY RAND() LIMIT #{limit}")
+    List<Article> findRandomArticles(@Param("limit") int limit);
 }

@@ -61,4 +61,12 @@ public class ArticleServiceImpl implements ArticleService {
         return articleMapper.addPoints(params);
     }
 
+    public List<Article> findArticlesByIds(List<Integer> ids) {
+        return articleMapper.findArticlesByIds(ids);
+    }
+
+    public List<Article> findRandomArticles(int limit) {
+        return articleMapper.findRandomArticles(limit);
+    }
+
 }

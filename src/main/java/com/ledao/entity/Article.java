@@ -96,6 +96,9 @@ public class Article {
         this.state = state;
     }
 
+    public Article(Integer key) {
+    }
+
     public Integer getId() {
         return id;
     }

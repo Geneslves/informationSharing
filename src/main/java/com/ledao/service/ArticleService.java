@@ -1,6 +1,8 @@
 package com.ledao.service;
 
 import com.ledao.entity.Article;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -63,4 +65,9 @@ public interface ArticleService {
     Article findById(Integer id);
 
     Integer addPoints(Integer points, Integer userId);
+
+
+    List<Article> findArticlesByIds(List<Integer> articleIds);
+
+    List<Article> findRandomArticles(int i);
 }

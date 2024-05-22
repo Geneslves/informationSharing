@@ -41,4 +41,14 @@ public class DownloadMessageServiceImpl implements DownloadMessageService {
     public Integer deleteById(Integer id) {
         return downloadMessageMapper.deleteById(id);
     }
+
+    @Override
+    public List<DownloadMessage> findByArticleId(int articleId) {
+        return downloadMessageMapper.findByArticleId(articleId);
+    }
+    @Override
+    public List<DownloadMessage> findByUserId(int userId) {
+        return downloadMessageMapper.findByUserId(userId);
+    }
+
 }

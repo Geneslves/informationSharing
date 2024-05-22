@@ -6,6 +6,7 @@ import com.ledao.util.PageUtil;
 import com.ledao.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -73,13 +74,15 @@ public class IndexController implements CommandLineRunner, ServletContextListene
 
     @Resource
     private NoticeService noticeService;
+    @Autowired
+    private RecommendationService recommendationService;
     /**
      * 首页地址
      *
      * @return
      */
     @RequestMapping("/")
-    public ModelAndView root(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "articleTypeId", required = false) String articleTypeId) {
+    public ModelAndView root(HttpSession session, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "articleTypeId", required = false) String articleTypeId) {
         this.loadSomeData();
         ModelAndView mav = new ModelAndView();
         if (page == null) {
@@ -104,6 +107,12 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         for (Article article : articleList) {
             article.setUser(userService.findById(article.getUserId()));
         }
+        // 推荐资源
+        User currentUser = (User) session.getAttribute("currentUser");
+        int userId = (currentUser != null) ? currentUser.getId() : 0;
+        List<Article> recommendations = recommendationService.getRecommendations(userId, 5);
+        mav.addObject("recommendations", recommendations);
+
         Long total = articleService.getTotal(map);
         mav.addObject("total", total);
         mav.addObject("pageCode", PageUtil.genPagination("/", total, page, pageSize, param.toString()));

@@ -14,6 +14,7 @@ public class DownloadMessage {
     /**
      * 编号
      */
+
     private Integer id;
     /**
      * 下载者id
