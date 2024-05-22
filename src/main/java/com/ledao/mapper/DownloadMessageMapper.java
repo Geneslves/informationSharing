@@ -58,4 +58,7 @@ public interface DownloadMessageMapper {
 
     @Select("SELECT DISTINCT articleId FROM t_download_message WHERE articleId NOT IN (SELECT articleId FROM t_download_message WHERE userId = #{userId})")
     List<Integer> findArticlesNotDownloadedByUser(@Param("userId") int userId);
+
+    @Select("SELECT * FROM t_download_message")
+    List<DownloadMessage> findAll();
 }
