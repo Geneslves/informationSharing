@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/RecommendationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/RecommendationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/RecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_informationshare.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +226,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716355137219</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1716355718514</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716355718514</updated>
+    </task>
+    <task id="LOCAL-00013" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1716355933292</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716355933292</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
