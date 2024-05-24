@@ -35,11 +35,9 @@
                         <a class="layui-btn layui-btn-danger layui-btn-sm"
                            th:href="'javascript:download('+${article.id}+')'"
                            th:if="${session.currentUser.roleName=='VIP用户'}">VIP免积分下载</a>
-<!--                        <a class="layui-btn layui-btn-danger layui-btn-sm"-->
-<!--                           th:href="'javascript:download('+${article.id}+')'"-->
-<!--                           th:if="${session.currentUser.roleName=='管理员'}">免积分下载</a>-->
-                        <a class="layui-btn layui-btn-sm" th:href="'javascript:download('+${article.id}+')'"
-                           th:if="${session.currentUser.roleName=='普通用户'}">立即下载</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-sm"
+                           th:href="'javascript:download('+${article.id}+')'"
+                           th:if="${session.currentUser.roleName=='管理员'}">管理员免积分下载</a>
                     </div>
                     <span style="color: red;float: right" th:if="${session.currentUser!=null&&article.isUseful==0}">本链接已经失效</span>
                     <hr class="layui-bg-blue">
