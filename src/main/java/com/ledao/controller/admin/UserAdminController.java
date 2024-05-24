@@ -173,7 +173,7 @@ public class UserAdminController {
     }
 
     /**
-     * 修改用户类型(普通用户或VIP用户)
+     * 修改用户类型(普通用户或VIP用户或管理员)
      *
      * @param id
      * @param roleName
@@ -184,6 +184,11 @@ public class UserAdminController {
         Map<String, Object> resultMap = new HashMap<>(16);
         User user = userService.findById(id);
         user.setRoleName(roleName);
+        if (roleName.equals("普通用户")) {
+            user.setIsVip(0);
+        }else {
+            user.setIsVip(1);
+        }
         userService.update(user);
         resultMap.put("success", true);
         return resultMap;
