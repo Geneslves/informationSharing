@@ -1,8 +1,8 @@
 package com.ledao.service.impl;
 
+import com.ledao.entity.Article;
 import com.ledao.entity.DownloadMessage;
 import com.ledao.mapper.DownloadMessageMapper;
-import com.ledao.entity.Article;
 import com.ledao.service.ArticleService;
 import com.ledao.service.RecommendationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,10 @@ public class RecommendationServiceImpl implements RecommendationService {
 
     @Autowired
     private ArticleService articleService;
+
     /**
      * 基于用户协同过滤的推荐方法
+     *
      * @return 推荐的文章列表
      */
 //    public List<Article> recommendArticles(int userId) {
@@ -92,8 +94,10 @@ public class RecommendationServiceImpl implements RecommendationService {
 
         return intersection.size() / Math.sqrt(user1ArticleIds.size() * user2ArticleIds.size());
     }
+
     /**
      * 使用随机的推荐方法
+     *
      * @return 推荐的文章列表
      */
     public List<Article> recommendRandomArticles(int limit) {
@@ -110,11 +114,12 @@ public class RecommendationServiceImpl implements RecommendationService {
 //            return articleService.findRandomArticles(limit);
 //        }
 //    }
+
     /**
      * 根据用户ID获取推荐文章
      *
      * @param userId 用户ID
-     * @param limit 推荐数量
+     * @param limit  推荐数量
      * @return 推荐的文章列表
      */
     public List<Article> getRecommendations(int userId, int limit) {

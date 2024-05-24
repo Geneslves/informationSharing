@@ -10,17 +10,17 @@
     <!--内容-->
     <div>
         <!--公告-->
-<!--        <div class="layui-col-md12" style="margin-top: 5px">-->
-<!--            &lt;!&ndash;条件检索&ndash;&gt;-->
-<!--            <div style="margin-top: 2px;margin-right: 5px">-->
-<!--                <blockquote class="layui-elem-quote" style="border-color: red">-->
-<!--                    <strong><i class="layui-icon layui-icon-reply-fill"-->
-<!--                               style="font-size: 16px;color: red">公告</i></strong>-->
-<!--                    <hr class="layui-bg-red">-->
-<!--                    <span style="color: red">本网站为个人项目,仅用于展示</span>-->
-<!--                </blockquote>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="layui-col-md12" style="margin-top: 5px">-->
+        <!--            &lt;!&ndash;条件检索&ndash;&gt;-->
+        <!--            <div style="margin-top: 2px;margin-right: 5px">-->
+        <!--                <blockquote class="layui-elem-quote" style="border-color: red">-->
+        <!--                    <strong><i class="layui-icon layui-icon-reply-fill"-->
+        <!--                               style="font-size: 16px;color: red">公告</i></strong>-->
+        <!--                    <hr class="layui-bg-red">-->
+        <!--                    <span style="color: red">本网站为个人项目,仅用于展示</span>-->
+        <!--                </blockquote>-->
+        <!--            </div>-->
+        <!--        </div>-->
         <!--左边内容-->
         <div class="layui-col-md9" style="margin-top: 5px">
             <!--资源详情-->
@@ -30,19 +30,21 @@
                     <span style="color: red;float: right" th:if="${session.currentUser==null&&article.isUseful==1}">登录后才可以下载资源</span>
                     <span style="color: red;float: right" th:if="${session.currentUser==null&&article.isUseful==0}">本链接已经失效</span>
                     <div style="float: right" th:if="${session.currentUser!=null&&article.isUseful==1}">
-                        <a th:href="'javascript:download('+${article.id}+')'" class="layui-btn layui-btn-sm"
+                        <a class="layui-btn layui-btn-sm" th:href="'javascript:download('+${article.id}+')'"
                            th:if="${session.currentUser.roleName=='普通用户'}">立即下载</a>
-                        <a th:href="'javascript:download('+${article.id}+')'" class="layui-btn layui-btn-danger layui-btn-sm"
+                        <a class="layui-btn layui-btn-danger layui-btn-sm"
+                           th:href="'javascript:download('+${article.id}+')'"
                            th:if="${session.currentUser.roleName=='VIP用户'}">VIP免积分下载</a>
                     </div>
                     <span style="color: red;float: right" th:if="${session.currentUser!=null&&article.isUseful==0}">本链接已经失效</span>
                     <hr class="layui-bg-blue">
-                    <h2 th:text="${article.name}" style="text-align: center"></h2>
+                    <h2 style="text-align: center" th:text="${article.name}"></h2>
                     <p style="text-align: center;color: grey;margin-top: 10px">上传者:<span
                             th:text="${article.user.nickName}"></span>&nbsp;&nbsp;类别:<span
                             th:text="${article.articleType.name}"></span>&nbsp;&nbsp;发布日期:<span
                             th:text="${#dates.format(article.publishDate,'yyyy-MM-dd')}"></span>&nbsp;&nbsp;阅读次数:<span
-                            th:text="${article.click}"></span>&nbsp;&nbsp;所需积分:<span th:text="${article.points}"></span>
+                            th:text="${article.click}"></span>&nbsp;&nbsp;所需积分:<span
+                            th:text="${article.points}"></span>
                     </p>
                     <p style="margin-top: 10px" th:utext="${article.content}"></p>
                 </blockquote>
@@ -54,28 +56,30 @@
                     <i class="layui-icon-tips layui-icon" style="color: #1e9fff;font-size: 16px;float: right">评论审核通过后才可以在下方显示</i>
                     <hr class="layui-bg-blue">
                     <div>
-                        <textarea id="commentContent" name="commentContent" required="required" placeholder="请输入评论"
-                                  class="layui-textarea"></textarea>
-                        <input type="hidden" id="commentArticleId" name="ArticleId" th:value="${article.id}">
-                        <button type="submit" class="layui-btn layui-btn-normal" style="margin-top: 10px"
-                                lay-filter="formDemo" onclick="submitData()"
-                                th:if="${session.currentUser!=null}">立即提交
+                        <textarea class="layui-textarea" id="commentContent" name="commentContent" placeholder="请输入评论"
+                                  required="required"></textarea>
+                        <input id="commentArticleId" name="ArticleId" th:value="${article.id}" type="hidden">
+                        <button class="layui-btn layui-btn-normal" lay-filter="formDemo" onclick="submitData()"
+                                style="margin-top: 10px" th:if="${session.currentUser!=null}"
+                                type="submit">立即提交
                         </button>
                         <a href="/toLoginPage">
-                            <button class="layui-btn layui-btn-danger" style="margin-top: 10px" lay-filter="formDemo"
+                            <button class="layui-btn layui-btn-danger" lay-filter="formDemo" style="margin-top: 10px"
                                     th:if="${session.currentUser==null}">登录后再评论
                             </button>
                         </a>
-                        <h3 style="margin-top: 10px">用户评论列表<span style="font-size: 10px;color: green">(只显示最近的20条评论)</span></h3>
+                        <h3 style="margin-top: 10px">用户评论列表<span style="font-size: 10px;color: green">(只显示最近的20条评论)</span>
+                        </h3>
                         <hr style="height:5px;border:none;border-top:2px dotted #1296db;">
                         <div th:each="comment:${commentList}" th:if="${commentList.size>0&&commentStat.count<=20}">
                             <div class="layui-col-md1">
-                                <img th:src="@{'/static/images/userImage/'+${comment.user.imageName}}"
-                                     class="layui-nav-img" style="height: 55px;width: 55px">
+                                <img class="layui-nav-img"
+                                     style="height: 55px;width: 55px" th:src="@{'/static/images/userImage/'+${comment.user.imageName}}">
                             </div>
                             <div class="layui-col-md11">
-                                <span th:text="${comment.user.nickName}" style="color: #1296db"></span>&nbsp;&nbsp;<span style="color: grey"
-                                                                                                  th:text="${#dates.format(comment.date,'yyyy-MM-dd HH:mm:ss')}"></span>
+                                <span style="color: #1296db" th:text="${comment.user.nickName}"></span>&nbsp;&nbsp;<span
+                                    style="color: grey"
+                                    th:text="${#dates.format(comment.date,'yyyy-MM-dd HH:mm:ss')}"></span>
                                 <p th:text="${comment.commentContent}"></p>
                             </div>
                             <hr style="border-top:2px grey;">
@@ -93,7 +97,8 @@
                 <strong><i class="layui-icon layui-icon-fire" style="font-size: 16px">热门资源</i></strong>
                 <hr class="layui-bg-blue">
                 <div th:each="articleHot:${application.articleListHot}">
-                    <p><a style="color: #1e9fff" th:href="@{'/article/'+${articleHot.id}}" th:text="${#strings.abbreviate(articleHot.name,20)}"
+                    <p><a style="color: #1e9fff" th:href="@{'/article/'+${articleHot.id}}"
+                          th:text="${#strings.abbreviate(articleHot.name,20)}"
                           th:title="${articleHot.name}"></a></p>
                 </div>
             </blockquote>
@@ -104,7 +109,8 @@
                 <strong><i class="layui-icon layui-icon-link" style="font-size: 16px">友情链接</i></strong>
                 <hr class="layui-bg-blue">
                 <div th:each="link:${application.linkList}">
-                    <a th:href="${link.url}" th:text="${link.name+'&nbsp;&nbsp;'}" style="float: left;color: #1e9fff"></a>
+                    <a style="float: left;color: #1e9fff" th:href="${link.url}"
+                       th:text="${link.name+'&nbsp;&nbsp;'}"></a>
                 </div>
                 <span style="color: #f2f2f2">1</span>
             </blockquote>

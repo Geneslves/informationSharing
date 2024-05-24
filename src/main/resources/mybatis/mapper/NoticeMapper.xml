@@ -10,32 +10,32 @@
         <result property="time" column="time"/>
     </resultMap>
 
-<!--    <select id="list" parameterType="map" resultMap="NoticeResult">-->
-<!--        select *-->
-<!--        from t_notice-->
-<!--        <where>-->
-<!--            <if test="title != null and title != ''">-->
-<!--                and title like #{title}-->
-<!--            </if>-->
-<!--        </where>-->
-<!--        <if test="time != null">-->
-<!--            order by time-->
-<!--        </if>-->
-<!--        <if test="start != null and size != null">-->
-<!--            limit #{start},#{size}-->
-<!--        </if>-->
-<!--    </select>-->
+    <!--    <select id="list" parameterType="map" resultMap="NoticeResult">-->
+    <!--        select *-->
+    <!--        from t_notice-->
+    <!--        <where>-->
+    <!--            <if test="title != null and title != ''">-->
+    <!--                and title like #{title}-->
+    <!--            </if>-->
+    <!--        </where>-->
+    <!--        <if test="time != null">-->
+    <!--            order by time-->
+    <!--        </if>-->
+    <!--        <if test="start != null and size != null">-->
+    <!--            limit #{start},#{size}-->
+    <!--        </if>-->
+    <!--    </select>-->
     <select id="list" parameterType="map" resultMap="NoticeResult">
         select *
         from t_notice
         order by time desc
-            limit #{start}, #{size}
+        limit #{start}, #{size}
     </select>
     <select id="list1" parameterType="map" resultMap="NoticeResult">
         select *
         from t_notice
         order by time desc
-            limit #{start}, #{size}
+        limit #{start}, #{size}
     </select>
     <select id="getTotal" parameterType="map" resultType="java.lang.Long">
         select count(*)
@@ -56,7 +56,6 @@
     </insert>
 
 
-
     <update id="update" parameterType="Notice">
         update t_notice
         <set>
@@ -66,7 +65,7 @@
             <if test="content != null and content != ''">
                 content=#{content},
             </if>
-                time=now()
+            time=now()
         </set>
         where id=#{id}
     </update>

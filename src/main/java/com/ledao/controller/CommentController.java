@@ -1,6 +1,5 @@
 package com.ledao.controller;
 
-import com.ledao.entity.Article;
 import com.ledao.entity.Comment;
 import com.ledao.entity.User;
 import com.ledao.service.ArticleService;
@@ -9,15 +8,10 @@ import com.ledao.service.CommentService;
 import com.ledao.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 评论Controller层

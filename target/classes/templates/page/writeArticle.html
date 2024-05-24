@@ -12,7 +12,7 @@
             <div th:include="common/menuLeft::#m"></div>
         </div>
         <div class="layui-col-md9">
-            <form action="/article/save" method="post" class="layui-form" onsubmit="return checkWriteArticleValue()">
+            <form action="/article/save" class="layui-form" method="post" onsubmit="return checkWriteArticleValue()">
                 <div style="margin-top: 24px">
                     <p class="layui-breadcrumb">
                         <i class="layui-icon layui-icon-location">当前位置：</i>
@@ -23,40 +23,40 @@
                     </p>
                     <label class="layui-form-label" style="margin-top: 33px">资源名称:</label>
                     <div class="layui-input-block">
-                        <input type="text" id="name" name="name"
-                               style="width: 388px;border-color: gray;margin-top: 33px"
-                               lay-verify="title" autocomplete="off" required="required" placeholder="请输入资源名称"
-                               class="layui-input">
+                        <input autocomplete="off" class="layui-input" id="name"
+                               lay-verify="title"
+                               name="name" placeholder="请输入资源名称" required="required" style="width: 388px;border-color: gray;margin-top: 33px"
+                               type="text">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">资源类别:</label>
                     <div class="layui-input-block" style="margin-top: 12px;width: 388px">
-                        <select id="articleTypeId" name="articleTypeId" lay-filter="aihao">
+                        <select id="articleTypeId" lay-filter="aihao" name="articleTypeId">
                             <option value="">请选择类别...</option>
                             <div th:each="articleType:${articleTypeList}">
-                                <option th:value="${articleType.id}" th:text="${articleType.name} "></option>
+                                <option th:text="${articleType.name} " th:value="${articleType.id}"></option>
                             </div>
                         </select>
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">资源描述:</label>
                     <div class="layui-input-block" style="margin-top: 12px">
-                        <textarea id="content" name="content" rows="30" cols="90"></textarea>
+                        <textarea cols="90" id="content" name="content" rows="30"></textarea>
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">分享地址:</label>
                     <div class="layui-input-block">
-                        <input type="text" required="required" id="downloadLink" name="downloadLink"
-                               style="width: 388px;border-color: gray;margin-top: 12px" placeholder="请输入分享地址"
-                               autocomplete="off" class="layui-input">
+                        <input autocomplete="off" class="layui-input" id="downloadLink" name="downloadLink"
+                               placeholder="请输入分享地址" required="required"
+                               style="width: 388px;border-color: gray;margin-top: 12px" type="text">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">分享密码:</label>
                     <div class="layui-input-block">
-                        <input type="text" required="required" id="password" name="password"
-                               style="width: 388px;border-color: gray;margin-top: 12px" placeholder="请输入分享密码"
-                               autocomplete="off" class="layui-input">
-                        <input type="hidden" id="userId" name="userId" th:value="${session.currentUser.id}">
+                        <input autocomplete="off" class="layui-input" id="password" name="password"
+                               placeholder="请输入分享密码" required="required"
+                               style="width: 388px;border-color: gray;margin-top: 12px" type="text">
+                        <input id="userId" name="userId" th:value="${session.currentUser.id}" type="hidden">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">积分:</label>
                     <div class="layui-input-block" style="margin-top: 12px;width: 388px">
-                        <select id="points" name="points" lay-filter="aihao">
+                        <select id="points" lay-filter="aihao" name="points">
                             <option value="">请选择下载所需积分...</option>
                             <option value="0">0个积分</option>
                             <option value="1">1个积分</option>
@@ -72,7 +72,9 @@
                         </select>
                     </div>
                     <div class="layui-input-block" style="margin-top: 12px">
-                        <button class="layui-btn layui-btn-normal" type="submit"><i class="layui-icon layui-icon-release"></i>发布</button>
+                        <button class="layui-btn layui-btn-normal" type="submit"><i
+                                class="layui-icon layui-icon-release"></i>发布
+                        </button>
                     </div>
                 </div>
             </form>

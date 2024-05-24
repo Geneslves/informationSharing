@@ -46,6 +46,7 @@ public class DownloadMessageServiceImpl implements DownloadMessageService {
     public List<DownloadMessage> findByArticleId(int articleId) {
         return downloadMessageMapper.findByArticleId(articleId);
     }
+
     @Override
     public List<DownloadMessage> findByUserId(int userId) {
         return downloadMessageMapper.findByUserId(userId);

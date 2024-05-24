@@ -15,19 +15,22 @@
 */
 
 SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
+SET
+FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for t_link
 -- ----------------------------
 DROP TABLE IF EXISTS `t_link`;
-CREATE TABLE `t_link`  (
-  `id` int NOT NULL AUTO_INCREMENT COMMENT '编号',
-  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称',
-  `url` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '地址',
-  `sortNum` int NULL DEFAULT NULL COMMENT '排列序号',
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `id`(`id` ASC) USING BTREE
+CREATE TABLE `t_link`
+(
+    `id`      int NOT NULL AUTO_INCREMENT COMMENT '编号',
+    `name`    varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称',
+    `url`     varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '地址',
+    `sortNum` int NULL DEFAULT NULL COMMENT '排列序号',
+    PRIMARY KEY (`id`) USING BTREE,
+    INDEX     `id`(`id` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_link' ROW_FORMAT = DYNAMIC;
 
-SET FOREIGN_KEY_CHECKS = 1;
+SET
+FOREIGN_KEY_CHECKS = 1;

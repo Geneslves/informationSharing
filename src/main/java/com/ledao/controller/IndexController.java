@@ -4,13 +4,9 @@ import com.ledao.entity.*;
 import com.ledao.service.*;
 import com.ledao.util.PageUtil;
 import com.ledao.util.StringUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -35,6 +31,26 @@ import java.util.Map;
 @Controller
 public class IndexController implements CommandLineRunner, ServletContextListener {
 
+    private ServletContext application;
+    @Resource
+    private ArticleTypeService articleTypeService;
+    @Resource
+    private ArticleService articleService;
+    @Resource
+    private UserService userService;
+    @Resource
+    private LinkService linkService;
+    @Resource
+    private CommentService commentService;
+    @Resource
+    private DownloadMessageService downloadMessageService;
+    @Resource
+    private InformationService informationService;
+    @Resource
+    private NoticeService noticeService;
+    @Autowired
+    private RecommendationService recommendationService;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -50,32 +66,6 @@ public class IndexController implements CommandLineRunner, ServletContextListene
 
     }
 
-    private ServletContext application;
-    @Resource
-    private ArticleTypeService articleTypeService;
-
-    @Resource
-    private ArticleService articleService;
-
-    @Resource
-    private UserService userService;
-
-    @Resource
-    private LinkService linkService;
-
-    @Resource
-    private CommentService commentService;
-
-    @Resource
-    private DownloadMessageService downloadMessageService;
-
-    @Resource
-    private InformationService informationService;
-
-    @Resource
-    private NoticeService noticeService;
-    @Autowired
-    private RecommendationService recommendationService;
     /**
      * 首页地址
      *
@@ -143,6 +133,7 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         application.setAttribute("articleListHot", articleListHot);
         application.setAttribute("linkList", linkList);
     }
+
     /**
      * 跳转到用户登录页面
      *

@@ -2,7 +2,6 @@ package com.ledao.controller.admin;
 
 import com.ledao.entity.Information;
 import com.ledao.entity.PageBean;
-import com.ledao.entity.User;
 import com.ledao.service.InformationService;
 import com.ledao.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;

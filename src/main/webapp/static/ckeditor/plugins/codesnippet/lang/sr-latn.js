@@ -3,11 +3,11 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-CKEDITOR.plugins.setLang( 'codesnippet', 'sr-latn', {
-	button: 'Nalepi delić koda',
-	codeContents: 'Sadržaj koda',
-	emptySnippetError: 'Delić koda ne može biti prazan',
-	language: 'Jezik',
-	title: 'Delić koda',
-	pathName: 'Delić koda'
-} );
+CKEDITOR.plugins.setLang('codesnippet', 'sr-latn', {
+    button: 'Nalepi delić koda',
+    codeContents: 'Sadržaj koda',
+    emptySnippetError: 'Delić koda ne može biti prazan',
+    language: 'Jezik',
+    title: 'Delić koda',
+    pathName: 'Delić koda'
+});

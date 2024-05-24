@@ -14,9 +14,13 @@
                     style="font-size: 20px">电子资源推荐交流</strong></a>
             </li>
             <li class="layui-nav-item"><a href="/"><strong style="font-size: 15px">首页</strong></a></li>
-            <li class="layui-nav-item"><a href="/toDescriptionPage"><strong style="font-size: 15px">系统介绍</strong></a></li>
+            <li class="layui-nav-item"><a href="/toDescriptionPage"><strong
+                    style="font-size: 15px">系统介绍</strong></a></li>
             <li class="layui-nav-item" lay-unselect="" style="float: right" th:if="${session.currentUser!=null}">
-                <a href="javascript:;"><a href="/toUserBackstagePage"><img th:src="@{'/static/images/userImage/'+${session.currentUser.imageName}}" class="layui-nav-img" th:if="${session.currentUser.imageName!=null}"><span th:text="${session.currentUser.nickName}"></span></a></a>
+                <a href="javascript:;"><a href="/toUserBackstagePage"><img
+                        class="layui-nav-img" th:if="${session.currentUser.imageName!=null}"
+                        th:src="@{'/static/images/userImage/'+${session.currentUser.imageName}}"><span
+                        th:text="${session.currentUser.nickName}"></span></a></a>
                 <dl class="layui-nav-child">
                     <a href="/toUserBackstagePage">个人中心</a>
                     <a href="/user/logout">注销</a>

@@ -86,12 +86,12 @@ public class LinkAdminController {
     public Map<String, Object> delete(String ids) {
         Map<String, Object> resultMap = new HashMap<>(16);
         String[] idsStr = ids.split(",");
-        int deleteKey=0;
+        int deleteKey = 0;
         for (int i = 0; i < idsStr.length; i++) {
-            int id= Integer.parseInt(idsStr[i]);
+            int id = Integer.parseInt(idsStr[i]);
             deleteKey = linkService.deleteById(id);
         }
-        if (deleteKey>0) {
+        if (deleteKey > 0) {
             resultMap.put("success", true);
         }
         return resultMap;

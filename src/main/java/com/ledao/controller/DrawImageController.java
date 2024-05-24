@@ -93,7 +93,7 @@ public class DrawImageController {
         // 设置颜色
         g.setColor(Color.WHITE);
         // 设置线条个数并画线
-        int lineNum=5;
+        int lineNum = 5;
         for (int i = 0; i < lineNum; i++) {
             int x1 = new Random().nextInt(WIDTH);
             int y1 = new Random().nextInt(HEIGHT);
@@ -134,7 +134,7 @@ public class DrawImageController {
             g.rotate(-degree * Math.PI / 180, x, 20);
             x += 30;
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
         return sb.toString();
     }
 }

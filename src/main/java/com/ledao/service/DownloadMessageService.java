@@ -47,5 +47,6 @@ public interface DownloadMessageService {
     Integer deleteById(Integer id);
 
     List<DownloadMessage> findByUserId(int userId);
+
     List<DownloadMessage> findByArticleId(int articleId);
 }

@@ -4,22 +4,17 @@ import com.ledao.entity.Notice;
 import com.ledao.entity.PageBean;
 import com.ledao.service.ArticleService;
 import com.ledao.service.NoticeService;
-import com.ledao.util.StringUtil;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Date; // Added import for Date
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 @RestController
 @RequestMapping("/admin/notice")
 @Controller

@@ -12,7 +12,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.annotation.Resource;
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * 每天23点自动删除已被删除文章中的图片
@@ -53,9 +56,7 @@ public class DeleteInvalidImage {
         //文件夹内的图片名称集合
         List<String> dirImageList = new ArrayList<>();
         //仅为了获取文件名
-        for (String s : file.list()) {
-            dirImageList.add(s);
-        }
+        Collections.addAll(dirImageList, file.list());
         if (dirImageList.size() > articleImageList.size()) {
             for (String s : articleImageList) {
                 Iterator iterator = dirImageList.iterator();

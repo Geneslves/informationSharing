@@ -1,8 +1,6 @@
 package com.ledao.service;
 
 import com.ledao.entity.Article;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;

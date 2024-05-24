@@ -12,7 +12,7 @@
             <div th:include="common/menuLeft::#m"></div>
         </div>
         <div class="layui-col-md9">
-            <form action="/user/save" method="post" enctype="multipart/form-data"
+            <form action="/user/save" enctype="multipart/form-data" method="post"
                   onsubmit="return checkUpdateMessageValue()">
                 <div style="margin-top: 24px">
                     <p class="layui-breadcrumb">
@@ -24,36 +24,36 @@
                     </p>
                     <label class="layui-form-label" style="margin-top: 33px">用户名:</label>
                     <div class="layui-input-block">
-                        <input type="text" id="userName" name="userName"
-                               style="width: 388px;border-color: gray;margin-top: 33px"
-                               lay-verify="title" autocomplete="off" required="required" disabled="disabled"
-                               class="layui-input" th:value="${session.currentUser.userName}">
+                        <input autocomplete="off" class="layui-input" disabled="disabled"
+                               id="userName"
+                               lay-verify="title" name="userName" required="required" style="width: 388px;border-color: gray;margin-top: 33px"
+                               th:value="${session.currentUser.userName}" type="text">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">*密码:</label>
                     <div class="layui-input-block">
-                        <input type="password" id="passwordUpdateMessage" name="password"
-                               style="width: 388px;border-color: gray;margin-top: 12px"
-                               lay-verify="title" autocomplete="off" required="required"
-                               class="layui-input" th:value="${session.currentUser.password}">
+                        <input autocomplete="off" class="layui-input" id="passwordUpdateMessage"
+                               lay-verify="title"
+                               name="password" required="required" style="width: 388px;border-color: gray;margin-top: 12px"
+                               th:value="${session.currentUser.password}" type="password">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">*确认密码:</label>
                     <div class="layui-input-block">
-                        <input type="password" id="password2UpdateMessage"
-                               style="width: 388px;border-color: gray;margin-top: 12px"
-                               lay-verify="title" autocomplete="off" required="required"
-                               class="layui-input" th:value="${session.currentUser.password}">
+                        <input autocomplete="off" class="layui-input"
+                               id="password2UpdateMessage"
+                               lay-verify="title" required="required" style="width: 388px;border-color: gray;margin-top: 12px"
+                               th:value="${session.currentUser.password}" type="password">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">个人邮箱:</label>
                     <div class="layui-input-block">
-                        <input type="text" required="required"
-                               style="width: 388px;border-color: gray;margin-top: 12px" disabled="disabled"
-                               autocomplete="off" class="layui-input" th:value="${session.currentUser.email}">
+                        <input autocomplete="off" class="layui-input"
+                               disabled="disabled" required="required"
+                               style="width: 388px;border-color: gray;margin-top: 12px" th:value="${session.currentUser.email}" type="text">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">*昵称:</label>
                     <div class="layui-input-block">
-                        <input type="text" required="required" name="nickName"
-                               style="width: 388px;border-color: gray;margin-top: 12px"
-                               autocomplete="off" class="layui-input" th:value="${session.currentUser.nickName}">
+                        <input autocomplete="off" class="layui-input" name="nickName"
+                               required="required"
+                               style="width: 388px;border-color: gray;margin-top: 12px" th:value="${session.currentUser.nickName}" type="text">
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">*头像:</label>
@@ -61,15 +61,15 @@
                             <div data-vid="5b53cdb6fc650e53f84fd4c8"
                                  style="width: 100%;height: 36px;margin-top: 12px">
                                 <div style="width: 388px">
-                                    <input type="file" name="userImage" style="margin-top: 8px">
+                                    <input name="userImage" style="margin-top: 8px" type="file">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="id" th:value="${session.currentUser.id}">
+                    <input name="id" th:value="${session.currentUser.id}" type="hidden">
                     <div class="layui-input-block">
-                        <button type="submit" class="layui-btn layui-btn-normal" lay-submit=""
-                                lay-filter="demo1">提交
+                        <button class="layui-btn layui-btn-normal" lay-filter="demo1" lay-submit=""
+                                type="submit">提交
                         </button>
                     </div>
                 </div>

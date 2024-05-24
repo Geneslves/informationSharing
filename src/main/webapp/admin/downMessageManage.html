@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>下载信息管理</title>
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css">
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
+    <link href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css" rel="stylesheet" type="text/css">
+    <link href="/static/jquery-easyui-1.7.0/themes/icon.css" rel="stylesheet" type="text/css">
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
     <script type="text/javascript">
         var url;
 
@@ -47,31 +47,32 @@
             });
         }
 
-        function formatUser(val,row) {
+        function formatUser(val, row) {
             return val.userName;
         }
     </script>
 </head>
 <body style="margin: 1px">
-<table id="dg" title="下载信息管理" class="easyui-datagrid" striped="true"
-       fitColumns="true" pagination="true" rownumbers="true"
-       url="/admin/downloadMessage/list" fit="true" toolbar="#tb">
+<table class="easyui-datagrid" fit="true" fitColumns="true" id="dg"
+       pagination="true" rownumbers="true" striped="true"
+       title="下载信息管理" toolbar="#tb" url="/admin/downloadMessage/list">
     <thead>
-    <th field="cb" checkbox="true" align="center"></th>
-    <th field="id" width="20" align="center" hidden="hidden">编号</th>
-    <th field="user" width="10" align="center" formatter="formatUser">用户名</th>
-    <th field="downloadDate" width="14" align="center">下载时间</th>
-    <th field="message" width="50" align="center">内容</th>
+    <th align="center" checkbox="true" field="cb"></th>
+    <th align="center" field="id" hidden="hidden" width="20">编号</th>
+    <th align="center" field="user" formatter="formatUser" width="10">用户名</th>
+    <th align="center" field="downloadDate" width="14">下载时间</th>
+    <th align="center" field="message" width="50">内容</th>
     </thead>
 </table>
 
 <div id="tb">
     <div>
-        <a href="javascript:deleteDownloadMessage()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+        <a class="easyui-linkbutton" href="javascript:deleteDownloadMessage()" iconCls="icon-remove"
+           plain="true">删除</a>
     </div>
     <div>
         &nbsp;用户名：&nbsp;
-        <select id="s_userId" name="userId" class="easyui-combogrid" style="width:140px" data-options="
+        <select class="easyui-combogrid" data-options="
 			panelWidth: 800,
 			idField: 'id',
 			textField: 'userName',
@@ -85,10 +86,11 @@
 				{field:'email',title:'邮箱',width:100},
 			]],
 			fitColumns: true
-		">
+		" id="s_userId" name="userId" style="width:140px">
         </select>
-        <a href="javascript:searchDownloadMessage()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
-        <a href="javascript:resetValue()" class="easyui-linkbutton" iconCls="icon-reset" plain="true">重置</a>
+        <a class="easyui-linkbutton" href="javascript:searchDownloadMessage()" iconCls="icon-search"
+           plain="true">搜索</a>
+        <a class="easyui-linkbutton" href="javascript:resetValue()" iconCls="icon-reset" plain="true">重置</a>
     </div>
 </div>
 </body>

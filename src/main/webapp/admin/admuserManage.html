@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>管理员管理</title>
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css">
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
+    <link href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css" rel="stylesheet" type="text/css">
+    <link href="/static/jquery-easyui-1.7.0/themes/icon.css" rel="stylesheet" type="text/css">
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
     <script type="text/javascript">
         var url;
 
@@ -220,7 +220,7 @@
                     }, function (result) {
                         if (result.success) {
                             $("#dg").datagrid("reload");
-                            $.messager.alert("系统提示", str+"积分成功!");
+                            $.messager.alert("系统提示", str + "积分成功!");
                             closeAddOrReducePointsDialog();
                         } else {
                             $.messager.alert("系统提示", result.errorInfo);
@@ -242,127 +242,127 @@
     </script>
 </head>
 <body style="margin: 1px">
-<table id="dg" title="管理员管理" class="easyui-datagrid" striped="true"
-       fitColumns="true" pagination="true" rownumbers="true"
-       url="/admin/admuser/list" fit="true" toolbar="#tb">
+<table class="easyui-datagrid" fit="true" fitColumns="true" id="dg"
+       pagination="true" rownumbers="true" striped="true"
+       title="管理员管理" toolbar="#tb" url="/admin/admuser/list">
     <thead>
-    <th field="cb" checkbox="true" align="center"></th>
-    <th field="id" width="10" align="center">id</th>
-    <th field="userName" width="30" align="center">用户名</th>
-    <th field="nickName" width="20" align="center">昵称</th>
-    <th field="email" width="50" align="center">邮箱</th>
-    <th field="points" width="20" align="center">剩余积分</th>
-    <th field="isOff" width="20" align="center" formatter="formatIsOff">是否被封禁</th>
-    <th field="roleName" width="20" align="center" formatter="formatRoleName">用户类型</th>
-    <th field="registerDate" width="30" align="center">注册时间</th>
+    <th align="center" checkbox="true" field="cb"></th>
+    <th align="center" field="id" width="10">id</th>
+    <th align="center" field="userName" width="30">用户名</th>
+    <th align="center" field="nickName" width="20">昵称</th>
+    <th align="center" field="email" width="50">邮箱</th>
+    <th align="center" field="points" width="20">剩余积分</th>
+    <th align="center" field="isOff" formatter="formatIsOff" width="20">是否被封禁</th>
+    <th align="center" field="roleName" formatter="formatRoleName" width="20">用户类型</th>
+    <th align="center" field="registerDate" width="30">注册时间</th>
     </thead>
 </table>
 <div id="tb">
     <div>
-        <a href="javascript:openUserAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
-        <a href="javascript:openUserModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit"
+        <a class="easyui-linkbutton" href="javascript:openUserAddDialog()" iconCls="icon-add" plain="true">添加</a>
+        <a class="easyui-linkbutton" href="javascript:openUserModifyDialog()" iconCls="icon-edit"
            plain="true">修改</a>
-        <a href="javascript:deleteUser()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
-        <a href="javascript:modifyOff()" class="easyui-linkbutton" iconCls="icon-modifyOff" plain="true">封禁或解封</a>
-        <a href="javascript:modifyRoleType()" class="easyui-linkbutton" iconCls="icon-modifyRoleType" plain="true">切换用户类型</a>
-        <a href="javascript:openAddOrReducePointsDialog(1)" class="easyui-linkbutton" iconCls="icon-addPoints"
+        <a class="easyui-linkbutton" href="javascript:deleteUser()" iconCls="icon-remove" plain="true">删除</a>
+        <a class="easyui-linkbutton" href="javascript:modifyOff()" iconCls="icon-modifyOff" plain="true">封禁或解封</a>
+        <a class="easyui-linkbutton" href="javascript:modifyRoleType()" iconCls="icon-modifyRoleType" plain="true">切换用户类型</a>
+        <a class="easyui-linkbutton" href="javascript:openAddOrReducePointsDialog(1)" iconCls="icon-addPoints"
            plain="true">加积分</a>
-        <a href="javascript:openAddOrReducePointsDialog(2)" class="easyui-linkbutton" iconCls="icon-reducePoints"
+        <a class="easyui-linkbutton" href="javascript:openAddOrReducePointsDialog(2)" iconCls="icon-reducePoints"
            plain="true">减积分</a>
     </div>
     <div>
-        &nbsp;用户名：&nbsp;<input type="text" id="s_userName" size="20" onkeydown="if(event.keyCode==13) searchUser()"/>
-        &nbsp;邮箱：&nbsp;<input type="text" id="s_email" size="20" onkeydown="if(event.keyCode==13) searchUser()"/>
-<!--        &nbsp;用户类型：&nbsp;-->
-<!--        <select id="s_roleName" class="easyui-combobox" name="type" style="width:130px;" panelHeight="auto">-->
-<!--            <option value="">请选择...</option>-->
-<!--            <option value="普通用户">普通用户</option>-->
-<!--            <option value="VIP用户">VIP用户</option>-->
+        &nbsp;用户名：&nbsp;<input id="s_userName" onkeydown="if(event.keyCode==13) searchUser()" size="20" type="text"/>
+        &nbsp;邮箱：&nbsp;<input id="s_email" onkeydown="if(event.keyCode==13) searchUser()" size="20" type="text"/>
+        <!--        &nbsp;用户类型：&nbsp;-->
+        <!--        <select id="s_roleName" class="easyui-combobox" name="type" style="width:130px;" panelHeight="auto">-->
+        <!--            <option value="">请选择...</option>-->
+        <!--            <option value="普通用户">普通用户</option>-->
+        <!--            <option value="VIP用户">VIP用户</option>-->
         </select>
         &nbsp;是否被封禁：&nbsp;
-        <select id="s_isOff" class="easyui-combobox" name="type" style="width:130px;" panelHeight="auto">
+        <select class="easyui-combobox" id="s_isOff" name="type" panelHeight="auto" style="width:130px;">
             <option value="">请选择...</option>
             <option value="1">是</option>
             <option value="0">否</option>
         </select>
-        <a href="javascript:searchUser()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
-        <a href="javascript:resetValue()" class="easyui-linkbutton" iconCls="icon-reset" plain="true">重置</a>
+        <a class="easyui-linkbutton" href="javascript:searchUser()" iconCls="icon-search" plain="true">搜索</a>
+        <a class="easyui-linkbutton" href="javascript:resetValue()" iconCls="icon-reset" plain="true">重置</a>
     </div>
 </div>
-<div id="dlg" class="easyui-dialog" style="width: 433px;height: 325px;padding: 10px 20px"
-     closed="true" buttons="#dlg-buttons" data-options="onClose:function(){resetValue()}">
+<div buttons="#dlg-buttons" class="easyui-dialog" closed="true"
+     data-options="onClose:function(){resetValue()}" id="dlg" style="width: 433px;height: 325px;padding: 10px 20px">
     <form id="fm" method="post">
         <table cellspacing="8px">
             <tr>
                 <td>用户名：</td>
                 <td>
-                    <input type="text" id="userName" name="userName" class="easyui-textbox" required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-textbox" id="userName" name="userName" required="true" style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>密码：</td>
                 <td>
-                    <input type="text" id="password" name="password" class="easyui-passwordbox" showEye="true"
-                           required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-passwordbox" id="password" name="password" required="true" showEye="true"
+                           style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>确认密码：</td>
                 <td>
-                    <input type="text" id="password2" name="password2" class="easyui-passwordbox" showEye="true"
-                           required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-passwordbox" id="password2" name="password2" required="true" showEye="true"
+                           style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>昵称：</td>
                 <td>
-                    <input type="text" id="nickName" name="nickName" class="easyui-textbox" required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-textbox" id="nickName" name="nickName" required="true" style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>邮箱：</td>
                 <td>
-                    <input type="text" id="email" name="email" class="easyui-textbox" required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-textbox" id="email" name="email" required="true" style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
         </table>
     </form>
 </div>
-<div id="dlg2" class="easyui-dialog" style="width: 433px;height: 200px;padding: 10px 20px"
-     closed="true" buttons="#dlg2-buttons" data-options="onClose:function(){resetValue()}">
+<div buttons="#dlg2-buttons" class="easyui-dialog" closed="true"
+     data-options="onClose:function(){resetValue()}" id="dlg2" style="width: 433px;height: 200px;padding: 10px 20px">
     <form id="fm" method="post">
         <table cellspacing="8px">
             <tr>
                 <td>用户名：</td>
                 <td>
-                    <input type="text" id="userNameAddOrReducePoints" class="easyui-textbox" required="true"
-                           style="width: 250px"/>
-                    <input type="hidden" id="idAddOrReducePoints" style="width: 250px"/>
-                    <input type="hidden" id="status" style="width: 250px"/>
+                    <input class="easyui-textbox" id="userNameAddOrReducePoints" required="true" style="width: 250px"
+                           type="text"/>
+                    <input id="idAddOrReducePoints" style="width: 250px" type="hidden"/>
+                    <input id="status" style="width: 250px" type="hidden"/>
                 </td>
             </tr>
             <tr>
                 <td>积分数：</td>
                 <td>
-                    <input type="text" id="points" class="easyui-numberbox" showEye="true" required="true"
-                           style="width: 250px"/>
+                    <input class="easyui-numberbox" id="points" required="true" showEye="true" style="width: 250px"
+                           type="text"/>
                 </td>
             </tr>
         </table>
     </form>
 </div>
 <div id="dlg-buttons">
-    <a href="javascript:saveUser()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-    <a href="javascript:closeUserDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+    <a class="easyui-linkbutton" href="javascript:saveUser()" iconCls="icon-ok">保存</a>
+    <a class="easyui-linkbutton" href="javascript:closeUserDialog()" iconCls="icon-cancel">关闭</a>
 </div>
 <div id="dlg2-buttons">
-    <a href="javascript:submitMyData()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-    <a href="javascript:closeAddOrReducePointsDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+    <a class="easyui-linkbutton" href="javascript:submitMyData()" iconCls="icon-ok">保存</a>
+    <a class="easyui-linkbutton" href="javascript:closeAddOrReducePointsDialog()" iconCls="icon-cancel">关闭</a>
 </div>
 </body>
 </html>

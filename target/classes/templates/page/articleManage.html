@@ -12,7 +12,7 @@
             <div th:include="common/menuLeft::#m"></div>
         </div>
         <div class="layui-col-md9">
-            <form action="/toArticleManagePage" method="post" class="layui-form">
+            <form action="/toArticleManagePage" class="layui-form" method="post">
                 <div style="margin-top: 24px">
                     <p class="layui-breadcrumb">
                         <i class="layui-icon layui-icon-location">当前位置：</i>
@@ -24,14 +24,14 @@
                         <div class="layui-inline">
                             <label class="layui-form-label" style="margin-top: 33px">资源名称:</label>
                             <div class="layui-input-block">
-                                <input type="text" id="nameManage" name="name" th:value="${articleSearch.name}"
-                                       style="width: 200px;margin-top: 33px"
-                                       lay-verify="title" autocomplete="off" placeholder="请输入资源名称"
-                                       class="layui-input">
+                                <input autocomplete="off" class="layui-input" id="nameManage" lay-verify="title"
+                                       name="name"
+                                       placeholder="请输入资源名称" style="width: 200px;margin-top: 33px" th:value="${articleSearch.name}"
+                                       type="text">
                             </div>
                             <label class="layui-form-label" style="margin-top: 12px">审核状态:</label>
                             <div class="layui-input-inline" style="width: 200px;margin-top: 12px">
-                                <select id="state" name="state" th:value="${articleSearch.state}" lay-filter="aihao">
+                                <select id="state" lay-filter="aihao" name="state" th:value="${articleSearch.state}">
                                     <option value="">请选择审核状态...</option>
                                     <option value="1">未审核</option>
                                     <option value="2">审核通过</option>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="layui-input-inline" style="width: 100px;">
                                 <a href="javascript:searchArticle()">
-                                    <button type="button" style="margin-top: 12px" class="layui-btn layui-btn-normal"><i
+                                    <button class="layui-btn layui-btn-normal" style="margin-top: 12px" type="button"><i
                                             class="layui-icon layui-icon-search"></i>查询
                                     </button>
                                 </a>
@@ -49,8 +49,10 @@
                     </div>
                 </div>
                 <div>
-                    ( <span style="color: red"> 1，鼠标移动到红色“审核未通过”字体上，能显示未通过原因；2，审核未通过的，请重新编辑帖子，然后提交审核；</span> )<a
-                        href="/toWriteArticlePage" class="layui-btn layui-btn-sm layui-btn-warm"><i
+                    ( <span
+                        style="color: red"> 1，鼠标移动到红色“审核未通过”字体上，能显示未通过原因；2，审核未通过的，请重新编辑帖子，然后提交审核；</span>
+                    )<a
+                        class="layui-btn layui-btn-sm layui-btn-warm" href="/toWriteArticlePage"><i
                         class="layui-icon layui-icon-release"></i>发布资源</a>
                     <table class="layui-table">
                         <colgroup>
@@ -73,7 +75,8 @@
                         </thead>
                         <tbody>
                         <tr th:each="article:${articleList}">
-                            <td style="text-align: center;color: #1e9fff" th:text="${#strings.abbreviate(article.name,16)}"
+                            <td style="text-align: center;color: #1e9fff"
+                                th:text="${#strings.abbreviate(article.name,16)}"
                                 th:title="${article.name}"></td>
                             <td style="text-align: center" th:text="${article.articleType.name}"></td>
                             <td style="text-align: center" th:text="${article.points}"></td>
@@ -85,10 +88,10 @@
                                 th:title="${'审核未通过原因:'+article.reason}">审核未通过
                             </td>
                             <td style="text-align: center">
-                                <a th:href="@{'/toUpdateArticlePage?id='+${article.id}}" class="layui-btn layui-btn-sm"><i
+                                <a class="layui-btn layui-btn-sm" th:href="@{'/toUpdateArticlePage?id='+${article.id}}"><i
                                         class="layui-icon layui-icon-edit"></i>编辑</a>
-                                <a th:href="'javascript:deleteArticle('+${article.id}+')'"
-                                   class="layui-btn layui-btn-danger layui-btn-sm"><i
+                                <a class="layui-btn layui-btn-danger layui-btn-sm"
+                                   th:href="'javascript:deleteArticle('+${article.id}+')'"><i
                                         class="layui-icon layui-icon-delete"></i>删除</a>
                             </td>
                         </tr>

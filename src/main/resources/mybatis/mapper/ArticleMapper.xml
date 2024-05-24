@@ -79,8 +79,10 @@
     </select>
 
     <insert id="add" parameterType="Article">
-        insert into t_article(name, publishDate, userId, articleTypeId, points,summary, content, downloadLink, password, isHot,state, isUseful, click)
-        values (#{name},now(),#{userId},#{articleTypeId},#{points},#{summary},#{content},#{downloadLink},#{password},0,1,1,0);
+        insert into t_article(name, publishDate, userId, articleTypeId, points,summary, content, downloadLink, password,
+        isHot,state, isUseful, click)
+        values
+        (#{name},now(),#{userId},#{articleTypeId},#{points},#{summary},#{content},#{downloadLink},#{password},0,1,1,0);
     </insert>
 
     <update id="update">
@@ -144,10 +146,10 @@
         </set>
         where id = #{userId}
     </update>
-<!--    <select id="getArticleById" parameterType="int" resultType="com.ledao.entity.Article">-->
-<!--        SELECT * FROM t_article WHERE id = #{id}-->
-<!--    </select>-->
-<!--    <select id="getAllArticles" resultType="com.ledao.entity.Article">-->
-<!--        SELECT * FROM t_article-->
-<!--    </select>-->
+    <!--    <select id="getArticleById" parameterType="int" resultType="com.ledao.entity.Article">-->
+    <!--        SELECT * FROM t_article WHERE id = #{id}-->
+    <!--    </select>-->
+    <!--    <select id="getAllArticles" resultType="com.ledao.entity.Article">-->
+    <!--        SELECT * FROM t_article-->
+    <!--    </select>-->
 </mapper>

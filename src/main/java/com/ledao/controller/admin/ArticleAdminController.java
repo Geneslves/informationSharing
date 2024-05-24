@@ -1,9 +1,7 @@
 package com.ledao.controller.admin;
 
 import com.ledao.entity.Article;
-import com.ledao.entity.ArticleType;
 import com.ledao.entity.PageBean;
-import com.ledao.entity.User;
 import com.ledao.lucene.ArticleIndex;
 import com.ledao.service.ArticleService;
 import com.ledao.service.ArticleTypeService;
@@ -14,7 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.*;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 后台资源Controller层
@@ -36,7 +37,7 @@ public class ArticleAdminController {
     @Resource
     private UserService userService;
 
-    private ArticleIndex articleIndex = new ArticleIndex();
+    private final ArticleIndex articleIndex = new ArticleIndex();
 
     /**
      * 分页分条件查询文章

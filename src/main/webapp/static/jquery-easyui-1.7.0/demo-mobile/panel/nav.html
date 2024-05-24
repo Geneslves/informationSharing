@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Navigation Panel - jQuery EasyUI Mobile Demo</title>
-	<link rel="stylesheet" type="text/css" href="../../themes/metro/easyui.css">
-    <link rel="stylesheet" type="text/css" href="../../themes/mobile.css">
-    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
-	<script type="text/javascript" src="../../jquery.min.js"></script>
-    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="../../jquery.easyui.mobile.js"></script>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>Navigation Panel - jQuery EasyUI Mobile Demo</title>
+    <link href="../../themes/metro/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../../themes/mobile.css" rel="stylesheet" type="text/css">
+    <link href="../../themes/icon.css" rel="stylesheet" type="text/css">
+    <script src="../../jquery.min.js" type="text/javascript"></script>
+    <script src="../../jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../../jquery.easyui.mobile.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="easyui-navpanel">
-        <header>
-            <div class="m-toolbar">
-                <div class="m-title">Navigation</div>
-            </div>
-        </header>
-        <div style="margin:50px 0 0;text-align:center">
-            <a href="javascript:void(0)" class="easyui-linkbutton" style="width:100px;height:30px" onclick="$.mobile.go('#p2')">Goto Panel2</a>
+<div class="easyui-navpanel">
+    <header>
+        <div class="m-toolbar">
+            <div class="m-title">Navigation</div>
         </div>
-	</div>
-    <div id="p2" class="easyui-navpanel">
-        <header>
-            <div class="m-toolbar">
-                <div class="m-title">Panel2</div>
-                <div class="m-left">
-                    <a href="#" class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true">Back</a>
-                </div>
-            </div>
-        </header>
-        <div style="margin:50px 0 0;text-align:center">
-            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="$.mobile.back()">Go Back</a>
-        </div>
+    </header>
+    <div style="margin:50px 0 0;text-align:center">
+        <a class="easyui-linkbutton" href="javascript:void(0)" onclick="$.mobile.go('#p2')"
+           style="width:100px;height:30px">Goto Panel2</a>
     </div>
+</div>
+<div class="easyui-navpanel" id="p2">
+    <header>
+        <div class="m-toolbar">
+            <div class="m-title">Panel2</div>
+            <div class="m-left">
+                <a class="easyui-linkbutton m-back" data-options="plain:true,outline:true,back:true" href="#">Back</a>
+            </div>
+        </div>
+    </header>
+    <div style="margin:50px 0 0;text-align:center">
+        <a class="easyui-linkbutton" href="javascript:void(0)" onclick="$.mobile.back()">Go Back</a>
+    </div>
+</div>
 </body>
 </html>

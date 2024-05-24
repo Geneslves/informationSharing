@@ -22,7 +22,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -55,7 +54,21 @@ public class ArticleController {
     @Resource
     private CommentService commentService;
 
-    private ArticleIndex articleIndex = new ArticleIndex();
+    private final ArticleIndex articleIndex = new ArticleIndex();
+
+    /**
+     * 获得纯文本
+     *
+     * @param strHtml
+     * @return
+     */
+    public static String StripHT(String strHtml) {
+        //剔出<html>的标签
+        String txtcontent = strHtml.replaceAll("</?[^>]+>", "");
+        //去除字符串中的空格,回车,换行符,制表符
+        txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");
+        return txtcontent;
+    }
 
     /**
      * 添加或修改资源
@@ -108,7 +121,7 @@ public class ArticleController {
             if (article.getIsUseful() == 1) {
                 ModelAndView mav = new ModelAndView("redirect:/toArticleManagePage");
                 return mav;
-            } else if (article.getIsUseful()==0){
+            } else if (article.getIsUseful() == 0) {
                 ModelAndView mav = new ModelAndView("redirect:/toArticleFailureManagePage");
                 return mav;
             }
@@ -148,11 +161,10 @@ public class ArticleController {
         //拼接新的文件名
         String newFileName = DateUtil.getCurrentDateStr2() + ".jpg";
         FileUtils.copyInputStreamToFile(file.getInputStream(), new File(articleImageFilePath + newFileName));
-        StringBuffer sb = new StringBuffer();
-        sb.append("<script type=\"text/javascript\">");
-        sb.append("window.parent.CKEDITOR.tools.callFunction(" + CKEditorFuncNum + ",'" + "/static/images/articleImage/" + newFileName + "','')");
-        sb.append("</script>");
-        return sb.toString();
+        String sb = "<script type=\"text/javascript\">" +
+                "window.parent.CKEDITOR.tools.callFunction(" + CKEditorFuncNum + ",'" + "/static/images/articleImage/" + newFileName + "','')" +
+                "</script>";
+        return sb;
     }
 
     /**
@@ -262,19 +274,5 @@ public class ArticleController {
             }
         }
         return pageCode.toString();
-    }
-
-    /**
-     * 获得纯文本
-     *
-     * @param strHtml
-     * @return
-     */
-    public static String StripHT(String strHtml) {
-        //剔出<html>的标签
-        String txtcontent = strHtml.replaceAll("</?[^>]+>", "");
-        //去除字符串中的空格,回车,换行符,制表符
-        txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");
-        return txtcontent;
     }
 }

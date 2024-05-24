@@ -2,9 +2,7 @@ package com.ledao.service.impl;
 
 import com.ledao.entity.User;
 import com.ledao.mapper.AdmUserMapper;
-import com.ledao.mapper.UserMapper;
 import com.ledao.service.AdmUserService;
-import com.ledao.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

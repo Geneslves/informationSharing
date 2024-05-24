@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <title>后台登录-电子资源分享平台</title>
-    <meta name="author" content="DeathGhost"/>
-    <link rel="shortcut icon" href="static/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="static/css/styleLoginPage.css"/>
+    <meta content="DeathGhost" name="author"/>
+    <link href="static/images/favicon.ico" rel="shortcut icon">
+    <link href="static/css/styleLoginPage.css" rel="stylesheet" type="text/css"/>
     <style>
         body {
             height: 100%;
@@ -57,7 +57,7 @@
             });
         });
 
-        function submitData(){
+        function submitData() {
             var username = $("#username").val();
             var password = $("#password").val();
             var imageCode = $("#imageCode").val();
@@ -104,26 +104,28 @@
     </script>
 </head>
 <body>
-<form id="fm" action="/login" method="post">
+<form action="/login" id="fm" method="post">
     <dl class="admin_login">
         <dt>
             <strong>后台登录</strong>
             <em>Background login</em>
         </dt>
         <dd class="user_icon">
-            <input type="text" id="username" name="username" placeholder="账号" class="login_txtbx"/>
+            <input class="login_txtbx" id="username" name="username" placeholder="账号" type="text"/>
         </dd>
         <dd class="pwd_icon">
-            <input type="password" id="password" name="password" placeholder="密码" class="login_txtbx"/>
+            <input class="login_txtbx" id="password" name="password" placeholder="密码" type="password"/>
         </dd>
         <dd class="val_icon">
             <div class="checkcode">
-                <input type="text" id="imageCode" name="imageCode" placeholder="验证码" maxlength="4" class="login_txtbx" onblur="checkCode(this.value)">
-                <img id="imgObj" title="看不清，换一张" src="/drawImage" onclick="changeImg()"/>
+                <input class="login_txtbx" id="imageCode" maxlength="4" name="imageCode" onblur="checkCode(this.value)"
+                       placeholder="验证码" type="text">
+                <img id="imgObj" onclick="changeImg()" src="/drawImage" title="看不清，换一张"/>
             </div>
         </dd>
         <dd>
-            <input type="button" id="loginBtn" disabled="disabled" value="立即登陆" class="submit_btn" onclick="submitData()"/>
+            <input class="submit_btn" disabled="disabled" id="loginBtn" onclick="submitData()" type="button"
+                   value="立即登陆"/>
         </dd>
         <dd>
             <span id="checkCodeIsSuccess" style="color: white"></span>

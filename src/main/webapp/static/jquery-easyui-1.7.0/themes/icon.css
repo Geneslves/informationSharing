@@ -221,30 +221,30 @@
 }
 
 .icon-modifyOff {
-	background: url('usericons/modifyOff.gif') no-repeat center center;
+    background: url('usericons/modifyOff.gif') no-repeat center center;
 }
 
-.icon-modifyRoleType{
-	background: url('usericons/modifyRoleType.gif') no-repeat center center;
+.icon-modifyRoleType {
+    background: url('usericons/modifyRoleType.gif') no-repeat center center;
 }
 
-.icon-addPoints{
+.icon-addPoints {
     background: url('usericons/addPoints.gif') no-repeat center center;
 }
 
-.icon-reducePoints{
+.icon-reducePoints {
     background: url('usericons/reducePoints.gif') no-repeat center center;
 }
 
-.icon-sendMessage{
+.icon-sendMessage {
     background: url('usericons/sendMessage.gif') no-repeat center center;
 }
 
-.icon-isHot{
+.icon-isHot {
     background: url('usericons/isHot.gif') no-repeat center center;
 }
 
-.icon-isUseful{
+.icon-isUseful {
     background: url('usericons/isUseful.gif') no-repeat center center;
 }
 

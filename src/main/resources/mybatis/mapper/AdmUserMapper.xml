@@ -71,7 +71,7 @@
 
     <insert id="add" parameterType="User">
         insert into t_user (userName, password, nickName, email, imageName, points, isVip, isOff, roleName,
-                            registerDate)
+        registerDate)
         values (#{userName}, #{password}, #{nickName}, #{email}, #{imageName}, 1000, 1, 0, "管理员", now());
     </insert>
 

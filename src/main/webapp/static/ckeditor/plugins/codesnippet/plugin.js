@@ -156,34 +156,34 @@
      *        // based on customEngine in order to replace the one that comes
      *        // with the Code Snippet plugin.
      *        CKEDITOR.plugins.add( 'myCustomHighlighter', {
-     *			afterInit: function( editor ) {
-     *				// Create a new instance of the highlighter.
-     *				var myHighlighter = new CKEDITOR.plugins.codesnippet.highlighter( {
-     *					init: function( ready ) {
-     *						// Asynchronous code to load resources and libraries for customEngine.
-     *						customEngine.loadResources( function() {
-     *							// Let the editor know that everything is ready.
-     *							ready();
-     *						} );
-     *					},
-     *					highlighter: function( code, language, callback ) {
-     *						// Let the customEngine highlight the code.
-     *						customEngine.highlight( code, language, function() {
-     *							callback( highlightedCode );
-     *						} );
-     *					}
-     *				} );
+     *            afterInit: function( editor ) {
+     *                // Create a new instance of the highlighter.
+     *                var myHighlighter = new CKEDITOR.plugins.codesnippet.highlighter( {
+     *                    init: function( ready ) {
+     *                        // Asynchronous code to load resources and libraries for customEngine.
+     *                        customEngine.loadResources( function() {
+     *                            // Let the editor know that everything is ready.
+     *                            ready();
+     *                        } );
+     *                    },
+     *                    highlighter: function( code, language, callback ) {
+     *                        // Let the customEngine highlight the code.
+     *                        customEngine.highlight( code, language, function() {
+     *                            callback( highlightedCode );
+     *                        } );
+     *                    }
+     *                } );
      *
-     *				// Check how it performs.
-     *				myHighlighter.highlight( 'foo()', 'javascript', function( highlightedCode ) {
-     *					console.log( highlightedCode ); // -> <span class="pretty">foo()</span>
-     *				} );
+     *                // Check how it performs.
+     *                myHighlighter.highlight( 'foo()', 'javascript', function( highlightedCode ) {
+     *                    console.log( highlightedCode ); // -> <span class="pretty">foo()</span>
+     *                } );
      *
-     *				// From now on, myHighlighter will be used as a Code Snippet
-     *				// highlighter, overwriting the default engine.
-     *				editor.plugins.codesnippet.setHighlighter( myHighlighter );
-     *			}
-     *		} );
+     *                // From now on, myHighlighter will be used as a Code Snippet
+     *                // highlighter, overwriting the default engine.
+     *                editor.plugins.codesnippet.setHighlighter( myHighlighter );
+     *            }
+     *        } );
      *
      * @since 4.4.0
      * @class CKEDITOR.plugins.codesnippet.highlighter
@@ -244,11 +244,11 @@
          * overwrite** the languages listed in `languages`.
          *
          *        languages: {
-         *			coffeescript: 'CoffeeScript',
-         *			cpp: 'C++',
-         *			cs: 'C#',
-         *			css: 'CSS'
-         *		}
+         *            coffeescript: 'CoffeeScript',
+         *            cpp: 'C++',
+         *            cs: 'C#',
+         *            css: 'CSS'
+         *        }
          *
          * More information on how to change the list of languages is available
          * in the {@glink features/codesnippet#changing-supported-languages Code Snippet documentation}.
@@ -342,13 +342,13 @@
                 // Remove old .language-* class.
                 if (oldData && newData.lang != oldData.lang)
                     this.parts.code.removeClass('language-' + oldData.lang);
-                	this.parts.pre.removeClass('language-' + oldData.lang);
+                this.parts.pre.removeClass('language-' + oldData.lang);
 
                 // Lang needs to be specified in order to apply formatting.
                 if (newData.lang) {
                     // Apply new .language-* class.
                     this.parts.code.addClass('language-' + newData.lang);
-					this.parts.pre.addClass( 'language-' + newData.lang );
+                    this.parts.pre.addClass('language-' + newData.lang);
                     this.highlight();
                 }
 
@@ -461,9 +461,9 @@ CKEDITOR.config.codeSnippet_codeClass = 'hljs';
  *
  *        // Restricts languages to JavaScript and PHP.
  *        config.codeSnippet_languages = {
- *			javascript: 'JavaScript',
- *			php: 'PHP'
- *		};
+ *            javascript: 'JavaScript',
+ *            php: 'PHP'
+ *        };
  *
  * @since 4.4.0
  * @cfg {Object} [codeSnippet_languages=null]

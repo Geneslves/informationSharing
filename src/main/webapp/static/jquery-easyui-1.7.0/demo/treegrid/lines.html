@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>TreeGrid Lines - jQuery EasyUI Demo</title>
-	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
-	<link rel="stylesheet" type="text/css" href="../demo.css">
-	<script type="text/javascript" src="../../jquery.min.js"></script>
-	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+    <meta charset="UTF-8">
+    <title>TreeGrid Lines - jQuery EasyUI Demo</title>
+    <link href="../../themes/default/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../../themes/icon.css" rel="stylesheet" type="text/css">
+    <link href="../demo.css" rel="stylesheet" type="text/css">
+    <script src="../../jquery.min.js" type="text/javascript"></script>
+    <script src="../../jquery.easyui.min.js" type="text/javascript"></script>
 </head>
 <body>
-	<h2>TreeGrid Lines</h2>
-	<p>This example shows how to show treegrid lines.</p>
-	<div style="margin:20px 0;"></div>
-	<table title="TreeGrid Lines" class="easyui-treegrid" style="width:700px;height:250px"
-			data-options="
+<h2>TreeGrid Lines</h2>
+<p>This example shows how to show treegrid lines.</p>
+<div style="margin:20px 0;"></div>
+<table class="easyui-treegrid" data-options="
 				url: 'treegrid_data1.json',
 				method: 'get',
 				lines: true,
 				rownumbers: true,
 				idField: 'id',
 				treeField: 'name'
-			">
-		<thead>
-			<tr>
-				<th data-options="field:'name'" width="220">Name</th>
-				<th data-options="field:'size'" width="100" align="right">Size</th>
-				<th data-options="field:'date'" width="150">Modified Date</th>
-			</tr>
-		</thead>
-	</table>
+			" style="width:700px;height:250px"
+       title="TreeGrid Lines">
+    <thead>
+    <tr>
+        <th data-options="field:'name'" width="220">Name</th>
+        <th align="right" data-options="field:'size'" width="100">Size</th>
+        <th data-options="field:'date'" width="150">Modified Date</th>
+    </tr>
+    </thead>
+</table>
 
 </body>
 </html>

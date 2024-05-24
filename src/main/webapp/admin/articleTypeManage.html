@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>资源类别管理</title>
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css">
-    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
+    <link href="/static/jquery-easyui-1.7.0/themes/metro-blue/easyui.css" rel="stylesheet" type="text/css">
+    <link href="/static/jquery-easyui-1.7.0/themes/icon.css" rel="stylesheet" type="text/css">
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
     <script type="text/javascript">
         var url;
 
         function searchArticleType() {
-            $("#dg").datagrid('load',{
+            $("#dg").datagrid('load', {
                 "name": $("#s_name").val()
             });
         }
@@ -103,7 +103,7 @@
 
         });
 
-        function formatNum(val,row) {
+        function formatNum(val, row) {
             if (val == 0) {
                 return "<span style='color: red'>" + val + "</span>";
             } else {
@@ -113,53 +113,55 @@
     </script>
 </head>
 <body style="margin: 1px">
-<table id="dg" title="资源类别管理" class="easyui-datagrid"  striped="true"
-       fitColumns="true" pagination="true" rownumbers="true"
-       url="/admin/articleType/list" fit="true" toolbar="#tb">
+<table class="easyui-datagrid" fit="true" fitColumns="true" id="dg"
+       pagination="true" rownumbers="true" striped="true"
+       title="资源类别管理" toolbar="#tb" url="/admin/articleType/list">
     <thead>
-    <th field="cb" checkbox="true" align="center"></th>
-    <th field="id" width="20" align="center" hidden="hidden">编号</th>
-    <th field="name" width="50" align="center">名称</th>
-    <th field="remark" width="50" align="center">描述</th>
-    <th field="sortNum" width="50" align="center">排列顺序</th>
-    <th field="num" width="50" align="center" formatter="formatNum">博客数量</th>
+    <th align="center" checkbox="true" field="cb"></th>
+    <th align="center" field="id" hidden="hidden" width="20">编号</th>
+    <th align="center" field="name" width="50">名称</th>
+    <th align="center" field="remark" width="50">描述</th>
+    <th align="center" field="sortNum" width="50">排列顺序</th>
+    <th align="center" field="num" formatter="formatNum" width="50">博客数量</th>
     </thead>
 </table>
 
 <div id="tb">
     <div>
-        <a href="javascript:openArticleTypeAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
-        <a href="javascript:openArticleTypeModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit"
+        <a class="easyui-linkbutton" href="javascript:openArticleTypeAddDialog()" iconCls="icon-add"
+           plain="true">添加</a>
+        <a class="easyui-linkbutton" href="javascript:openArticleTypeModifyDialog()" iconCls="icon-edit"
            plain="true">修改</a>
-        <a href="javascript:deleteArticleType()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+        <a class="easyui-linkbutton" href="javascript:deleteArticleType()" iconCls="icon-remove" plain="true">删除</a>
     </div>
     <div>
-        &nbsp;资源类别名称：&nbsp;<input type="text" id="s_name" size="20" onkeydown="if(event.keyCode==13) searchArticleType()"/>
-        <a href="javascript:searchArticleType()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
+        &nbsp;资源类别名称：&nbsp;<input id="s_name" onkeydown="if(event.keyCode==13) searchArticleType()" size="20"
+                                        type="text"/>
+        <a class="easyui-linkbutton" href="javascript:searchArticleType()" iconCls="icon-search" plain="true">搜索</a>
     </div>
 </div>
 
 
-<div id="dlg" class="easyui-dialog" style="width: 400px;height: 211px;padding: 10px 20px"
-     closed="true" buttons="#dlg-buttons" data-options="onClose:function(){resetValue()}">
+<div buttons="#dlg-buttons" class="easyui-dialog" closed="true"
+     data-options="onClose:function(){resetValue()}" id="dlg" style="width: 400px;height: 211px;padding: 10px 20px">
     <form id="fm" method="post">
         <table cellspacing="8px">
             <tr>
                 <td valign="top">名称:</td>
                 <td>
-                    <input id="name" name="name" class="easyui-validatebox" required="true" style="width: 250px">
+                    <input class="easyui-validatebox" id="name" name="name" required="true" style="width: 250px">
                 </td>
             </tr>
             <tr>
                 <td valign="top">描述:</td>
                 <td>
-                    <input id="remark" name="remark" class="easyui-validatebox" required="true" style="width: 250px">
+                    <input class="easyui-validatebox" id="remark" name="remark" required="true" style="width: 250px">
                 </td>
             </tr>
             <tr>
                 <td valign="top">排列顺序:</td>
                 <td>
-                    <input id="sortNum" name="sortNum" class="easyui-validatebox" required="true" style="width: 250px">
+                    <input class="easyui-validatebox" id="sortNum" name="sortNum" required="true" style="width: 250px">
                 </td>
             </tr>
         </table>
@@ -167,8 +169,8 @@
 </div>
 
 <div id="dlg-buttons">
-    <a href="javascript:saveArticleType()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-    <a href="javascript:closeArticleTypeDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+    <a class="easyui-linkbutton" href="javascript:saveArticleType()" iconCls="icon-ok">保存</a>
+    <a class="easyui-linkbutton" href="javascript:closeArticleTypeDialog()" iconCls="icon-cancel">关闭</a>
 </div>
 </body>
 </html>
