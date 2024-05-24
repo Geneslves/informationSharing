@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="isVip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/AdmUserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/AdmUserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/articleResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/articleResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/articleResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/articleResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716534121848</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="isVip">
+      <option name="closed" value="true" />
+      <created>1716545422312</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716545422312</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +312,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+    <MESSAGE value="isVip" />
+    <option name="LAST_COMMIT_MESSAGE" value="isVip" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
