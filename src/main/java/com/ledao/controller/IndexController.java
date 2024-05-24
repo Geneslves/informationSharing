@@ -633,11 +633,11 @@ public class IndexController implements CommandLineRunner, ServletContextListene
      *
      * @return
      */
-    @RequestMapping("/toDownloadCodePage")
-    public ModelAndView toDownloadCodePage() {
+    @RequestMapping("/toDescriptionPage")
+    public ModelAndView toDescriptionPage() {
         ModelAndView mav = new ModelAndView();
         mav.addObject("title", "系统介绍");
-        mav.addObject("mainPage", "page/downloadCode");
+        mav.addObject("mainPage", "page/description");
         mav.addObject("mainPageKey", "#b");
         mav.setViewName("index");
         return mav;

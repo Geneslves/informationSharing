@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="初始化">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_informationshare.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadCode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -137,6 +138,12 @@
       <workItem from="1716124664651" duration="1289000" />
       <workItem from="1716181802904" duration="10266000" />
       <workItem from="1716192086875" duration="43217000" />
+      <workItem from="1716368447570" duration="375000" />
+      <workItem from="1716368834724" duration="1219000" />
+      <workItem from="1716370624114" duration="116000" />
+      <workItem from="1716370855415" duration="26000" />
+      <workItem from="1716529738073" duration="31000" />
+      <workItem from="1716529781497" duration="2726000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -242,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716355933292</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1716364157497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716364157497</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,5 +284,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="初始化" />
     <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
