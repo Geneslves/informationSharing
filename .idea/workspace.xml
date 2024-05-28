@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="头像">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/articleImage/20240528214350.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/commentManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/commentManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/commentManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/commentManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/writeArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/writeArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/writeArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/writeArticle.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +159,7 @@
       <workItem from="1716529781497" duration="3272000" />
       <workItem from="1716785827258" duration="2325000" />
       <workItem from="1716810195702" duration="675000" />
+      <workItem from="1716901450030" duration="2782000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />

@@ -12,7 +12,7 @@
             <div th:include="common/menuLeft::#m"></div>
         </div>
         <div class="layui-col-md9">
-            <form action="/article/save" class="layui-form" method="post" onsubmit="return checkWriteArticleValue()">
+            <form action="/article/save" class="layui-form" method="post" enctype="multipart/form-data" onsubmit="return checkWriteArticleValue()">
                 <div style="margin-top: 24px">
                     <p class="layui-breadcrumb">
                         <i class="layui-icon layui-icon-location">当前位置：</i>
@@ -71,6 +71,10 @@
                             <option value="10">10个积分</option>
                         </select>
                     </div>
+                    <label class="layui-form-label" style="margin-top: 12px">上传文件:</label>
+                    <div class="layui-input-block">
+                        <input type="file" name="file" style="margin-top: 12px">
+                    </div>
                     <div class="layui-input-block" style="margin-top: 12px">
                         <button class="layui-btn layui-btn-normal" type="submit"><i
                                 class="layui-icon layui-icon-release"></i>发布
@@ -81,5 +85,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

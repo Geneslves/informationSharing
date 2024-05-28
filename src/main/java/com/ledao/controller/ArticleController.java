@@ -42,6 +42,9 @@ public class ArticleController {
     @Value("${articleImageFilePath}")
     private String articleImageFilePath;
 
+    @Value("${articleFilePath}")
+    private String articleFilePath;
+
     @Resource
     private ArticleService articleService;
 
@@ -70,14 +73,28 @@ public class ArticleController {
         return txtcontent;
     }
 
-    /**
-     * 添加或修改资源
-     *
-     * @param article
-     * @return
-     */
+    // 上传文件方法
+    @ResponseBody
+    @RequestMapping("/uploadFile")
+    public Map<String, Object> uploadFile(@RequestParam("upload") MultipartFile file) throws Exception {
+        String fileName = file.getOriginalFilename();
+        String suffixName = fileName.substring(fileName.lastIndexOf("."));
+        String newFileName = DateUtil.getCurrentDateStr2() + suffixName;
+        FileUtils.copyInputStreamToFile(file.getInputStream(), new File(articleFilePath + newFileName));
+        Map<String, Object> result = new HashMap<>();
+        result.put("filePath", "./File/" + newFileName);
+        result.put("fileName", newFileName);
+        return result;
+    }
+
     @RequestMapping("/save")
-    public ModelAndView save(Article article) throws Exception {
+    public ModelAndView save(@RequestParam(value = "file", required = false) MultipartFile file, Article article) throws Exception {
+        if (file != null && !file.isEmpty()) {
+            Map<String, Object> uploadResult = uploadFile(file);
+            String filePath = (String) uploadResult.get("filePath");
+            article.setFilePath(filePath);
+        }
+
         int maxStringLength = 600;
         if (article.getId() == null) {
             ModelAndView mav = new ModelAndView();

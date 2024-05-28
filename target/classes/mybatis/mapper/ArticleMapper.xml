@@ -20,6 +20,7 @@
         <result column="isUseful" property="isUseful"/>
         <result column="click" property="click"/>
         <result column="addPoints" property="addPoints"/>
+        <result column="filePath" property="filePath"/>
     </resultMap>
 
     <select id="list" parameterType="map" resultMap="ArticleResult">
@@ -80,9 +81,9 @@
 
     <insert id="add" parameterType="Article">
         insert into t_article(name, publishDate, userId, articleTypeId, points,summary, content, downloadLink, password,
-        isHot,state, isUseful, click)
+        isHot,state, isUseful, click,filePath)
         values
-        (#{name},now(),#{userId},#{articleTypeId},#{points},#{summary},#{content},#{downloadLink},#{password},0,1,1,0);
+        (#{name},now(),#{userId},#{articleTypeId},#{points},#{summary},#{content},#{downloadLink},#{password},0,1,1,0,#{filePath});
     </insert>
 
     <update id="update">
@@ -126,6 +127,9 @@
             </if>
             <if test="summary != null and summary != ''">
                 summary=#{summary},
+            </if>
+            <if test="filePath != null and filePath != ''">
+                filePath=#{filePath},
             </if>
         </set>
         where id=#{id}

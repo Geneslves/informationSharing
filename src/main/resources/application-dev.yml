@@ -49,6 +49,7 @@ userImageFilePath: ./src/main/webapp/static/images/userImage/
 #文章图片存储地址
 articleImageFilePath: ./src/main/webapp/static/images/articleImage/
 
+articleFilePath: ./File/
 #mybatis配置
 mybatis:
   #配置SQL映射文件路径
