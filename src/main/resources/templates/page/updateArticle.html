@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!--suppress ALL-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>修改资源</title>
 </head>
 <body>
 <div id="b">
@@ -12,7 +11,7 @@
             <div th:include="common/menuLeft::#m"></div>
         </div>
         <div class="layui-col-md9">
-            <form action="/article/save" class="layui-form" method="post" onsubmit="return checkUpdateArticleValue()">
+            <form action="/article/save" class="layui-form" method="post" enctype="multipart/form-data">
                 <div style="margin-top: 24px">
                     <p class="layui-breadcrumb">
                         <i class="layui-icon layui-icon-location">当前位置：</i>
@@ -24,15 +23,15 @@
                     <label class="layui-form-label" style="margin-top: 33px">资源名称:</label>
                     <div class="layui-input-block">
                         <input autocomplete="off" class="layui-input" id="name"
-                               lay-verify="title"
-                               name="name" placeholder="请输入资源名称" required="required" style="width: 388px;border-color: gray;margin-top: 33px"
+                               name="name" placeholder="请输入资源名称" required="required"
+                               style="width: 388px;border-color: gray;margin-top: 33px"
                                th:value="${article.name}" type="text">
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">资源类别:</label>
                     <div class="layui-input-block" style="margin-top: 12px;width: 388px">
                         <select id="articleTypeIdUpdate" lay-filter="aihao" name="articleTypeId">
                             <option value="">请选择类别...</option>
-                            <div th:each="articleType:${articleTypeList}">
+                            <div th:each="articleType : ${articleTypeList}">
                                 <option th:text="${articleType.name}" th:value="${articleType.id}"></option>
                             </div>
                         </select>
@@ -40,7 +39,7 @@
                     <label class="layui-form-label" style="margin-top: 12px">资源描述:</label>
                     <div class="layui-input-block" style="margin-top: 12px">
                         <textarea cols="90" id="content" name="content" rows="30"
-                                  th:value="${article.content}"></textarea>
+                                  th:text="${article.content}"></textarea>
                     </div>
                     <label class="layui-form-label" style="margin-top: 12px">分享地址:</label>
                     <div class="layui-input-block">
@@ -74,6 +73,10 @@
                             <option value="9">9个积分</option>
                             <option value="10">10个积分</option>
                         </select>
+                    </div>
+                    <label class="layui-form-label" style="margin-top: 12px">上传文件:</label>
+                    <div class="layui-input-block">
+                        <input type="file" name="file" style="margin-top: 12px">
                     </div>
                     <div class="layui-input-block" style="margin-top: 12px">
                         <button class="layui-btn layui-btn-normal" type="submit"><i
