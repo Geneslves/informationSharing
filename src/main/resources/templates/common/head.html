@@ -19,8 +19,11 @@
             <li class="layui-nav-item" lay-unselect="" style="float: right" th:if="${session.currentUser!=null}">
                 <a href="javascript:;"><a href="/toUserBackstagePage"><img
                         class="layui-nav-img" th:if="${session.currentUser.imageName!=null}"
-                        th:src="@{'/static/images/userImage/'+${session.currentUser.imageName}}"><span
-                        th:text="${session.currentUser.nickName}"></span></a></a>
+                        th:src="@{'/static/images/userImage/'+${session.currentUser.imageName}}">
+                    <img class="layui-nav-img"
+                         th:unless="${session.currentUser.imageName != null}"
+                         th:src="@{'/static/images/userImage/20240111025655.jpg'}">
+                    <span th:text="${session.currentUser.nickName}"></span></a></a>
                 <dl class="layui-nav-child">
                     <a href="/toUserBackstagePage">个人中心</a>
                     <a href="/user/logout">注销</a>
