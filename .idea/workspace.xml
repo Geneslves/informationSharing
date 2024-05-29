@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="下载文件按钮修改">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/Article.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/Article.sql" afterDir="false" />
-    </list>
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="备份" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +148,7 @@
       <workItem from="1716810195702" duration="675000" />
       <workItem from="1716901450030" duration="3923000" />
       <workItem from="1716937043281" duration="15752000" />
-      <workItem from="1716976352045" duration="1560000" />
+      <workItem from="1716976352045" duration="2388000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -361,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716951492618</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="备份">
+      <option name="closed" value="true" />
+      <created>1716979209507</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716979209507</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,13 +394,13 @@
     <MESSAGE value="初始化" />
     <MESSAGE value="isVip" />
     <MESSAGE value="头像" />
-    <MESSAGE value="备份" />
     <MESSAGE value="上传文件" />
     <MESSAGE value="修改时上传文件" />
     <MESSAGE value="修改时上传新文件" />
     <MESSAGE value="下载文件文件" />
     <MESSAGE value="下载文件按钮修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="下载文件按钮修改" />
+    <MESSAGE value="备份" />
+    <option name="LAST_COMMIT_MESSAGE" value="备份" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
