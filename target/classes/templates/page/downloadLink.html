@@ -14,18 +14,25 @@
                 <h2>资源名称:<span style="color: #1e9fff" th:text="${article.name}"></span></h2>
                 <h2>分享地址:<span style="color: red" th:text="${article.downloadLink}"></span></h2>
                 <h2>分享密码:<span style="color: green" th:text="${article.password}"></span></h2>
-                <h2>下载文件:</h2>
-                <div th:if="${article.filePath != null}">
-                    <a th:href="@{{filePath}(filePath=${#strings.substringAfter(article.filePath, 'src/main/webapp/')})}" download>
-                        <button class="layui-btn layui-btn-normal">下载文件</button>
-                    </a>
+                <div style="display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center;">
+                        <h2 style="margin-right: 10px;">下载文件:</h2>
+                        <div th:if="${article.filePath != null}">
+                            <a th:href="@{{filePath}(filePath=${#strings.substringAfter(article.filePath, 'src/main/webapp/')})}" download>
+                                <button class="layui-btn layui-btn-primary">下载文件</button>
+                            </a>
+                        </div>
+                        <div th:if="${article.filePath == null}">
+                            <span style="color: red">没有已上传文件</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                        <a th:href="@{'/article/'+${article.id}}">
+                            <button class="layui-btn layui-btn-normal">返回</button>
+                        </a>
+                    </div>
                 </div>
-                <div th:if="${article.filePath == null}">
-                    <span style="color: red">没有已上传文件</span>
-                </div>
-                <a th:href="@{'/article/'+${article.id}}">
-                    <button class="layui-btn layui-btn-normal" style="margin-top: 10px">返回</button>
-                </a>
+
             </blockquote>
         </div>
     </div>

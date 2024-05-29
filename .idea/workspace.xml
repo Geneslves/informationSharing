@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="修改时上传新文件">
-      <change afterPath="$PROJECT_DIR$/File/20240529100655.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529100704.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240529102904.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240529102912.mp3" afterDir="false" />
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="下载文件文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/db_informationshare.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/page/downloadLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/downloadLink.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +152,7 @@
       <workItem from="1716785827258" duration="2325000" />
       <workItem from="1716810195702" duration="675000" />
       <workItem from="1716901450030" duration="3923000" />
-      <workItem from="1716937043281" duration="13418000" />
+      <workItem from="1716937043281" duration="14064000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -353,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716942893613</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="下载文件文件">
+      <option name="closed" value="true" />
+      <created>1716950621064</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716950621064</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +386,8 @@
     <MESSAGE value="上传文件" />
     <MESSAGE value="修改时上传文件" />
     <MESSAGE value="修改时上传新文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改时上传新文件" />
+    <MESSAGE value="下载文件文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="下载文件文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
