@@ -82,7 +82,7 @@ public class ArticleController {
         String newFileName = DateUtil.getCurrentDateStr2() + suffixName;
         FileUtils.copyInputStreamToFile(file.getInputStream(), new File(articleFilePath + newFileName));
         Map<String, Object> result = new HashMap<>();
-        result.put("filePath", "./File/" + newFileName);
+        result.put("filePath", articleFilePath + newFileName);
         result.put("fileName", newFileName);
         return result;
     }
@@ -93,6 +93,9 @@ public class ArticleController {
             Map<String, Object> uploadResult = uploadFile(file);
             String filePath = (String) uploadResult.get("filePath");
             article.setFilePath(filePath);
+        } else if (article.getId() != null) {
+            Article existingArticle = articleService.findById(article.getId());
+            article.setFilePath(existingArticle.getFilePath());
         }
 
         int maxStringLength = 600;
