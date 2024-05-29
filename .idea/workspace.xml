@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="修改时上传文件">
-      <change afterPath="$PROJECT_DIR$/File/20240529075223.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529075353.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529075818.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529075844.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529080225.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529082243.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File/20240529082320.docx" afterDir="false" />
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="修改时上传新文件">
+      <change afterPath="$PROJECT_DIR$/File/20240529100655.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/File/20240529100704.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240529102904.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240529102912.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/updateArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/updateArticle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/updateArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/updateArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/articleView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/downloadLink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/articleView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/downloadLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/downloadLink.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +27,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,44 +70,44 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.InformationsharingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.null.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/JavaProgram/informationSharing/src/main/webapp/static/images/articleImage&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.InformationsharingApplication.executor": "Run",
+    "Spring Boot.null.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/JavaProgram/informationSharing/src/main/webapp/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ledao.entity" />
       <recent name="com.ledao.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static" />
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static\images\articleImage" />
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static\images\userImage" />
       <recent name="G:\JavaProgram\informationSharing\src\main\resources\templates\page" />
       <recent name="G:\JavaProgram\informationSharing\src\main\resources\mybatis\mapper" />
-      <recent name="G:\JavaProgram\informationSharing\src\main\webapp\admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ledao.controller" />
@@ -160,7 +159,7 @@
       <workItem from="1716785827258" duration="2325000" />
       <workItem from="1716810195702" duration="675000" />
       <workItem from="1716901450030" duration="3923000" />
-      <workItem from="1716937043281" duration="5677000" />
+      <workItem from="1716937043281" duration="13418000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -346,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716938893423</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="修改时上传新文件">
+      <option name="closed" value="true" />
+      <created>1716942893613</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716942893613</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +384,8 @@
     <MESSAGE value="备份" />
     <MESSAGE value="上传文件" />
     <MESSAGE value="修改时上传文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改时上传文件" />
+    <MESSAGE value="修改时上传新文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改时上传新文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
