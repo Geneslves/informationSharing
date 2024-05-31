@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--suppress ALL-->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ledao.mapper.ArticleMapper">
     <resultMap id="ArticleResult" type="Article">
@@ -49,8 +48,11 @@
         <if test="sortByPublishDate!=null">
             order by publishDate desc
         </if>
+        <if test="sort != null and order != null">
+            order by ${sort} ${order}
+        </if>
         <if test="start != null and size != null">
-            limit #{start},#{size}
+            limit #{start}, #{size}
         </if>
     </select>
 
@@ -80,13 +82,13 @@
     </select>
 
     <insert id="add" parameterType="Article">
-        insert into t_article(name, publishDate, userId, articleTypeId, points,summary, content, downloadLink, password,
-        isHot,state, isUseful, click,filePath)
+        insert into t_article(name, publishDate, userId, articleTypeId, points, summary, content, downloadLink, password,
+                              isHot, state, isUseful, click, filePath)
         values
-        (#{name},now(),#{userId},#{articleTypeId},#{points},#{summary},#{content},#{downloadLink},#{password},0,1,1,0,#{filePath});
+            (#{name}, now(), #{userId}, #{articleTypeId}, #{points}, #{summary}, #{content}, #{downloadLink}, #{password}, 0, 1, 1, 0, #{filePath});
     </insert>
 
-    <update id="update">
+    <update id="update" parameterType="Article">
         update t_article
         <set>
             <if test="name != null and name != ''">
@@ -150,10 +152,4 @@
         </set>
         where id = #{userId}
     </update>
-    <!--    <select id="getArticleById" parameterType="int" resultType="com.ledao.entity.Article">-->
-    <!--        SELECT * FROM t_article WHERE id = #{id}-->
-    <!--    </select>-->
-    <!--    <select id="getAllArticles" resultType="com.ledao.entity.Article">-->
-    <!--        SELECT * FROM t_article-->
-    <!--    </select>-->
 </mapper>

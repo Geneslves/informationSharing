@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="备份">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/ArticleAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/RecommendationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/RecommendationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/articleManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/articleManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/ArticleAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/RecommendationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/RecommendationServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="点击量排序" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +152,7 @@
       <workItem from="1717055260586" duration="56000" />
       <workItem from="1717055326901" duration="1245000" />
       <workItem from="1717061315478" duration="1984000" />
-      <workItem from="1717122285075" duration="11992000" />
+      <workItem from="1717122285075" duration="12558000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -387,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716979296366</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="点击量排序">
+      <option name="closed" value="true" />
+      <created>1717150582357</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717150582357</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +420,8 @@
     <MESSAGE value="下载文件文件" />
     <MESSAGE value="下载文件按钮修改" />
     <MESSAGE value="备份" />
-    <option name="LAST_COMMIT_MESSAGE" value="备份" />
+    <MESSAGE value="点击量排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="点击量排序" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
