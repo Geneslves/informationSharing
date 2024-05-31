@@ -39,15 +39,12 @@
                 and isHot = #{isHot}
             </if>
             <if test="state != null">
-                and state like #{state}
+                and state = #{state}
             </if>
             <if test="isUseful != null">
-                and isUseful like #{isUseful}
+                and isUseful = #{isUseful}
             </if>
         </where>
-        <if test="sortByPublishDate!=null">
-            order by publishDate desc
-        </if>
         <if test="sort != null and order != null">
             order by ${sort} ${order}
         </if>
@@ -73,10 +70,10 @@
                 and isHot = #{isHot}
             </if>
             <if test="state != null">
-                and state like #{state}
+                and state = #{state}
             </if>
             <if test="isUseful != null">
-                and isUseful like #{isUseful}
+                and isUseful = #{isUseful}
             </if>
         </where>
     </select>

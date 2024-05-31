@@ -17,9 +17,11 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpSession;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 首页Controller层
@@ -100,9 +102,13 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         // 推荐资源
         User currentUser = (User) session.getAttribute("currentUser");
         int userId = (currentUser != null) ? currentUser.getId() : 0;
-        List<Article> recommendations = recommendationService.getRecommendations(userId, 5);
+        List<Article> recommendations = recommendationService.getRecommendations(userId, 8);
         mav.addObject("recommendations", recommendations);
-
+//        // 打印推荐资源的推荐ID
+//        System.out.println("Recommendation IDs:");
+//        for (Article recommendation : recommendations) {
+//            System.out.println(recommendation.getId());
+//        }
         Long total = articleService.getTotal(map);
         mav.addObject("total", total);
         mav.addObject("pageCode", PageUtil.genPagination("/", total, page, pageSize, param.toString()));
@@ -118,21 +124,27 @@ public class IndexController implements CommandLineRunner, ServletContextListene
      * 加载首页数据
      */
     public void loadSomeData() {
-        //文章类型列表
+        // 文章类型列表
         Map<String, Object> map = new HashMap<>(16);
         map.put("isHot", 1);
         map.put("state", 2);
         map.put("sortByPublishDate", 1);
-        //热门资源列表
+        // 热门资源列表
         List<Article> articleListHot = articleService.list(map);
         map.put("sortBySortNum", 1);
         List<ArticleType> articleTypeList = articleTypeService.list(map);
-        //友情链接列表
+        // 友情链接列表
         List<Link> linkList = linkService.list(map);
+
+        // 随机选择9个热门资源
+        Collections.shuffle(articleListHot);
+        List<Article> randomHotArticles = articleListHot.stream().limit(9).collect(Collectors.toList());
+
         application.setAttribute("articleTypeList", articleTypeList);
-        application.setAttribute("articleListHot", articleListHot);
+        application.setAttribute("articleListHot", randomHotArticles); // 更新为随机的热门资源
         application.setAttribute("linkList", linkList);
     }
+
 
     /**
      * 跳转到用户登录页面

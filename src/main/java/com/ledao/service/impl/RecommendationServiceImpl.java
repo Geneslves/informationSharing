@@ -25,7 +25,7 @@ public class RecommendationServiceImpl implements RecommendationService {
      *
      * @return 推荐的文章列表
      */
-    public List<Article> recommendArticles(int userId) {
+    public List<Article> recommendArticles(int userId, int limit) {
         // 获取所有用户的下载记录
         List<DownloadMessage> allDownloads = downloadMessageMapper.findAll();
         // 获取当前用户的下载记录
@@ -33,7 +33,8 @@ public class RecommendationServiceImpl implements RecommendationService {
                 .filter(dm -> dm.getUserId() == userId)
                 .map(DownloadMessage::getArticleId)
                 .collect(Collectors.toSet());
-
+        // 打印已下载的文章ID
+        System.out.println("Downloads article IDs: " + userDownloadedArticleIds);
         // 计算用户之间的相似度
         Map<Integer, Double> userSimilarities = new HashMap<>();
         for (DownloadMessage dm : allDownloads) {
@@ -55,6 +56,8 @@ public class RecommendationServiceImpl implements RecommendationService {
                 .limit(5)  // 假设选取前5个相似用户
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
+        // 打印相似用户的ID
+        System.out.println("Top 5 similar user IDs: " + similarUserIds);
 
         // 获取相似用户下载的文章ID，排除当前用户已经下载的文章
         Set<Integer> recommendedArticleIds = allDownloads.stream()
@@ -62,8 +65,17 @@ public class RecommendationServiceImpl implements RecommendationService {
                 .map(DownloadMessage::getArticleId)
                 .collect(Collectors.toSet());
 
-        // 根据文章ID获取文章
-        return articleService.findArticlesByIds(new ArrayList<>(recommendedArticleIds));
+        // 打印推荐的文章ID
+        System.out.println("Recommended article IDs: " + recommendedArticleIds);
+        // 根据文章ID获取文章，并限制返回数量
+        List<Article> recommendedArticles = articleService.findArticlesByIds(new ArrayList<>(recommendedArticleIds));
+            // 打印实际获取的文章ID
+            Set<Integer> actualArticleIds = recommendedArticles.stream()
+                    .map(Article::getId)
+                    .collect(Collectors.toSet());
+            System.out.println("Actual recommended article IDs: " + actualArticleIds);
+
+        return recommendedArticles.stream().limit(limit).collect(Collectors.toList());
     }
 
     /**
@@ -76,7 +88,6 @@ public class RecommendationServiceImpl implements RecommendationService {
     private double calculateSimilarity(Set<Integer> user1ArticleIds, Set<Integer> user2ArticleIds) {
         Set<Integer> intersection = new HashSet<>(user1ArticleIds);
         intersection.retainAll(user2ArticleIds);
-
         return intersection.size() / Math.sqrt(user1ArticleIds.size() * user2ArticleIds.size());
     }
 
@@ -99,13 +110,122 @@ public class RecommendationServiceImpl implements RecommendationService {
     public List<Article> getRecommendations(int userId, int limit) {
         if (userId > 0) {
             // 用户已登录，根据下载记录推荐
-            return recommendArticles(userId);
+            return recommendArticles(userId, limit);
         } else {
             // 用户未登录，随机推荐
             return recommendRandomArticles(limit);
         }
     }
 }
+
+//package com.ledao.service.impl;
+//
+//import com.ledao.entity.Article;
+//import com.ledao.entity.DownloadMessage;
+//import com.ledao.mapper.DownloadMessageMapper;
+//import com.ledao.service.ArticleService;
+//import com.ledao.service.RecommendationService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
+//
+//import java.util.*;
+//import java.util.stream.Collectors;
+//
+//@Service
+//public class RecommendationServiceImpl implements RecommendationService {
+//
+//    @Autowired
+//    private DownloadMessageMapper downloadMessageMapper;
+//
+//    @Autowired
+//    private ArticleService articleService;
+//
+//    /**
+//     * 基于用户协同过滤的推荐方法
+//     *
+//     * @return 推荐的文章列表
+//     */
+//    public List<Article> recommendArticles(int userId) {
+//        // 获取所有用户的下载记录
+//        List<DownloadMessage> allDownloads = downloadMessageMapper.findAll();
+//        // 获取当前用户的下载记录
+//        Set<Integer> userDownloadedArticleIds = allDownloads.stream()
+//                .filter(dm -> dm.getUserId() == userId)
+//                .map(DownloadMessage::getArticleId)
+//                .collect(Collectors.toSet());
+//
+//        // 计算用户之间的相似度
+//        Map<Integer, Double> userSimilarities = new HashMap<>();
+//        for (DownloadMessage dm : allDownloads) {
+//            if (dm.getUserId() != userId) {
+//                int similarUserId = dm.getUserId();
+//                if (!userSimilarities.containsKey(similarUserId)) {
+//                    double similarity = calculateSimilarity(userDownloadedArticleIds, allDownloads.stream()
+//                            .filter(d -> d.getUserId() == similarUserId)
+//                            .map(DownloadMessage::getArticleId)
+//                            .collect(Collectors.toSet()));
+//                    userSimilarities.put(similarUserId, similarity);
+//                }
+//            }
+//        }
+//
+//        // 找到相似用户
+//        List<Integer> similarUserIds = userSimilarities.entrySet().stream()
+//                .sorted(Map.Entry.<Integer, Double>comparingByValue().reversed()) // 根据值（相似性得分）降序排序
+//                .limit(5)  // 假设选取前5个相似用户
+//                .map(Map.Entry::getKey)
+//                .collect(Collectors.toList());
+//
+//        // 获取相似用户下载的文章ID，排除当前用户已经下载的文章
+//        Set<Integer> recommendedArticleIds = allDownloads.stream()
+//                .filter(dm -> similarUserIds.contains(dm.getUserId()) && !userDownloadedArticleIds.contains(dm.getArticleId()))
+//                .map(DownloadMessage::getArticleId)
+//                .collect(Collectors.toSet());
+//
+//        // 根据文章ID获取文章
+//        return articleService.findArticlesByIds(new ArrayList<>(recommendedArticleIds));
+//    }
+//
+//    /**
+//     * 计算两个用户的相似度（使用余弦相似度）
+//     *
+//     * @param user1ArticleIds 用户1的下载文章ID集合
+//     * @param user2ArticleIds 用户2的下载文章ID集合
+//     * @return 相似度
+//     */
+//    private double calculateSimilarity(Set<Integer> user1ArticleIds, Set<Integer> user2ArticleIds) {
+//        Set<Integer> intersection = new HashSet<>(user1ArticleIds);
+//        intersection.retainAll(user2ArticleIds);
+//
+//        return intersection.size() / Math.sqrt(user1ArticleIds.size() * user2ArticleIds.size());
+//    }
+//
+//    /**
+//     * 使用随机的推荐方法
+//     *
+//     * @return 推荐的文章列表
+//     */
+//    public List<Article> recommendRandomArticles(int limit) {
+//        return articleService.findRandomArticles(limit);
+//    }
+//
+//    /**
+//     * 根据用户ID获取推荐文章
+//     *
+//     * @param userId 用户ID
+//     * @param limit  推荐数量
+//     * @return 推荐的文章列表
+//     */
+//    public List<Article> getRecommendations(int userId, int limit) {
+//        if (userId > 0) {
+//            // 用户已登录，根据下载记录推荐
+//            return recommendArticles(userId);
+//        } else {
+//            // 用户未登录，随机推荐
+//            return recommendRandomArticles(limit);
+//        }
+//    }
+//}
 
 //package com.ledao.service.impl;
 //
