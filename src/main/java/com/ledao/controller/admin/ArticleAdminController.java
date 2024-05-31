@@ -48,13 +48,18 @@ public class ArticleAdminController {
      * @return
      */
     @RequestMapping("/list")
-    public Map<String, Object> list(Article article, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "rows", required = false) Integer rows) {
+    public Map<String, Object> list(Article article,
+                                    @RequestParam(value = "page", required = false) Integer page,
+                                    @RequestParam(value = "rows", required = false) Integer rows,
+                                    @RequestParam(value = "sort", required = false) String sort,
+                                    @RequestParam(value = "order", required = false) String order) {
         PageBean pageBean = new PageBean(page, rows);
         Map<String, Object> resultMap = new HashMap<>(16);
         Map<String, Object> map = new HashMap<>(16);
         map.put("start", pageBean.getStart());
         map.put("size", pageBean.getPageSize());
-        map.put("sortByPublishDate", 1);
+        map.put("sort", sort);
+        map.put("order", order);
         map.put("name", StringUtil.formatLike(article.getName()));
         map.put("userId", article.getUserId());
         map.put("articleTypeId", article.getArticleTypeId());

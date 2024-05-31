@@ -104,13 +104,18 @@
         }
 
         $(document).ready(function () {
-
             $("#dg").datagrid({
                 onDblClickRow: function (index, row) {
                     $("#dlg").dialog("open").dialog("setTitle", "查看资源");
                     $("#fm").form("load", row);
                     CKEDITOR.instances.content.setData(row.content);
                     url = "/admin/article/save?id=" + row.id;
+                },
+                onLoadSuccess: function(data) {
+                    console.log("DataGrid loaded successfully:", data);
+                },
+                onLoadError: function() {
+                    console.log("Failed to load DataGrid.");
                 }
             });
             $("#articleTypeId").combobox({
@@ -277,6 +282,15 @@
                 return val;
             }
         }
+
+        function sortByClick(order) {
+            console.log("Sorting by click, order: " + order);
+            $('#dg').datagrid('load', {
+                sort: 'click',
+                order: order
+            });
+        }
+
     </script>
 </head>
 <body style="margin: 1px">
@@ -295,6 +309,7 @@
         <th align="center" field="isHot" formatter="formatIsHot" width="50">是否热门</th>
         <th align="center" field="isUseful" formatter="formatIsUseful" width="50">是否有效</th>
         <th align="center" field="name" formatter="formatName" width="160">资源名称</th>
+        <th align="center" field="click" width="30">点击量</th>
     </tr>
     </thead>
 </table>
@@ -346,8 +361,12 @@
             <option value="1">有效</option>
             <option value="0">无效</option>
         </select>
+
         <a class="easyui-linkbutton" href="javascript:searchArticle()" iconCls="icon-search" plain="true">搜索</a>
         <a class="easyui-linkbutton" href="javascript:resetValue()" iconCls="icon-reset" plain="true">重置</a>
+        <a class="easyui-linkbutton" href="javascript:sortByClick('asc')" iconCls="icon-asc" plain="true">点击量升序</a>
+        <a class="easyui-linkbutton" href="javascript:sortByClick('desc')" iconCls="icon-desc" plain="true">点击量降序</a>
+
     </div>
 </div>
 <div buttons="#dlg-buttons" class="easyui-dialog" closed="true"
