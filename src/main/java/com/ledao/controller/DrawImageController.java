@@ -111,7 +111,7 @@ public class DrawImageController {
      * @return
      */
     private String drawRandomNum(Graphics2D g) {
-        StringBuffer sb = new StringBuffer();
+        StringBuffer code = new StringBuffer();
         // 设置颜色
         g.setColor(Color.WHITE);
         // 设置字体
@@ -126,7 +126,7 @@ public class DrawImageController {
             int degree = new Random().nextInt() % 30;
             // 截取汉字
             String ch = base.charAt(new Random().nextInt(base.length())) + "";
-            sb.append(ch);
+            code.append(ch);
             // 正向角度
             g.rotate(degree * Math.PI / 180, x, 20);
             g.drawString(ch, x, 20);
@@ -134,7 +134,7 @@ public class DrawImageController {
             g.rotate(-degree * Math.PI / 180, x, 20);
             x += 30;
         }
-        System.out.println(sb);
-        return sb.toString();
+        System.out.println("Verification Code:" + code);
+        return code.toString();
     }
 }
