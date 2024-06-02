@@ -28,9 +28,9 @@ public class RecommendationServiceImpl implements RecommendationService {
     /**
      * 基于用户协同过滤的推荐方法
      *
-     * @return 推荐的文章列表
+     * @return 推荐的文章列表和相似用户ID
      */
-    public List<Article> recommendArticles(int userId, int limit) {
+    public RecommendationResult recommendArticles(int userId, int limit) {
         // 获取所有用户的下载记录
         List<DownloadMessage> allDownloads = downloadMessageMapper.findAll();
         // 获取当前用户的下载记录
@@ -85,11 +85,10 @@ public class RecommendationServiceImpl implements RecommendationService {
         System.out.println("         ______________________________________________________________________");
 
         // 根据文章ID获取文章
-        return articleService.findArticlesByIds(randomRecommendedArticleIds);
+        List<Article> recommendedArticles = articleService.findArticlesByIds(randomRecommendedArticleIds);
 
-//        // 根据文章ID获取文章，并限制返回数量
-//        List<Article> recommendedArticles = articleService.findArticlesByIds(new ArrayList<>(recommendedArticleIds));
-//        return recommendedArticles.stream().limit(limit).collect(Collectors.toList());
+        // 返回推荐结果
+        return new RecommendationResult(recommendedArticles, similarUserIds);
     }
 
     /**
@@ -125,9 +124,10 @@ public class RecommendationServiceImpl implements RecommendationService {
         List<Article> recommendedArticles;
         if (userId > 0) {
             // 用户已登录，根据下载记录推荐
-            recommendedArticles = recommendArticles(userId, limit);
+            RecommendationResult result = recommendArticles(userId, limit);
+            recommendedArticles = result.getRecommendedArticles();
             // 插入推荐数据到数据库
-            insertRecommendedArticles(userId, recommendedArticles);
+            insertRecommendedArticles(userId, recommendedArticles, result.getSimilarUserIds());
         } else {
             // 用户未登录，随机推荐
             recommendedArticles = recommendRandomArticles(limit);
@@ -136,9 +136,16 @@ public class RecommendationServiceImpl implements RecommendationService {
         return recommendedArticles;
     }
 
-    private void insertRecommendedArticles(int userId, List<Article> recommendedArticles) {
+    private void insertRecommendedArticles(int userId, List<Article> recommendedArticles, List<Integer> similarUserIds) {
         RecommendedArticle recommendedArticle = new RecommendedArticle();
         recommendedArticle.setUserId(userId);
+
+        // 收集推荐文章ID
+        List<Integer> recommendedArticleIds = recommendedArticles.stream()
+                .map(Article::getId)
+                .collect(Collectors.toList());
+
+        // 填充recommendedArticle对象的articleId字段
         for (int i = 0; i < Math.min(recommendedArticles.size(), 10); i++) {
             Article article = recommendedArticles.get(i);
             switch (i) {
@@ -176,6 +183,11 @@ public class RecommendationServiceImpl implements RecommendationService {
                     break;
             }
         }
+
+        // 插入recommendedArticleIds和similarUserIds
+        recommendedArticle.setRecommendedArticleIds(recommendedArticleIds.toString());
+        recommendedArticle.setSimilarUserIds(similarUserIds.toString());
+
         recommendedArticleMapper.insert(recommendedArticle);
     }
 }
