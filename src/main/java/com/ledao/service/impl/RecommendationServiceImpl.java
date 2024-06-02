@@ -87,8 +87,8 @@ public class RecommendationServiceImpl implements RecommendationService {
         // 根据文章ID获取文章
         List<Article> recommendedArticles = articleService.findArticlesByIds(randomRecommendedArticleIds);
 
-        // 返回推荐结果
-        return new RecommendationResult(recommendedArticles, similarUserIds);
+        // 返回推荐结果，包含所有推荐文章ID
+        return new RecommendationResult(recommendedArticles, similarUserIds, recommendedArticleIds);
     }
 
     /**
@@ -127,7 +127,7 @@ public class RecommendationServiceImpl implements RecommendationService {
             RecommendationResult result = recommendArticles(userId, limit);
             recommendedArticles = result.getRecommendedArticles();
             // 插入推荐数据到数据库
-            insertRecommendedArticles(userId, recommendedArticles, result.getSimilarUserIds());
+            insertRecommendedArticles(userId, recommendedArticles, result.getSimilarUserIds(), result.getRecommendedArticleIds());
         } else {
             // 用户未登录，随机推荐
             recommendedArticles = recommendRandomArticles(limit);
@@ -136,7 +136,7 @@ public class RecommendationServiceImpl implements RecommendationService {
         return recommendedArticles;
     }
 
-    private void insertRecommendedArticles(int userId, List<Article> recommendedArticles, List<Integer> similarUserIds) {
+    private void insertRecommendedArticles(int userId, List<Article> recommendedArticles, List<Integer> similarUserIds, Set<Integer> allRecommendedArticleIds) {
         RecommendedArticle recommendedArticle = new RecommendedArticle();
         recommendedArticle.setUserId(userId);
 
@@ -184,8 +184,8 @@ public class RecommendationServiceImpl implements RecommendationService {
             }
         }
 
-        // 插入recommendedArticleIds和similarUserIds
-        recommendedArticle.setRecommendedArticleIds(recommendedArticleIds.toString());
+        // 插入所有推荐的文章ID（未限制数量）
+        recommendedArticle.setRecommendedArticleIds(allRecommendedArticleIds.toString());
         recommendedArticle.setSimilarUserIds(similarUserIds.toString());
 
         recommendedArticleMapper.insert(recommendedArticle);
