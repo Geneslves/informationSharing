@@ -4,11 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="公告修改bug">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="资源列表固定高度">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page/indexFirst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page/indexFirst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/page/indexFirst.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page/indexFirst.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fdt" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fdx" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fnm" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fnm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.nvd" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.nvd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.nvm" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.nvm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.doc" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.pos" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.pos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tim" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tip" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.cfe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.si" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/segments_i" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/segments_i" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,44 +95,44 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.InformationsharingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.null.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/JavaProgramBackup/InformationSharing&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.InformationsharingApplication.executor": "Run",
+    "Spring Boot.null.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/JavaProgram/informationSharing",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ledao.entity" />
       <recent name="com.ledao.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\JavaProgram\informationSharing" />
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static" />
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static\images\articleImage" />
       <recent name="G:\JavaProgram\informationSharing\src\main\webapp\static\images\userImage" />
       <recent name="G:\JavaProgram\informationSharing\src\main\resources\templates\page" />
-      <recent name="G:\JavaProgram\informationSharing\src\main\resources\mybatis\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ledao.controller" />
@@ -159,7 +191,9 @@
       <workItem from="1717061315478" duration="1984000" />
       <workItem from="1717122285075" duration="30144000" />
       <workItem from="1717204951435" duration="25016000" />
-      <workItem from="1717573126753" duration="5467000" />
+      <workItem from="1717573126753" duration="6493000" />
+      <workItem from="1717580142490" duration="1162000" />
+      <workItem from="1717581377679" duration="430000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -473,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717576317054</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="资源列表固定高度">
+      <option name="closed" value="true" />
+      <created>1717578720029</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717578720029</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +558,8 @@
     <MESSAGE value="更新数据库" />
     <MESSAGE value="插入全部推荐资源" />
     <MESSAGE value="公告修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="公告修改bug" />
+    <MESSAGE value="资源列表固定高度" />
+    <option name="LAST_COMMIT_MESSAGE" value="资源列表固定高度" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
