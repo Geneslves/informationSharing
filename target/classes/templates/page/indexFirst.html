@@ -57,7 +57,7 @@
                     <span style="color: green">（当前有 <span style="color: red" th:text="${total}"></span> 个资源）</span>
                     <i class="layui-icon-tips layui-icon" style="color: #1e9fff; font-size: 16px; float: right">点击名称可查看详情</i>
                     <hr class="layui-bg-blue">
-                    <table class="layui-table" lay-skin="line">
+                    <table class="layui-table resource-table" lay-skin="line">
                         <colgroup>
                             <col width="400">
                             <col width="140">
@@ -86,6 +86,9 @@
                             <td style="text-align: center"><span
                                     th:text="${#dates.format(article.publishDate, 'yyyy-MM-dd')}"></span></td>
                             <td style="text-align: center"><span th:text="${article.points}"></span></td>
+                        </tr>
+                        <tr th:if="${articleList.size() < 10}" th:each="i : ${#numbers.sequence(articleList.size() + 1, 10)}">
+                            <td colspan="5" style="text-align: center;color: transparent">无数据</td>
                         </tr>
                         </tbody>
                     </table>
@@ -125,16 +128,17 @@
             <blockquote class="layui-elem-quote" style="border-color: #1e9fff">
                 <strong><i class="layui-icon layui-icon-notice" style="font-size: 16px">最新公告</i></strong>
                 <hr class="layui-bg-blue">
-                <div th:if="${latestNotice != null}">
-                    <p><strong>标题:</strong> <span th:text="${latestNotice.title}"></span></p>
-                    <p><strong>内容:</strong> <span th:text="${latestNotice.content}"></span></p>
-                    <p><strong>时间:</strong> <span th:text="${latestNotice.time}"></span></p>
+                <div th:each="notice : ${application.noticeList}">
+                    <p><strong>标题:</strong> <span th:text="${notice.title}"></span></p>
+                    <p><strong>内容:</strong> <span th:text="${notice.content}"></span></p>
+                    <p><strong>时间:</strong> <span th:text="${notice.time}"></span></p>
                 </div>
-                <div th:if="${latestNotice == null}">
+                <div th:if="${#lists.isEmpty(application.noticeList)}">
                     <p>暂无公告</p>
                 </div>
             </blockquote>
         </div>
+
         <!-- 友情链接 -->
         <div class="layui-col-md12">
             <blockquote class="layui-elem-quote" style="border-color: #1e9fff">

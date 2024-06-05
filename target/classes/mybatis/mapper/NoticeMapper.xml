@@ -29,7 +29,9 @@
         select *
         from t_notice
         order by time desc
-        limit #{start}, #{size}
+        <if test="start != null and size != null">
+            limit #{start}, #{size}
+        </if>
     </select>
     <select id="list1" parameterType="map" resultMap="NoticeResult">
         select *
