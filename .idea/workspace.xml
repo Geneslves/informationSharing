@@ -4,43 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="资源列表固定高度">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="索引">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fdt" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fdt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fdx" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.fnm" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.fnm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.nvd" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.nvd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.nvm" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.nvm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.doc" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.pos" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.pos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tim" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tip" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_a_Lucene50_0.tip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_b.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_b.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_c.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_c.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_d.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_d.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_e.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_e.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_f.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_f.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_g.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_g.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_h.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_h.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.cfe" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.cfe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.cfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_i.si" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/_i.si" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/segments_i" beforeDir="false" afterPath="$PROJECT_DIR$/lucene/MyArticle/segments_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/quartz/DeleteInvalidImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/quartz/DeleteInvalidImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/lucene/ArticleIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/lucene/ArticleIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/quartz/DeleteInvalidImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/quartz/DeleteInvalidImage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +66,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.InformationsharingApplicationTests.contextLoads.executor": "Run",
+    "JUnit.InformationsharingApplicationTests.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -142,7 +112,38 @@
       <recent name="com.ledao.entity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.InformationsharingApplication">
+    <configuration name="InformationsharingApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="informationsharing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ledao.informationsharing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ledao.informationsharing" />
+      <option name="MAIN_CLASS_NAME" value="com.ledao.informationsharing.InformationsharingApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InformationsharingApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="informationsharing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ledao.informationsharing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ledao.informationsharing" />
+      <option name="MAIN_CLASS_NAME" value="com.ledao.informationsharing.InformationsharingApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InformationsharingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="informationsharing" />
@@ -151,6 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InformationsharingApplicationTests" />
+        <item itemvalue="JUnit.InformationsharingApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -193,7 +200,7 @@
       <workItem from="1717204951435" duration="25016000" />
       <workItem from="1717573126753" duration="6493000" />
       <workItem from="1717580142490" duration="1162000" />
-      <workItem from="1717581377679" duration="430000" />
+      <workItem from="1717581377679" duration="3746000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -515,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717578720029</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="索引">
+      <option name="closed" value="true" />
+      <created>1717582128230</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1717582128230</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +574,8 @@
     <MESSAGE value="插入全部推荐资源" />
     <MESSAGE value="公告修改bug" />
     <MESSAGE value="资源列表固定高度" />
-    <option name="LAST_COMMIT_MESSAGE" value="资源列表固定高度" />
+    <MESSAGE value="索引" />
+    <option name="LAST_COMMIT_MESSAGE" value="索引" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
