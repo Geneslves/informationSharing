@@ -125,16 +125,17 @@
             <blockquote class="layui-elem-quote" style="border-color: #1e9fff">
                 <strong><i class="layui-icon layui-icon-notice" style="font-size: 16px">最新公告</i></strong>
                 <hr class="layui-bg-blue">
-                <div th:if="${latestNotice != null}">
-                    <p><strong>标题:</strong> <span th:text="${latestNotice.title}"></span></p>
-                    <p><strong>内容:</strong> <span th:text="${latestNotice.content}"></span></p>
-                    <p><strong>时间:</strong> <span th:text="${latestNotice.time}"></span></p>
+                <div th:each="notice : ${application.noticeList}">
+                    <p><strong>标题:</strong> <span th:text="${notice.title}"></span></p>
+                    <p><strong>内容:</strong> <span th:text="${notice.content}"></span></p>
+                    <p><strong>时间:</strong> <span th:text="${notice.time}"></span></p>
                 </div>
-                <div th:if="${latestNotice == null}">
+                <div th:if="${#lists.isEmpty(application.noticeList)}">
                     <p>暂无公告</p>
                 </div>
             </blockquote>
         </div>
+
         <!-- 友情链接 -->
         <div class="layui-col-md12">
             <blockquote class="layui-elem-quote" style="border-color: #1e9fff">

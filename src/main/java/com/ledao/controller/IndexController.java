@@ -136,6 +136,9 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         // 友情链接列表
         List<Link> linkList = linkService.list(map);
 
+        // 加载公告数据
+        List<Notice> noticeList = noticeService.list(map).stream().limit(1).collect(Collectors.toList());
+
         // 随机选择9个热门资源
         Collections.shuffle(articleListHot);
         List<Article> randomHotArticles = articleListHot.stream().limit(9).collect(Collectors.toList());
@@ -143,7 +146,9 @@ public class IndexController implements CommandLineRunner, ServletContextListene
         application.setAttribute("articleTypeList", articleTypeList);
         application.setAttribute("articleListHot", randomHotArticles); // 更新为随机的热门资源
         application.setAttribute("linkList", linkList);
+        application.setAttribute("noticeList", noticeList); // 将公告列表添加到应用程序上下文中
     }
+
 
 
     /**
