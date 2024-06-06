@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="管理员资源数量">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="更改logo">
       <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo0.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo3.png" afterDir="false" />
@@ -229,7 +229,7 @@
       <workItem from="1717573126753" duration="6493000" />
       <workItem from="1717580142490" duration="1162000" />
       <workItem from="1717581377679" duration="21277000" />
-      <workItem from="1717655262750" duration="8677000" />
+      <workItem from="1717655262750" duration="9326000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -648,7 +648,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="头像" />
     <MESSAGE value="上传文件" />
     <MESSAGE value="修改时上传文件" />
     <MESSAGE value="修改时上传新文件" />
@@ -673,7 +672,8 @@
     <MESSAGE value="不通过时取消热门" />
     <MESSAGE value="推荐用户资源数量" />
     <MESSAGE value="管理员资源数量" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理员资源数量" />
+    <MESSAGE value="更改logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改logo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
