@@ -195,6 +195,9 @@
 .icon-userManage {
     background: url('usericons/userManage.gif') no-repeat center center;
 }
+.icon-adminManage {
+    background: url('usericons/adminManage.gif') no-repeat center center;
+}
 
 .icon-articleTypeManage {
     background: url('usericons/articleTypeManage.gif') no-repeat center center;
@@ -215,7 +218,9 @@
 .icon-downMessageManage {
     background: url('usericons/downMessageManage.gif') no-repeat center center;
 }
-
+.icon-noticeManage {
+    background: url('usericons/noticeManage.gif') no-repeat center center;
+}
 .icon-informationManage {
     background: url('usericons/informationManage.gif') no-repeat center center;
 }
