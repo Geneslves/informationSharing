@@ -234,16 +234,27 @@
                 if (r) {
                     $.post("/admin/article/modifyIsOff", {articleId: articleId}, function (result) {
                         if (result.success) {
-                            closeFailReasonDialog();
-                            $("#dg").datagrid("reload");
-                            $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + str + "</span>");
+                            if (isUseful == 1) { // If the resource is being set to invalid, also set it as not popular
+                                $.post("/admin/article/modifyIsHot", {articleId: articleId, isHot: 0}, function (result) {
+                                    if (result.success) {
+                                        $("#dg").datagrid("reload");
+                                        $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + str + "</span>并且设置为<span style='color: red'>不热门</span>");
+                                    } else {
+                                        $.messager.alert("系统提示", result.errorInfo);
+                                    }
+                                });
+                            } else {
+                                $("#dg").datagrid("reload");
+                                $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + str + "</span>");
+                            }
                         } else {
                             $.messager.alert("系统提示", result.errorInfo);
                         }
-                    })
+                    });
                 }
             });
         }
+
 
         function formatState(val, row) {
             if (val == 1) {
