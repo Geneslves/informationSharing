@@ -50,14 +50,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().cors().disable().headers().disable()
                 .authorizeRequests()
-                // 配置不需要身份认证的请求地址
                 .antMatchers("/", "/toLoginPage", "/toRegisterPage", "/toSearchPasswordPage", "/toUserBackstagePage", "/toPersonMessagePage", "/toPersonMessageUpdatePage", "/toWriteArticlePage", "/toArticleManagePage", "/toUpdateArticlePage", "/toArticleFailureManagePage", "/toCommentManagePage", "/toDownloadLink", "/checkPoints", "/checkIsDownload", "/toMyDownloadPage", "/toInformationPage", "/static/**", "/article/**", "/comment/**", "/user/**", "/drawImage").permitAll()
                 .antMatchers("/admin", "/admin/**").hasRole("ADMIN")
                 .and()
                 .formLogin()
-                // 指定登录请求地址
                 .loginPage("/login")
-                // 登录成功后的默认跳转页面
+                .failureUrl("/login?error=true")
                 .defaultSuccessUrl("/admin")
                 .permitAll()
                 .and()
@@ -65,6 +63,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/login")
                 .permitAll();
     }
+
 
     /**
      * 自定义UserDetailsService
