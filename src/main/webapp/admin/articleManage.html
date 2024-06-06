@@ -173,21 +173,44 @@
         function submitFailReason() {
             var id = $("#failArticleId").val();
             var reason = $("#failReason").val();
+
+            // Get the selected row to check if it is hot
+            var selectedRows = $("#dg").datagrid("getSelections");
+            if (selectedRows.length != 1) {
+                $.messager.alert("系统提示", "请选择一个要审核不通过的资源!");
+                return;
+            }
+            var isHot = selectedRows[0].isHot;
+
             $.messager.confirm("系统提示", "确定将这个资源设置为<span style='color: red'>审核不通过</span>吗?", function (r) {
                 if (r) {
                     $.post("/admin/article/fail", {articleId: id, reason: reason}, function (result) {
                         if (result.success) {
-                            closeFailReasonDialog();
-                            $("#dg").datagrid("reload");
-                            $.messager.alert("系统提示", "该资源状态已经设置为<span style='color: red'>审核不通过!</span>");
-                            $("#failReason").val("");
+                            if (isHot == 1) { // If the resource is currently hot
+                                $.post("/admin/article/modifyIsHot", {articleId: id, isHot: 0}, function (hotResult) {
+                                    if (hotResult.success) {
+                                        closeFailReasonDialog();
+                                        $("#dg").datagrid("reload");
+                                        $.messager.alert("系统提示", "该资源状态已经设置为<span style='color: red'>审核不通过</span>并且设置为<span style='color: red'>不热门</span>!");
+                                        $("#failReason").val("");
+                                    } else {
+                                        $.messager.alert("系统提示", hotResult.errorInfo);
+                                    }
+                                });
+                            } else {
+                                closeFailReasonDialog();
+                                $("#dg").datagrid("reload");
+                                $.messager.alert("系统提示", "该资源状态已经设置为<span style='color: red'>审核不通过</span>!");
+                                $("#failReason").val("");
+                            }
                         } else {
                             $.messager.alert("系统提示", result.errorInfo);
                         }
-                    })
+                    });
                 }
             });
         }
+
 
         function modifyIsHot() {
             var selectedRows = $("#dg").datagrid("getSelections");
@@ -225,27 +248,27 @@
             }
             var articleId = selectedRows[0].id;
             var isUseful = selectedRows[0].isUseful;
-            if (isUseful == 0) {
-                var str = "有效";
-            } else {
-                var str = "无效";
-            }
-            $.messager.confirm("系统提示", "确定将这个资源设置为<span style='color: red'>" + str + "</span>吗?", function (r) {
+            var isHot = selectedRows[0].isHot;
+
+            var newUsefulState = isUseful == 0 ? 1 : 0; // Toggle isUseful state
+            var strUseful = newUsefulState == 1 ? "有效" : "无效";
+
+            $.messager.confirm("系统提示", "确定将这个资源设置为<span style='color: red'>" + strUseful + "</span>吗?", function (r) {
                 if (r) {
-                    $.post("/admin/article/modifyIsOff", {articleId: articleId}, function (result) {
+                    $.post("/admin/article/modifyIsOff", {articleId: articleId, isUseful: newUsefulState}, function (result) {
                         if (result.success) {
-                            if (isUseful == 1) { // If the resource is being set to invalid, also set it as not popular
+                            if (newUsefulState == 0 && isHot == 1) { // If setting to invalid and it is currently hot
                                 $.post("/admin/article/modifyIsHot", {articleId: articleId, isHot: 0}, function (result) {
                                     if (result.success) {
                                         $("#dg").datagrid("reload");
-                                        $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + str + "</span>并且设置为<span style='color: red'>不热门</span>");
+                                        $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + strUseful + "</span>并且设置为<span style='color: red'>不热门</span>");
                                     } else {
                                         $.messager.alert("系统提示", result.errorInfo);
                                     }
                                 });
                             } else {
                                 $("#dg").datagrid("reload");
-                                $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + str + "</span>");
+                                $.messager.alert("系统提示", "该资源已经设置为<span style='color: red'>" + strUseful + "</span>");
                             }
                         } else {
                             $.messager.alert("系统提示", result.errorInfo);
@@ -254,7 +277,6 @@
                 }
             });
         }
-
 
         function formatState(val, row) {
             if (val == 1) {
