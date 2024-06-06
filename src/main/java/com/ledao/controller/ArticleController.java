@@ -218,7 +218,7 @@ public class ArticleController {
     }
 
     /**
-     * 根据关键字查询相关博客信息
+     * 根据关键字查询相关资源信息
      *
      * @param q 查询条件
      * @return

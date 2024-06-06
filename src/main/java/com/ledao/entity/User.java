@@ -66,6 +66,16 @@ public class User {
 
     private Integer resourceCount;
 
+    private Integer resourceCount1;
+
+    public Integer getResourceCount1() {
+        return resourceCount1;
+    }
+
+    public void setResourceCount1(Integer resourceCount1) {
+        this.resourceCount1 = resourceCount1;
+    }
+
     public Integer getResourceCount() {
         return resourceCount;
     }

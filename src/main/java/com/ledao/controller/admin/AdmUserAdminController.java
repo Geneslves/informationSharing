@@ -76,6 +76,10 @@ public class AdmUserAdminController {
         map.put("isOff", user.getIsOff());
         map.put("key", 1);
         List<User> userList = admuserService.list(map);
+        for (User u : userList) {
+            Integer resourceCount = admuserService.getResourceCountByUserId(u.getId());
+            u.setResourceCount(resourceCount);
+        }
         for (User user1 : userList) {
             user1.setPassword(user1.getPassword());
         }

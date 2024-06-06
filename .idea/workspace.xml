@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="不通过时取消热门">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="推荐用户资源数量">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/UserAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/AdmUserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/AdmUserAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/ArticleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/AdmUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/AdmUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/AdmUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/AdmUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/UserAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/UserAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/AdmUserAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/admin/AdmUserAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/mapper/ArticleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/AdmUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/AdmUserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ArticleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,36 +73,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JUnit.InformationsharingApplicationTests.contextLoads.executor": "Run",
-    "JUnit.InformationsharingApplicationTests.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.InformationsharingApplication.executor": "Run",
-    "Spring Boot.null.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/JavaProgram/informationSharing",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.IndexUpdater.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.InformationsharingApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InformationsharingApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.InformationsharingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.null.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/JavaProgram/informationSharing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.IndexUpdater.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ledao.entity" />
@@ -223,7 +225,8 @@
       <workItem from="1717204951435" duration="25016000" />
       <workItem from="1717573126753" duration="6493000" />
       <workItem from="1717580142490" duration="1162000" />
-      <workItem from="1717581377679" duration="19609000" />
+      <workItem from="1717581377679" duration="21277000" />
+      <workItem from="1717655262750" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -601,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717648524650</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="推荐用户资源数量">
+      <option name="closed" value="true" />
+      <created>1717653861270</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1717653861270</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +637,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="初始化" />
     <MESSAGE value="isVip" />
     <MESSAGE value="头像" />
     <MESSAGE value="上传文件" />
@@ -651,7 +661,8 @@
     <MESSAGE value="当资源无效时，热门取消" />
     <MESSAGE value="登录提示" />
     <MESSAGE value="不通过时取消热门" />
-    <option name="LAST_COMMIT_MESSAGE" value="不通过时取消热门" />
+    <MESSAGE value="推荐用户资源数量" />
+    <option name="LAST_COMMIT_MESSAGE" value="推荐用户资源数量" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

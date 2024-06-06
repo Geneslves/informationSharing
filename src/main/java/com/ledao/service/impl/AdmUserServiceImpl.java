@@ -2,6 +2,7 @@ package com.ledao.service.impl;
 
 import com.ledao.entity.User;
 import com.ledao.mapper.AdmUserMapper;
+import com.ledao.mapper.ArticleMapper;
 import com.ledao.service.AdmUserService;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,8 @@ public class AdmUserServiceImpl implements AdmUserService {
 
     @Resource
     private AdmUserMapper admUserMapper;
+    @Resource
+    private ArticleMapper articleMapper;
 
     @Override
     public List<User> list(Map<String, Object> map) {
@@ -65,5 +68,10 @@ public class AdmUserServiceImpl implements AdmUserService {
     @Override
     public List<User> findByName(String userName) {
         return admUserMapper.findByName(userName);
+    }
+
+    public Integer getResourceCountByUserId(Integer userId) {
+        // 调用 ArticleMapper 中的方法获取资源数量
+        return articleMapper.countByUserId(userId);
     }
 }

@@ -48,7 +48,7 @@ public class ArticleIndex {
     }
 
     /**
-     * 添加博客索引
+     * 添加资源索引
      *
      * @param article
      * @throws Exception
@@ -65,7 +65,7 @@ public class ArticleIndex {
     }
 
     /**
-     * 删除指定博客的索引
+     * 删除指定资源的索引
      *
      * @param articleId
      * @throws Exception
@@ -79,7 +79,7 @@ public class ArticleIndex {
     }
 
     /**
-     * 更新博客索引
+     * 更新资源索引
      *
      * @param article
      * @throws Exception
@@ -96,7 +96,7 @@ public class ArticleIndex {
     }
 
     /**
-     * 查询博客信息
+     * 查询资源信息
      *
      * @param q
      * @return

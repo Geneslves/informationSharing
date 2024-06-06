@@ -34,12 +34,12 @@ public class DeleteInvalidImage {
     @Scheduled(cron = "0 0 23 * * ?")
     public void work() {
         List<Article> articleList = articleService.list(null);
-        //博客中引用的图片名称集合
+        //资源中引用的图片名称集合
         List<String> articleImageList = new ArrayList<>();
         for (Article article : articleList) {
-            //博客里的内容
+            //资源里的内容
             String articleInfo = article.getContent();
-            //抓取出博客里的内容
+            //抓取出资源里的内容
             Document document = Jsoup.parse(articleInfo);
             //提出.jpg图片
             Elements jpgs = document.select("img[src$=.jpg]");
