@@ -85,4 +85,6 @@ public interface UserService {
      * @return
      */
     List<User> findByName(String userName);
+
+    Integer getResourceCountByUserId(Integer userId);
 }

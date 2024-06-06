@@ -72,14 +72,39 @@ public class UserAdminController {
         map.put("isOff", user.getIsOff());
         map.put("key", 1);
         List<User> userList = userService.list(map);
-        for (User user1 : userList) {
-            user1.setPassword(user1.getPassword());
+
+        // Add resource count for each user
+        for (User u : userList) {
+            Integer resourceCount = userService.getResourceCountByUserId(u.getId());
+            u.setResourceCount(resourceCount);
         }
+
         Long total = userService.getTotal(map);
         resultMap.put("rows", userList);
         resultMap.put("total", total);
         return resultMap;
     }
+//    @RequestMapping("/list")
+//    public Map<String, Object> list(User user, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "rows", required = false) Integer rows) {
+//        Map<String, Object> resultMap = new HashMap<>(16);
+//        Map<String, Object> map = new HashMap<>(16);
+//        PageBean pageBean = new PageBean(page, rows);
+//        map.put("start", pageBean.getStart());
+//        map.put("size", pageBean.getPageSize());
+//        map.put("userName", StringUtil.formatLike(user.getUserName()));
+//        map.put("email", StringUtil.formatLike(user.getEmail()));
+//        map.put("roleName", user.getRoleName());
+//        map.put("isOff", user.getIsOff());
+//        map.put("key", 1);
+//        List<User> userList = userService.list(map);
+//        for (User user1 : userList) {
+//            user1.setPassword(user1.getPassword());
+//        }
+//        Long total = userService.getTotal(map);
+//        resultMap.put("rows", userList);
+//        resultMap.put("total", total);
+//        return resultMap;
+//    }
 
     /**
      * 添加或修改用户

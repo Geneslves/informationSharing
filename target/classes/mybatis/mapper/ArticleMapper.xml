@@ -149,4 +149,10 @@
         </set>
         where id = #{userId}
     </update>
+
+    <select id="countByUserId" parameterType="integer" resultType="java.lang.Integer">
+        select count(*)
+        from t_article
+        where userId = #{userId}
+    </select>
 </mapper>

@@ -85,4 +85,6 @@ public interface ArticleMapper {
 
     @Select("SELECT * FROM t_article ORDER BY RAND() LIMIT #{limit}")
     List<Article> findRandomArticles(@Param("limit") int limit);
+
+    Integer countByUserId(Integer userId);
 }

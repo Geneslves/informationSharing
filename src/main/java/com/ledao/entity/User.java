@@ -64,6 +64,12 @@ public class User {
      */
     private String checkCode;
 
+    private Integer resourceCount;
+
+    public Integer getResourceCount() {
+        return resourceCount;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -166,5 +172,9 @@ public class User {
 
     public void setPassword2(String password2) {
         this.password2 = password2;
+    }
+
+    public void setResourceCount(Integer resourceCount) {
+        this.resourceCount = resourceCount;
     }
 }
