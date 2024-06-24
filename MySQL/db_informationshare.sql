@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 24/06/2024 20:55:25
+ Date: 24/06/2024 22:19:36
 */
 
 SET NAMES utf8mb4;
@@ -50,9 +50,9 @@ CREATE TABLE `t_article`  (
 -- ----------------------------
 -- Records of t_article
 -- ----------------------------
-INSERT INTO `t_article` VALUES (1, 'Java技术全解', '2024-03-29 19:26:21', 14, 1, 1, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;\n', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-05-20 10:11:38', 1, 38, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (1, 'Java技术全解', '2024-03-29 19:26:21', 14, 1, 1, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;\n', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-24 21:52:11', 0, 39, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (2, 'MySQL数据库', '2024-04-11 05:21:42', 14, 2, 6, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-04-29 17:06:50', 1, 6, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (3, 'SQLServer数据库', '2024-04-01 07:25:19', 14, 2, 4, '数据库\n', '<p><img alt=\"\" src=\"/static/images/articleImage/20240516170806.jpg\" />数据库</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-05-07 08:21:07', 1, 15, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (3, 'SQLServer数据库', '2024-04-01 07:25:19', 14, 2, 4, '数据库\n', '<p><img alt=\"\" src=\"/static/images/articleImage/20240516170806.jpg\" />数据库</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-24 21:52:17', 1, 16, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (4, 'Java基础入门', '2024-04-10 01:47:46', 6, 1, 5, 'Java基础知识概览', 'Java基础入门内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 19, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (5, 'Java高级编程', '2024-04-05 02:53:04', 7, 1, 8, '深入了解Java高级特性', 'Java高级编程内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 12, '');
 INSERT INTO `t_article` VALUES (6, 'Java并发编程', '2024-04-06 13:29:33', 8, 1, 7, '学习Java并发编程', 'Java并发编程内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 29, '');
@@ -102,16 +102,16 @@ INSERT INTO `t_article` VALUES (49, 'JavaEE JAX-RS', '2024-04-19 23:10:30', 4, 4
 INSERT INTO `t_article` VALUES (50, 'JavaEE JMS', '2024-03-03 18:24:31', 4, 4, 5, 'Java Message Service in JavaEE', 'Detailed content about JMS in JavaEE.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'vwx234', 1, 2, NULL, '2024-05-01 23:36:33', 1, 450, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (51, 'JavaEE Security', '2024-04-11 02:04:57', 5, 4, 4, 'Security in JavaEE Applications', 'Detailed content about security in JavaEE.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'yz567', 1, 2, NULL, '2024-05-01 23:00:19', 1, 500, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (52, 'JavaEE Testing', '2024-04-03 08:37:35', 5, 4, 3, 'Testing JavaEE Applications', 'Detailed content about testing in JavaEE.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'abc890', 1, 2, NULL, '2024-05-03 17:21:01', 1, 550, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (53, 'Introduction to SQL', '2024-03-16 18:37:58', 1, 2, 4, 'Introduction to SQL for beginners', 'Detailed content about SQL.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'abc123', 0, 2, NULL, '2024-05-17 06:43:49', 1, 100, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (53, 'Introduction to SQL', '2024-03-16 18:37:58', 1, 2, 4, 'Introduction to SQL for beginners', 'Detailed content about SQL.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'abc123', 0, 2, NULL, '2024-06-24 21:57:27', 1, 101, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (54, 'Advanced SQL Queries', '2024-03-02 10:57:59', 1, 2, 4, 'Advanced SQL query techniques', 'Detailed content about advanced SQL queries.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'def456', 1, 2, NULL, '2024-05-03 23:22:07', 1, 150, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (55, 'Database Normalization', '2024-04-12 11:31:42', 2, 2, 5, 'Understanding database normalization', 'Detailed content about database normalization.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'ghi789', 1, 2, NULL, '2024-04-24 18:38:08', 1, 200, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (56, 'Indexing in Databases', '2024-03-28 20:29:25', 2, 2, 4, 'How to use indexing in databases', 'Detailed content about indexing.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'jkl012', 1, 2, NULL, '2024-05-10 02:56:33', 1, 250, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (57, 'Database Transactions', '2024-03-22 10:59:53', 3, 2, 3, 'Understanding database transactions', 'Detailed content about transactions.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'mno345', 1, 2, NULL, '2024-05-19 06:54:16', 0, 300, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (55, 'Database Normalization', '2024-04-12 11:31:42', 2, 2, 5, 'Understanding database normalization', 'Detailed content about database normalization.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'ghi789', 1, 2, NULL, '2024-06-24 22:00:52', 1, 201, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (56, 'Indexing in Databases', '2024-03-28 20:29:25', 2, 2, 4, 'How to use indexing in databases', 'Detailed content about indexing.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'jkl012', 1, 2, NULL, '2024-06-24 22:00:41', 1, 251, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (57, 'Database Transactions', '2024-03-22 10:59:53', 3, 2, 3, 'Understanding database transactions', 'Detailed content about transactions.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'mno345', 1, 2, NULL, '2024-06-24 22:00:25', 0, 301, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (58, 'NoSQL Databases', '2024-03-21 01:32:50', 3, 2, 4, 'Introduction to NoSQL databases', 'Detailed content about NoSQL.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'pqr678', 1, 2, NULL, '2024-04-23 17:40:04', 1, 350, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (59, 'Database Security', '2024-03-14 12:03:38', 4, 2, 4, 'Best practices for database security', 'Detailed content about database security.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'stu901', 1, 2, NULL, '2024-04-27 00:51:02', 1, 400, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (59, 'Database Security', '2024-03-14 12:03:38', 4, 2, 4, 'Best practices for database security', 'Detailed content about database security.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'stu901', 1, 2, NULL, '2024-06-24 22:01:04', 1, 401, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (60, 'Data Warehousing', '2024-03-27 01:01:14', 4, 2, 2, 'Introduction to data warehousing', 'Detailed content about data warehousing.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'vwx234', 1, 2, NULL, '2024-05-10 20:58:04', 1, 451, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (61, 'Database Backup and Recovery', '2024-03-29 04:29:34', 5, 2, 5, 'Techniques for database backup and recovery', 'Detailed content about backup and recovery.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'yz567', 1, 2, NULL, '2024-05-04 21:36:52', 1, 500, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (62, 'Optimizing Database Performance', '2024-04-13 08:18:42', 5, 2, 7, 'Tips for optimizing database performance', 'Detailed content about performance optimization.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'abc890', 1, 2, NULL, '2024-05-13 10:35:28', 1, 550, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (62, 'Optimizing Database Performance', '2024-04-13 08:18:42', 5, 2, 7, 'Tips for optimizing database performance', 'Detailed content about performance optimization.', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', 'abc890', 1, 2, NULL, '2024-06-24 22:01:14', 1, 551, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (63, '前端开发入门指南', '2024-03-31 06:12:39', 1, 3, 5, '本指南适合初学者入门', '这是一篇关于前端开发入门的指南。', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '123456', 0, 2, NULL, '2024-05-09 09:35:47', 1, 101, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (64, 'JavaScript高级编程技巧', '2024-03-21 12:24:14', 2, 3, 4, '深入探讨JavaScript高级特性', '本文介绍了一些JavaScript高级编程技巧。', 'https://pan.baidu.com/s/yyy', 'abcdef', 1, 2, NULL, '2024-05-01 22:10:14', 1, 120, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (65, 'Vue.js实战教程', '2024-04-07 07:19:42', 3, 3, 1, '学习Vue.js的最佳实践', '本教程详细介绍了Vue.js的实战应用。', 'https://pan.baidu.com/s/zzz', 'password', 1, 2, NULL, '2024-05-23 11:16:50', 1, 150, './src/main/webapp/static/files/20240529102904.mp3');
@@ -225,7 +225,7 @@ INSERT INTO `t_article` VALUES (172, '数据库监控与性能调优实践', '20
 INSERT INTO `t_article` VALUES (173, '前端框架Vue.js入门与实践', '2024-04-05 08:11:03', 16, 3, 1, '学习Vue.js前端框架的基础知识和实践经验', '本文介绍了Vue.js前端框架的基本原理、常用功能和实际项目实践，适合前端开发者学习。', 'https://pan.baidu.com/s/xyz', 'security', 0, 2, NULL, '2024-04-30 05:44:40', 1, 90, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (174, 'React.js实战指南', '2024-03-24 10:08:51', 17, 3, 2, '介绍React.js前端框架的实践应用和开发技巧', '本文详细介绍了React.js前端框架的实际应用场景、开发技巧和最佳实践，适合前端开发者学习。', 'https://pan.baidu.com/s/abc', 'abcdef', 0, 2, NULL, '2024-05-06 02:50:24', 1, 80, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (175, 'Express.js实战指南', '2024-03-14 16:37:04', 18, 8, 2, '学习Express.js框架的实战经验和技巧', '本指南介绍了Express.js框架的实际项目开发经验、常见问题和解决方案，适合开发者学习。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-05-14 07:29:50', 1, 201, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (176, 'Java性能调优指南', '2024-04-02 01:52:50', 14, 1, 2, '介绍Java性能调优的常见方法和工具', '本文介绍了Java性能调优的基本原理、常用工具和实际操作经验，适合Java开发者阅读。', 'https://pan.baidu.com/s/xyz', '1234', 0, 2, NULL, '2024-04-24 04:34:04', 1, 90, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (176, 'Java性能调优指南', '2024-04-02 01:52:50', 14, 1, 3, '本文介绍了Java性能调优的基本原理、常用工具和实际操作经验，适合Java开发者阅读。\n', '<p>本文介绍了Java性能调优的基本原理、常用工具和实际操作经验，适合Java开发者阅读。</p>\r\n', 'https://pan.baidu.com/s/xyz', '1234', 0, 1, NULL, '2024-04-24 04:34:04', 1, 90, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (177, 'JavaScript异步编程实践', '2024-04-03 08:24:23', 16, 8, 7, '学习JavaScript异步编程的实践经验和技巧', '本指南介绍了JavaScript异步编程的基本概念、常见问题和解决方案，适合开发者学习。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-04-28 14:54:50', 1, 201, '');
 INSERT INTO `t_article` VALUES (178, '数据库事务处理实践指南', '2024-03-20 10:26:19', 4, 2, 9, '介绍数据库事务处理的实践经验和技巧', '本文介绍了数据库事务处理的基本原理、ACID特性和实际应用场景，适合开发人员学习。', 'https://pan.baidu.com/s/yyy', 'abcdef', 1, 2, NULL, '2024-04-23 10:56:49', 1, 120, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (179, '数据库备份与恢复实践指南', '2024-03-18 10:45:08', 5, 2, 2, '介绍数据库备份与恢复的实践方法', '本文详细介绍了数据库备份与恢复的实际操作步骤和常见问题解决方案，适合数据库管理员参考。', 'https://pan.baidu.com/s/zzz', 'password', 1, 2, NULL, '2024-04-30 14:51:17', 1, 150, './src/main/webapp/static/files/20240529102904.mp3');
@@ -249,7 +249,7 @@ INSERT INTO `t_article` VALUES (196, '移动APP前端框架选型', '2024-03-22 
 INSERT INTO `t_article` VALUES (197, '移动端原生开发技术解析', '2024-04-01 00:03:42', 11, 6, 5, '深入解析移动端原生开发技术及其应用场景', '本文介绍了移动端原生开发技术的基本原理、常用工具和实际应用场景，适合移动开发者学习。', 'https://pan.baidu.com/s/abc', '1234', 0, 2, NULL, '2024-04-29 02:10:05', 1, 80, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (198, '移动APP性能优化实践指南', '2024-03-08 06:05:46', 12, 6, 3, '介绍移动APP性能优化的常见方法和实践技巧', '本文详细介绍了移动APP性能优化的常用方法和实践经验，涵盖了界面渲染、网络请求、内存管理等方面，适合移动开发者学习。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-05-15 10:00:57', 1, 200, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (199, '移动APP安全防护指南', '2024-03-24 10:24:51', 13, 6, 9, '保障移动APP的安全性和可靠性', '本文介绍了移动APP开发中常见的安全漏洞和攻击手法，并提供了相应的防护策略和实践经验，适合移动开发者阅读。', 'https://pan.baidu.com/s/ghi', 'security', 1, 2, NULL, '2024-04-24 07:10:48', 1, 110, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (200, '移动APP后端服务架构设计', '2024-04-15 21:58:24', 14, 6, 4, '介绍移动APP后端服务架构的设计原则和技术选型', '本文详细介绍了移动APP后端服务架构的设计原则、技术组成和实际应用经验，适合移动开发者学习。', 'https://pan.baidu.com/s/jkl', 'security', 1, 2, NULL, '2024-05-10 10:09:17', 1, 130, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (200, '移动APP后端服务架构设计', '2024-04-15 21:58:24', 14, 6, 4, '介绍移动APP后端服务架构的设计原则和技术选型', '本文详细介绍了移动APP后端服务架构的设计原则、技术组成和实际应用经验，适合移动开发者学习。', 'https://pan.baidu.com/s/jkl', 'security', 0, 3, '不符合规范', '2024-06-24 21:55:18', 1, 130, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (201, '移动APP测试与发布流程', '2024-04-22 07:36:08', 15, 6, 7, '介绍移动APP测试和发布的流程和注意事项', '本文详细介绍了移动APP测试和发布的流程、常用工具和注意事项，帮助移动开发者更高效地进行测试和发布工作。', 'https://pan.baidu.com/s/mno', '1234', 0, 2, NULL, '2024-04-30 01:27:19', 0, 95, '');
 INSERT INTO `t_article` VALUES (202, '移动APP数据分析与用户行为监控', '2024-04-01 18:44:26', 16, 6, 2, '介绍移动APP数据分析和用户行为监控的方法和工具', '本文详细介绍了移动APP数据分析的方法、常用工具和用户行为监控技术，帮助移动开发者更好地了解用户需求和行为特征。', 'https://pan.baidu.com/s/pqr', 'password', 0, 2, NULL, '2024-05-23 04:25:36', 1, 85, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (203, '微服务架构设计原则与实践', '2024-03-22 09:32:17', 15, 5, 4, '介绍微服务架构设计的基本原则和实践经验', '本文详细介绍了微服务架构的设计原则、组件划分和实际应用经验，适合架构师和开发者学习。', 'https://pan.baidu.com/s/xxx', '123456', 0, 2, NULL, '2024-05-07 05:10:55', 1, 100, './src/main/webapp/static/files/20240529102904.mp3');
@@ -267,7 +267,7 @@ INSERT INTO `t_article` VALUES (214, 'C#进阶指南', '2024-04-17 22:42:53', 2,
 INSERT INTO `t_article` VALUES (215, 'C#面向对象编程入门', '2024-03-17 15:38:16', 3, 8, 2, '学习C#面向对象编程的基础知识', '本指南介绍了C#面向对象编程的基本原理和常用技巧，适合初学者入门。', 'https://pan.baidu.com/s/zzz', 'password', 1, 2, NULL, '2024-05-01 01:02:36', 1, 150, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (216, 'C#图形用户界面开发指南', '2024-03-21 07:40:45', 4, 8, 7, '学习C#图形用户界面开发的基础知识和实践经验', '本指南介绍了C#图形用户界面开发的基本原理、常用组件和实际案例，适合开发者学习。', 'https://pan.baidu.com/s/xyz', 'abcdef', 0, 2, NULL, '2024-05-11 03:46:24', 1, 90, '');
 INSERT INTO `t_article` VALUES (217, 'C#服务器端开发实战', '2024-04-09 17:59:48', 5, 8, 3, '学习C#服务器端开发的实践经验和技巧', '本指南介绍了C#服务器端开发的基本原理、常用技术和实际案例，适合开发者学习。', 'https://pan.baidu.com/s/abc', 'security', 0, 2, NULL, '2024-05-12 18:03:51', 1, 80, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (218, 'C#框架与工具介绍', '2024-04-13 12:07:32', 6, 8, 4, '了解C#常用框架和开发工具', '本指南介绍了C#常用框架（如.NET Framework、ASP.NET等）和开发工具（如Visual Studio、NuGet等），适合开发者了解。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-05-17 13:55:06', 1, 201, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (218, 'C#框架与工具介绍', '2024-04-13 12:07:32', 6, 8, 4, '了解C#常用框架和开发工具', '本指南介绍了C#常用框架（如.NET Framework、ASP.NET等）和开发工具（如Visual Studio、NuGet等），适合开发者了解。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-06-24 21:56:34', 1, 202, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (219, 'C#项目管理与团队协作指南', '2024-04-20 18:08:33', 7, 8, 6, '学习C#项目管理和团队协作的方法和工具', '本指南介绍了C#项目管理和团队协作的常用方法、工具和实践经验，适合开发团队参考。', 'https://pan.baidu.com/s/ghi', 'vwx234', 1, 2, NULL, '2024-05-06 07:35:08', 1, 110, '');
 INSERT INTO `t_article` VALUES (220, 'Go语言基础教程', '2024-03-29 21:10:32', 8, 8, 5, '适合初学者的Go语言基础教程', '本教程详细介绍了Go语言的基本语法和常用功能，适合初学者学习。', 'https://pan.baidu.com/s/jkl', 'security', 1, 2, NULL, '2024-05-14 12:19:19', 1, 130, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (221, 'Go语言进阶指南', '2024-03-26 17:42:40', 9, 8, 4, '深入学习Go语言进阶知识和技巧', '本指南介绍了Go语言的一些进阶用法和技巧，适合有一定基础的开发者阅读。', 'https://pan.baidu.com/s/mno', 'webperf', 0, 2, NULL, '2024-04-24 01:50:14', 1, 95, './src/main/webapp/static/files/20240529102904.mp3');
@@ -278,7 +278,7 @@ INSERT INTO `t_article` VALUES (225, 'C++面向对象编程入门', '2024-04-01 
 INSERT INTO `t_article` VALUES (226, 'C++图形用户界面开发指南', '2024-03-09 03:16:10', 14, 8, 4, '学习C++图形用户界面开发的基础知识和实践经验', '本指南介绍了C++图形用户界面开发的基本原理、常用组件和实际案例，适合开发者学习。', 'https://pan.baidu.com/s/xyz', 'yz567', 0, 2, NULL, '2024-05-18 08:50:50', 1, 90, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (227, 'C++服务器端开发实战', '2024-03-28 01:09:29', 15, 8, 4, '学习C++服务器端开发的实践经验和技巧', '本指南介绍了C++服务器端开发的基本原理、常用技术和实际案例，适合开发者学习。', 'https://pan.baidu.com/s/abc', 'ghi789', 0, 2, NULL, '2024-05-06 12:44:47', 1, 80, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (228, 'C++框架与工具介绍', '2024-03-25 02:32:09', 16, 8, 4, '了解C++常用框架和开发工具', '本指南介绍了C++常用框架（如Qt、Boost等）和开发工具（如Visual Studio、CMake等），适合开发者了解。', 'https://pan.baidu.com/s/def', 'webperf', 1, 2, NULL, '2024-05-09 06:01:34', 0, 200, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (229, 'C++项目管理与团队协作指南', '2024-04-22 22:59:35', 17, 8, 5, '学习C++项目管理和团队协作的方法和工具', '本指南介绍了C++项目管理和团队协作的常用方法、工具和实践经验，适合开发团队参考。', 'https://pan.baidu.com/s/ghi', 'stu901', 1, 2, NULL, '2024-05-07 13:20:59', 0, 110, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (229, 'C++项目管理与团队协作指南', '2024-04-22 22:59:35', 17, 8, 5, '学习C++项目管理和团队协作的方法和工具', '本指南介绍了C++项目管理和团队协作的常用方法、工具和实践经验，适合开发团队参考。', 'https://pan.baidu.com/s/ghi', 'stu901', 1, 2, NULL, '2024-06-24 21:56:22', 0, 111, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (230, 'Swift基础教程', '2024-03-05 12:41:22', 18, 8, 4, '适合初学者的Swift基础教程', '本教程详细介绍了Swift的基本语法和常用功能，适合初学者学习。', 'https://pan.baidu.com/s/jkl', 'security', 1, 2, NULL, '2024-05-13 03:37:13', 1, 130, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (231, 'Swift进阶指南', '2024-04-10 17:07:47', 1, 8, 3, '深入学习Swift进阶知识和技巧', '本指南介绍了Swift的一些进阶用法和技巧，适合有一定基础的开发者阅读。', 'https://pan.baidu.com/s/mno', 'webperf', 0, 2, NULL, '2024-04-29 17:41:28', 1, 95, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (232, 'Swift并发编程实战', '2024-03-03 14:22:56', 2, 8, 2, '学习Swift并发编程的实践经验和技巧', '本指南介绍了Swift并发编程的基本概念、常见问题和解决方案，适合开发者学习。', 'https://pan.baidu.com/s/pqr', 'password', 0, 2, NULL, '2024-05-11 20:15:49', 1, 85, './src/main/webapp/static/files/20240529102904.mp3');
@@ -330,15 +330,15 @@ CREATE TABLE `t_comment`  (
 -- ----------------------------
 -- Records of t_comment
 -- ----------------------------
-INSERT INTO `t_comment` VALUES (1, 6, 19, '有帮助', '2024-05-24 21:11:11', 7, 1);
-INSERT INTO `t_comment` VALUES (2, 6, 19, '文章写的很好', '2024-05-25 19:28:42', 7, 1);
-INSERT INTO `t_comment` VALUES (3, 7, 6, '内容详细', '2024-05-25 09:09:18', 6, 1);
-INSERT INTO `t_comment` VALUES (4, 6, 11, '信息量很大', '2024-05-27 17:18:06', 7, 1);
+INSERT INTO `t_comment` VALUES (1, 5, 1, '有帮助', '2024-05-24 21:11:11', 14, 1);
+INSERT INTO `t_comment` VALUES (2, 6, 2, '文章写的很好', '2024-05-25 19:28:42', 14, 1);
+INSERT INTO `t_comment` VALUES (3, 7, 3, '内容详细', '2024-05-25 09:09:18', 14, 1);
+INSERT INTO `t_comment` VALUES (4, 8, 9, '信息量很大', '2024-05-27 17:18:06', 14, 1);
 INSERT INTO `t_comment` VALUES (5, 6, 11, '是值得阅读的', '2024-05-27 22:51:55', 7, 2);
 INSERT INTO `t_comment` VALUES (6, 1, 21, '有用', '2024-05-26 15:21:26', 6, 1);
 INSERT INTO `t_comment` VALUES (7, 14, 21, '很好', '2024-05-26 18:54:34', 6, 1);
 INSERT INTO `t_comment` VALUES (8, 14, 20, '有压力的一天', '2024-05-27 07:31:35', 6, 1);
-INSERT INTO `t_comment` VALUES (9, 6, 22, '资源不错', '2024-05-27 08:06:34', 14, 1);
+INSERT INTO `t_comment` VALUES (9, 6, 22, '资源不错', '2024-05-27 08:06:34', 1, 1);
 INSERT INTO `t_comment` VALUES (10, 7, 25, '非常有用', '2024-05-25 05:34:49', 8, 1);
 INSERT INTO `t_comment` VALUES (11, 8, 26, '不错的文章', '2024-05-25 03:27:45', 9, 1);
 INSERT INTO `t_comment` VALUES (12, 9, 27, '资源详细', '2024-05-25 06:48:47', 10, 1);
@@ -371,11 +371,11 @@ CREATE TABLE `t_download_message`  (
 -- ----------------------------
 -- Records of t_download_message
 -- ----------------------------
-INSERT INTO `t_download_message` VALUES (1, 14, 19, '下载了：MUI全接触', '2024-05-28 21:06:06');
-INSERT INTO `t_download_message` VALUES (2, 14, 10, '下载了：50份优秀Java求职者简历', '2024-06-06 09:11:32');
-INSERT INTO `t_download_message` VALUES (3, 14, 7, '下载了：Postgresql数据库优化视频教程 下载', '2024-06-07 22:05:33');
-INSERT INTO `t_download_message` VALUES (4, 14, 17, '下载了：Vue2.0+Node.js+MongoDB全栈打造商城系统视', '2024-05-26 18:13:37');
-INSERT INTO `t_download_message` VALUES (5, 14, 19, '下载了：MUI全接触', '2024-05-29 08:31:19');
+INSERT INTO `t_download_message` VALUES (1, 5, 19, '下载了：MUI全接触', '2024-05-28 21:06:06');
+INSERT INTO `t_download_message` VALUES (2, 5, 10, '下载了：50份优秀Java求职者简历', '2024-06-06 09:11:32');
+INSERT INTO `t_download_message` VALUES (3, 5, 7, '下载了：Postgresql数据库优化视频教程 下载', '2024-06-07 22:05:33');
+INSERT INTO `t_download_message` VALUES (4, 5, 17, '下载了：Vue2.0+Node.js+MongoDB全栈打造商城系统视', '2024-05-26 18:13:37');
+INSERT INTO `t_download_message` VALUES (5, 5, 19, '下载了：MUI全接触', '2024-05-29 08:31:19');
 INSERT INTO `t_download_message` VALUES (6, 6, 16, '下载了：SSM整合案例【企业权限管理系统】视频教程', '2024-05-27 19:28:02');
 INSERT INTO `t_download_message` VALUES (7, 6, 16, '下载了：SSM整合案例【企业权限管理系统】视频教程', '2024-06-05 22:39:13');
 INSERT INTO `t_download_message` VALUES (8, 6, 15, '下载了：黑马JavaEE 57期', '2024-05-30 22:06:25');
@@ -383,17 +383,17 @@ INSERT INTO `t_download_message` VALUES (9, 6, 14, '下载了：mybatis教程pdf
 INSERT INTO `t_download_message` VALUES (10, 6, 17, '下载了：Vue2.0+Node.js+MongoDB全栈打造商城系统视', '2024-05-28 05:29:55');
 INSERT INTO `t_download_message` VALUES (11, 6, 19, '下载了：MUI全接触', '2024-05-25 14:06:47');
 INSERT INTO `t_download_message` VALUES (12, 6, 9, '下载了：mysql高级mycat集群视频&redis视频视频教程 下载', '2024-06-02 00:24:13');
-INSERT INTO `t_download_message` VALUES (13, 14, 21, '下载了：Web前端技术', '2024-06-09 04:46:18');
-INSERT INTO `t_download_message` VALUES (14, 14, 22, '下载了：Java技术全解', '2024-05-25 05:35:19');
-INSERT INTO `t_download_message` VALUES (15, 14, 22, '下载了：Java技术全解', '2024-05-28 03:56:50');
-INSERT INTO `t_download_message` VALUES (16, 14, 22, '下载了：Java技术全解', '2024-06-06 18:50:57');
-INSERT INTO `t_download_message` VALUES (17, 14, 22, '下载了：Java技术全解', '2024-06-07 13:09:33');
-INSERT INTO `t_download_message` VALUES (18, 14, 22, '下载了：Java技术全解', '2024-06-06 12:08:34');
-INSERT INTO `t_download_message` VALUES (19, 14, 22, '下载了：Java技术全解', '2024-06-01 12:49:46');
-INSERT INTO `t_download_message` VALUES (20, 14, 23, '下载了：MySQL数据库', '2024-06-05 11:10:28');
-INSERT INTO `t_download_message` VALUES (21, 14, 24, '下载了：SQLServer数据库', '2024-05-30 09:19:27');
-INSERT INTO `t_download_message` VALUES (22, 14, 24, '下载了：SQLServer数据库', '2024-06-07 03:50:32');
-INSERT INTO `t_download_message` VALUES (23, 14, 24, '下载了：SQLServer数据库', '2024-05-27 21:23:13');
+INSERT INTO `t_download_message` VALUES (13, 5, 21, '下载了：Web前端技术', '2024-06-09 04:46:18');
+INSERT INTO `t_download_message` VALUES (14, 5, 22, '下载了：Java技术全解', '2024-05-25 05:35:19');
+INSERT INTO `t_download_message` VALUES (15, 5, 22, '下载了：Java技术全解', '2024-05-28 03:56:50');
+INSERT INTO `t_download_message` VALUES (16, 5, 22, '下载了：Java技术全解', '2024-06-06 18:50:57');
+INSERT INTO `t_download_message` VALUES (17, 5, 22, '下载了：Java技术全解', '2024-06-07 13:09:33');
+INSERT INTO `t_download_message` VALUES (18, 5, 22, '下载了：Java技术全解', '2024-06-06 12:08:34');
+INSERT INTO `t_download_message` VALUES (19, 5, 22, '下载了：Java技术全解', '2024-06-01 12:49:46');
+INSERT INTO `t_download_message` VALUES (20, 5, 23, '下载了：MySQL数据库', '2024-06-05 11:10:28');
+INSERT INTO `t_download_message` VALUES (21, 5, 24, '下载了：SQLServer数据库', '2024-05-30 09:19:27');
+INSERT INTO `t_download_message` VALUES (22, 5, 24, '下载了：SQLServer数据库', '2024-06-07 03:50:32');
+INSERT INTO `t_download_message` VALUES (23, 5, 24, '下载了：SQLServer数据库', '2024-05-27 21:23:13');
 INSERT INTO `t_download_message` VALUES (24, 7, 19, '下载了：MUI全接触', '2024-05-28 06:52:39');
 INSERT INTO `t_download_message` VALUES (25, 8, 10, '下载了：50份优秀Java求职者简历', '2024-06-07 17:55:57');
 INSERT INTO `t_download_message` VALUES (26, 8, 7, '下载了：Postgresql数据库优化视频教程 下载', '2024-05-31 00:45:53');
@@ -470,12 +470,12 @@ INSERT INTO `t_download_message` VALUES (96, 8, 126, '下载了：JavaEE缓存�
 INSERT INTO `t_download_message` VALUES (97, 13, 127, '下载了：JavaEE监控与管理实践指南', '2024-06-07 09:11:08');
 INSERT INTO `t_download_message` VALUES (98, 17, 122, '下载了：JavaEE数据库编程指南', '2024-06-02 11:12:46');
 INSERT INTO `t_download_message` VALUES (99, 11, 166, '下载了：CSS3动画效果实践指南', '2024-05-29 11:58:28');
-INSERT INTO `t_download_message` VALUES (100, 14, 128, '下载了：JavaEE性能优化实践指南', '2024-05-28 14:11:15');
+INSERT INTO `t_download_message` VALUES (100, 5, 128, '下载了：JavaEE性能优化实践指南', '2024-05-28 14:11:15');
 INSERT INTO `t_download_message` VALUES (101, 9, 197, '下载了：移动端原生开发技术解析', '2024-06-06 09:58:21');
 INSERT INTO `t_download_message` VALUES (102, 20, 95, '下载了：Python数据分析入门', '2024-05-25 16:44:18');
 INSERT INTO `t_download_message` VALUES (103, 19, 116, '下载了：Java框架与工具介绍', '2024-06-08 07:25:01');
 INSERT INTO `t_download_message` VALUES (104, 18, 170, '下载了：Java程序员职业规划', '2024-06-04 19:19:40');
-INSERT INTO `t_download_message` VALUES (105, 14, 160, '下载了：前端跨平台开发技术介绍', '2024-05-31 06:42:52');
+INSERT INTO `t_download_message` VALUES (105, 5, 160, '下载了：前端跨平台开发技术介绍', '2024-05-31 06:42:52');
 INSERT INTO `t_download_message` VALUES (106, 3, 100, '下载了：Python Web开发入门', '2024-05-25 02:19:54');
 INSERT INTO `t_download_message` VALUES (107, 6, 110, '下载了：Java进阶指南', '2024-06-06 08:34:51');
 INSERT INTO `t_download_message` VALUES (108, 5, 201, '下载了：移动APP测试与发布流程', '2024-05-26 08:48:33');
@@ -486,14 +486,14 @@ INSERT INTO `t_download_message` VALUES (112, 4, 32, '下载了：Spring Boot入
 INSERT INTO `t_download_message` VALUES (113, 4, 14, '下载了：mybatis教程pdf合集', '2024-06-09 23:11:36');
 INSERT INTO `t_download_message` VALUES (114, 13, 169, '下载了：Java开源项目解析', '2024-06-04 11:55:13');
 INSERT INTO `t_download_message` VALUES (115, 21, 184, '下载了：Python高级编程技巧', '2024-06-07 19:15:08');
-INSERT INTO `t_download_message` VALUES (116, 14, 43, '下载了：JavaEE Overview', '2024-06-01 19:07:07');
+INSERT INTO `t_download_message` VALUES (116, 5, 43, '下载了：JavaEE Overview', '2024-06-01 19:07:07');
 INSERT INTO `t_download_message` VALUES (117, 19, 112, '下载了：Java集合框架详解', '2024-06-04 04:41:45');
 INSERT INTO `t_download_message` VALUES (118, 3, 43, '下载了：JavaEE Overview', '2024-06-06 21:20:53');
 INSERT INTO `t_download_message` VALUES (119, 21, 128, '下载了：JavaEE性能优化实践指南', '2024-06-08 13:14:20');
 INSERT INTO `t_download_message` VALUES (120, 18, 184, '下载了：Python高级编程技巧', '2024-06-01 22:43:54');
 INSERT INTO `t_download_message` VALUES (121, 1, 198, '下载了：移动APP性能优化实践指南', '2024-06-05 17:53:25');
 INSERT INTO `t_download_message` VALUES (122, 3, 1, '下载了：JavaScript基础教程', '2024-06-09 20:13:33');
-INSERT INTO `t_download_message` VALUES (123, 14, 105, '下载了：关系型数据库管理系统入门', '2024-05-25 07:13:29');
+INSERT INTO `t_download_message` VALUES (123, 5, 105, '下载了：关系型数据库管理系统入门', '2024-05-25 07:13:29');
 INSERT INTO `t_download_message` VALUES (124, 1, 154, '下载了：Java图像处理技术', '2024-05-27 06:20:58');
 INSERT INTO `t_download_message` VALUES (125, 13, 5, '下载了：常用日期函数', '2024-06-08 11:00:00');
 INSERT INTO `t_download_message` VALUES (126, 4, 198, '下载了：移动APP性能优化实践指南', '2024-05-28 17:43:33');
@@ -507,7 +507,14 @@ INSERT INTO `t_download_message` VALUES (133, 17, 172, '下载了：数据库监
 INSERT INTO `t_download_message` VALUES (134, 21, 196, '下载了：移动APP前端框架选型', '2024-05-31 20:33:35');
 INSERT INTO `t_download_message` VALUES (135, 10, 54, '下载了：Advanced SQL Queries', '2024-06-09 10:58:17');
 INSERT INTO `t_download_message` VALUES (136, 10, 64, '下载了：JavaScript高级编程技巧', '2024-05-28 16:51:56');
-INSERT INTO `t_download_message` VALUES (137, 14, 120, '下载了：JavaEE Web开发指南', '2024-06-01 08:01:08');
+INSERT INTO `t_download_message` VALUES (137, 5, 120, '下载了：JavaEE Web开发指南', '2024-06-01 08:01:08');
+INSERT INTO `t_download_message` VALUES (138, 5, 3, '下载了：SQLServer数据库', '2024-06-24 21:53:03');
+INSERT INTO `t_download_message` VALUES (139, 5, 218, '下载了：C#框架与工具介绍', '2024-06-24 21:56:36');
+INSERT INTO `t_download_message` VALUES (140, 5, 53, '下载了：Introduction to SQL', '2024-06-24 21:57:31');
+INSERT INTO `t_download_message` VALUES (141, 14, 56, '下载了：Indexing in Databases', '2024-06-24 22:00:44');
+INSERT INTO `t_download_message` VALUES (142, 14, 55, '下载了：Database Normalization', '2024-06-24 22:00:55');
+INSERT INTO `t_download_message` VALUES (143, 14, 59, '下载了：Database Security', '2024-06-24 22:01:07');
+INSERT INTO `t_download_message` VALUES (144, 14, 62, '下载了：Optimizing Database Performance', '2024-06-24 22:01:17');
 
 -- ----------------------------
 -- Table structure for t_information
@@ -632,7 +639,7 @@ CREATE TABLE `t_recommended`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userId`(`userId` ASC) USING BTREE,
   CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 260 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 262 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_recommended
@@ -896,6 +903,31 @@ INSERT INTO `t_recommended` VALUES (256, 14, '2024-06-06 10:32:13', '[1, 4, 70, 
 INSERT INTO `t_recommended` VALUES (257, 14, '2024-06-06 11:54:48', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 50, 94, 110, 152, 184, 220, 222, NULL, NULL);
 INSERT INTO `t_recommended` VALUES (258, 1, '2024-06-06 14:01:31', '[32, 128, 1, 100, 196, 70, 71, 72, 201, 43, 174, 14, 210, 182, 184, 217, 121, 58, 59, 222, 223]', '[4, 21, 2, 3, 5]', 1, 32, 70, 128, 174, 201, 217, 223, NULL, NULL);
 INSERT INTO `t_recommended` VALUES (259, 11, '2024-06-24 20:18:15', '[64, 1, 70, 198, 9, 137, 14, 206, 16, 17, 210, 19, 214, 86, 25, 217, 154, 219, 28, 222, 223, 34, 98, 100, 43, 110, 111, 54, 184, 123]', '[10, 6, 1, 2, 3]', 9, 43, 86, 98, 123, 217, 222, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (260, 14, '2024-06-24 21:09:08', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 4, 70, 100, 110, 219, 220, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (261, 14, '2024-06-24 21:45:22', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 16, 26, 151, 152, 184, 219, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (262, 14, '2024-06-24 21:52:08', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 9, 26, 40, 50, 75, 100, 123, 126, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (263, 14, '2024-06-24 21:52:16', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 14, 15, 50, 53, 126, 151, 184, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (264, 14, '2024-06-24 21:56:16', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 4, 16, 50, 70, 110, 126, 184, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (265, 14, '2024-06-24 21:56:19', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 14, 70, 111, 123, 126, 170, 184, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (266, 14, '2024-06-24 21:56:32', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 9, 40, 53, 110, 111, 126, 152, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (267, 14, '2024-06-24 21:57:07', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 9, 15, 16, 75, 94, 100, 220, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (268, 14, '2024-06-24 21:57:09', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 4, 16, 26, 40, 75, 152, 219, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (269, 14, '2024-06-24 21:57:12', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 26, 70, 75, 86, 170, 219, 220, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (270, 14, '2024-06-24 21:57:14', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 9, 15, 40, 50, 123, 185, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (271, 14, '2024-06-24 21:57:15', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 9, 26, 75, 86, 110, 151, 185, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (272, 14, '2024-06-24 21:57:18', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 1, 9, 16, 70, 86, 151, 170, 219, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (273, 14, '2024-06-24 21:57:19', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 16, 26, 70, 86, 123, 152, 170, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (274, 14, '2024-06-24 21:57:21', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 40, 94, 110, 151, 152, 170, 184, 220, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (275, 14, '2024-06-24 21:57:23', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 4, 9, 15, 75, 111, 151, 220, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (276, 14, '2024-06-24 21:57:25', '[1, 4, 70, 9, 75, 14, 15, 16, 86, 151, 152, 26, 219, 220, 94, 222, 100, 40, 170, 110, 111, 50, 53, 184, 185, 123, 126]', '[8, 7, 6, 16, 3]', 4, 9, 70, 86, 94, 110, 111, 219, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (277, 14, '2024-06-24 22:00:15', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 23, 34, 72, 98, 154, 182, 201, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (278, 14, '2024-06-24 22:00:17', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 14, 32, 34, 128, 160, 198, 210, 218, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (279, 14, '2024-06-24 22:00:18', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 23, 34, 43, 70, 105, 214, 222, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (280, 14, '2024-06-24 22:00:21', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 19, 21, 22, 23, 28, 43, 105, 160, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (281, 14, '2024-06-24 22:00:27', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 3, 17, 23, 59, 210, 214, 218, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (282, 14, '2024-06-24 22:00:34', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 7, 17, 19, 100, 105, 201, 214, 218, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (283, 14, '2024-06-24 22:00:37', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 14, 21, 22, 120, 198, 201, 214, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (284, 14, '2024-06-24 22:00:39', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 7, 19, 21, 23, 128, 137, 154, 217, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for t_user
@@ -919,12 +951,12 @@ CREATE TABLE `t_user`  (
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, 'admin', 'admin', '银叶', '1203007469@qq.com', '20240114225430.jpg', 10000, 1, 0, '管理员', '2024-01-03 23:16:40');
-INSERT INTO `t_user` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', '20240114225430.jpg', 134, 1, 0, '管理员', '2024-05-12 13:24:48');
+INSERT INTO `t_user` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', '20240114225430.jpg', 10002, 1, 0, '管理员', '2024-01-03 23:16:40');
+INSERT INTO `t_user` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', '20240114225430.jpg', 138, 1, 0, '管理员', '2024-05-12 13:24:48');
 INSERT INTO `t_user` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com', '20240108235216.jpg', 100, 1, 0, '管理员', '2024-05-12 15:22:58');
-INSERT INTO `t_user` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', '20240108235216.jpg', 1000, 1, 0, '管理员', '2024-05-12 15:58:22');
-INSERT INTO `t_user` VALUES (5, '蒋宇宁', 'oOaDpbtazr', '詩涵', '3652628245@qq.com', '20240108235216.jpg', 1000, 1, 0, '管理员', '2024-05-13 09:29:12');
-INSERT INTO `t_user` VALUES (6, '戴震南', 'PLhhw5Q1m2', '子异', '1524844115@qq.com', '20240108235216.jpg', 103, 1, 0, 'VIP用户', '2024-01-07 02:06:22');
+INSERT INTO `t_user` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', '20240108235216.jpg', 1002, 1, 0, '管理员', '2024-05-12 15:58:22');
+INSERT INTO `t_user` VALUES (5, '蒋宇宁', 'oOaDpbtazr', '詩涵', '3652628245@qq.com', '20240108235216.jpg', 1003, 1, 0, '管理员', '2024-05-13 09:29:12');
+INSERT INTO `t_user` VALUES (6, '戴震南', 'PLhhw5Q1m2', '子异', '1524844115@qq.com', '20240108235216.jpg', 105, 1, 0, 'VIP用户', '2024-01-07 02:06:22');
 INSERT INTO `t_user` VALUES (7, '武詩涵', 'sGPwC0R8MP', '震南', '452471515@qq.com', '20240107021707.PNG', 100, 0, 0, '普通用户', '2024-01-07 02:17:07');
 INSERT INTO `t_user` VALUES (8, '江秀英', 'K73GBYxISv', '璐', 'jxiuyi@gmail.com', '20240109172637.jfif', 103, 0, 0, '普通用户', '2024-01-09 17:26:37');
 INSERT INTO `t_user` VALUES (9, '贾睿', 'IK3to3MW4W', '云熙', 'jia69@gmail.com', '20240111025503.jpg', 0, 0, 0, '普通用户', '2024-01-11 02:55:03');
@@ -932,7 +964,7 @@ INSERT INTO `t_user` VALUES (10, '龙晓明', 'cXxZ21UgaO', '致远', 'xiaoming6
 INSERT INTO `t_user` VALUES (11, '潘睿', 'XhTHG6uA1d', '安岚', 'ruipan@gmail.com', '20240111025751.jpg', 100, 0, 0, '普通用户', '2024-01-11 02:57:51');
 INSERT INTO `t_user` VALUES (12, '毛宇宁', 'UtI2YTJSnb', '睿', 'yumao@gmail.com', '20240113053514.png', 50, 0, 0, '普通用户', '2024-01-13 05:35:14');
 INSERT INTO `t_user` VALUES (13, '陆云熙', 'XBZ5HnNgI1', '子韬', 'lu10@outlook.com', '20240108235216.jpg', 100, 0, 1, '普通用户', '2024-01-14 04:35:24');
-INSERT INTO `t_user` VALUES (14, '顾云熙', 'E3LmwZEnZk', '云熙', '2581593533@qq.com', '20240524191213.jpg', 43, 1, 0, 'VIP用户', '2024-05-11 08:13:35');
+INSERT INTO `t_user` VALUES (14, '顾云熙', 'E3LmwZEnZk', '云熙', '2581593533@qq.com', '20240624210919.jpg', 45, 1, 0, 'VIP用户', '2024-05-11 08:13:35');
 INSERT INTO `t_user` VALUES (15, '江睿', 'Jt2D3KXMoi', '秀英', 'rui73@gmail.com', '20240108235216.jpg', 153, 0, 0, '普通用户', '2024-05-12 15:28:23');
 INSERT INTO `t_user` VALUES (16, '贺云熙', 'blGsXiq8HK', '震南', 'hyunxi@qq.com', '20240513093313.jpg', 100, 0, 0, '普通用户', '2024-05-13 09:33:13');
 INSERT INTO `t_user` VALUES (17, '蔡詩涵', 'jmdfdKTcXq', '秀芹', 'shihan1980@outlook.com', '20240108235216.jpg', 100, 0, 0, '普通用户', '2024-05-16 16:30:34');

@@ -5,85 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="更新数据库">
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fnm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne_8.liv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.pos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tng.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tni.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/segments_4cai" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240624205806.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240624210919.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f97210bd-8939-4fc0-b14d-8035c664a399.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/Download_message.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/Download_message.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/db_informationshare.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.fdt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.fdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.fnm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.nvd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.nvm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k_5.liv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k_Lucene50_0.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k_Lucene50_0.pos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k_Lucene50_0.tim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9k_Lucene50_0.tip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9l.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9l.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9l.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9m.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9m.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9m.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9n.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9n.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9n.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9o.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9o.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9o.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9p.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9p.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4r9p.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/segments_4a56" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/DownloadMessageAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/admin/DownloadMessageAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/entity/DownloadMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/entity/DownloadMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/DownloadMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/mapper/DownloadMessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/DownloadMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/DownloadMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/DownloadMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/DownloadMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/downMessageManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/downMessageManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240524191213.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_8.liv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/segments_4cai" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,14 +214,7 @@
       <workItem from="1719146987203" duration="33000" />
       <workItem from="1719147040661" duration="29000" />
       <workItem from="1719228331387" duration="4640000" />
-    </task>
-    <task id="LOCAL-00002" summary="初始化">
-      <option name="closed" value="true" />
-      <created>1715433379851</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715433379851</updated>
+      <workItem from="1719236690699" duration="805000" />
     </task>
     <task id="LOCAL-00003" summary="初始化">
       <option name="closed" value="true" />
@@ -650,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718325662820</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="更新数据库">
+      <option name="closed" value="true" />
+      <created>1719236797061</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1719236797061</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
