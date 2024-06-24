@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 下载信息Service接口实现类
+ * 下载记录Service接口实现类
  *
  * @author
  * @company

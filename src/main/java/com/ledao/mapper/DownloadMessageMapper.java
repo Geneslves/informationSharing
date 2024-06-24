@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 下载信息Mapper接口
+ * 下载记录Mapper接口
  *
  * @author
  * @company
@@ -35,7 +35,7 @@ public interface DownloadMessageMapper {
     Long getTotal(Map<String, Object> map);
 
     /**
-     * 添加下载信息
+     * 添加下载记录
      *
      * @param downloadMessage
      * @return
@@ -43,7 +43,7 @@ public interface DownloadMessageMapper {
     Integer add(DownloadMessage downloadMessage);
 
     /**
-     * 根据id删除下载信息
+     * 根据id删除下载记录
      *
      * @param id
      * @return

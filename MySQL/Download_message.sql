@@ -27,7 +27,7 @@ CREATE TABLE `t_download_message`
     `id`           int NOT NULL AUTO_INCREMENT COMMENT '编号',
     `userId`       int NULL DEFAULT NULL COMMENT '下载者id',
     `articleId`    int NULL DEFAULT NULL COMMENT '资源id',
-    `message`      varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '下载信息',
+    `message`      varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '下载记录',
     `downloadDate` datetime NULL DEFAULT NULL COMMENT '下载时间',
     PRIMARY KEY (`id`) USING BTREE,
     INDEX          `id`(`id` ASC) USING BTREE,

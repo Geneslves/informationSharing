@@ -3,7 +3,7 @@ package com.ledao.entity;
 import java.util.Date;
 
 /**
- * 下载信息
+ * 下载记录
  *
  * @author
  * @company
@@ -33,7 +33,7 @@ public class DownloadMessage {
      */
     private Article article;
     /**
-     * 下载信息
+     * 下载记录
      */
     private String message;
     /**

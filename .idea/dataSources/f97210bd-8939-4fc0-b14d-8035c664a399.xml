@@ -1237,7 +1237,7 @@ DYNAMIC</Options>
       <Position>3</Position>
     </column>
     <column id="353" parent="303" name="message">
-      <Comment>下载信息</Comment>
+      <Comment>下载记录</Comment>
       <DasType>varchar(500)|0s</DasType>
       <Position>4</Position>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 后台下载信息Controller层
+ * 后台下载记录Controller层
  *
  * @author
  * @company
@@ -31,7 +31,7 @@ public class DownloadMessageAdminController {
     private UserService userService;
 
     /**
-     * 分页分条件查询下载信息
+     * 分页分条件查询下载记录
      *
      * @param downloadMessage
      * @param page
@@ -57,7 +57,7 @@ public class DownloadMessageAdminController {
     }
 
     /**
-     * 删除下载信息(可批量删除)
+     * 删除下载记录(可批量删除)
      *
      * @param ids
      * @return
