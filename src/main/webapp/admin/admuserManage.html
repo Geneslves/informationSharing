@@ -235,10 +235,10 @@
             if (val == 1) return "<span style='color: red'>是</span>";
         }
 
-        function formatRoleName(val, row) {
-            if (val == "普通用户") return "普通用户";
-            if (val == "管理员") return "<span style='color: red'>管理员</span>";
-        }
+        // function formatRoleName(val, row) {
+        //     if (val == "普通用户") return "普通用户";
+        //     if (val == "管理员") return "<span style='color: red'>管理员</span>";
+        // }
     </script>
 </head>
 <body style="margin: 1px">
@@ -252,9 +252,9 @@
     <th align="center" field="nickName" width="20">昵称</th>
     <th align="center" field="email" width="50">邮箱</th>
     <th align="center" field="points" width="20">剩余积分</th>
-    <th align="center" field="resourceCount" width="20">资源数量</th> <!-- 新增的资源数量列 -->
+<!--    <th align="center" field="resourceCount" width="20">资源数量</th> &lt;!&ndash; 新增的资源数量列 &ndash;&gt;-->
     <th align="center" field="isOff" formatter="formatIsOff" width="20">是否被封禁</th>
-    <th align="center" field="roleName" formatter="formatRoleName" width="20">用户类型</th>
+<!--    <th align="center" field="roleName" formatter="formatRoleName" width="20">用户类型</th>-->
     <th align="center" field="registerDate" width="30">注册时间</th>
     </thead>
 </table>
@@ -265,7 +265,7 @@
            plain="true">修改</a>
         <a class="easyui-linkbutton" href="javascript:deleteUser()" iconCls="icon-remove" plain="true">删除</a>
         <a class="easyui-linkbutton" href="javascript:modifyOff()" iconCls="icon-modifyOff" plain="true">封禁或解封</a>
-        <a class="easyui-linkbutton" href="javascript:modifyRoleType()" iconCls="icon-modifyRoleType" plain="true">切换用户类型</a>
+<!--        <a class="easyui-linkbutton" href="javascript:modifyRoleType()" iconCls="icon-modifyRoleType" plain="true">切换用户类型</a>-->
         <a class="easyui-linkbutton" href="javascript:openAddOrReducePointsDialog(1)" iconCls="icon-addPoints"
            plain="true">加积分</a>
         <a class="easyui-linkbutton" href="javascript:openAddOrReducePointsDialog(2)" iconCls="icon-reducePoints"

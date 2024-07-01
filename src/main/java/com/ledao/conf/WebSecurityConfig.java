@@ -1,6 +1,7 @@
 package com.ledao.conf;
 
 import com.ledao.entity.User;
+import com.ledao.service.AdmUserService;
 import com.ledao.service.UserService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -27,6 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Resource
     private UserService userService;
+    @Resource
+    private AdmUserService admuserService;
 
     /**
      * 配置用户认证
@@ -71,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public class CustomUserDetailsService implements UserDetailsService {
         @Override
         public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-            User user = userService.findByUserName(username);
+            User user = admuserService.findByUserName(username);
             if (user == null) {
                 throw new UsernameNotFoundException("User not found");
             }

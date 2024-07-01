@@ -5,42 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="更新数据库">
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.fnm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.nvm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_8.liv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.pos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tne_Lucene50_0.tip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnf.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tng.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnh.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tni.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnj.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnk.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnl.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/_4tnm.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucene/MyArticle/segments_4cai" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/_2024_6_6_6_33____.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/20240606174914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/_4r9k_8.liv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/_4r9q.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/_4r9q.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/_4r9q.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/segments_4a59" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_6_下午6_33_取消提交了更改_[更改]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.fdt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.fdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.fnm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.nvd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.nvm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno_Lucene50_0.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno_Lucene50_0.pos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno_Lucene50_0.tim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tno_Lucene50_0.tip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnp.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnp.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnp.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnq.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnq.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lucene/MyArticle/_4tnq.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240629094050.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/files/20240629094820.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240629092829.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240629092907.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240629093456.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240629093848.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240629094620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ledao/quartz/DatabaseHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ledao/quartz/IndexUpdater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/db_informationshare.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/conf/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/conf/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/RecommendationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/service/impl/RecommendationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdmUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdmUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/userManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240111025751.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/images/userImage/20240624210919.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig$CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig$CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/conf/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/RecommendationResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/service/impl/RecommendationResult.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,15 +225,13 @@
       <workItem from="1719146987203" duration="33000" />
       <workItem from="1719147040661" duration="29000" />
       <workItem from="1719228331387" duration="4640000" />
-      <workItem from="1719236690699" duration="805000" />
-    </task>
-    <task id="LOCAL-00003" summary="初始化">
-      <option name="closed" value="true" />
-      <created>1715433451892</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715433451892</updated>
+      <workItem from="1719236690699" duration="1526000" />
+      <workItem from="1719367236493" duration="13000" />
+      <workItem from="1719368777614" duration="1096000" />
+      <workItem from="1719384284798" duration="695000" />
+      <workItem from="1719493805831" duration="509000" />
+      <workItem from="1719624245659" duration="1577000" />
+      <workItem from="1719834918455" duration="4423000" />
     </task>
     <task id="LOCAL-00004" summary="初始化">
       <option name="closed" value="true" />
@@ -608,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719236797061</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="更新数据库">
+      <option name="closed" value="true" />
+      <created>1719238812707</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1719238812707</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

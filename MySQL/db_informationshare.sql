@@ -11,11 +11,37 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 24/06/2024 22:19:36
+ Date: 01/07/2024 21:30:08
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for t_admuser
+-- ----------------------------
+DROP TABLE IF EXISTS `t_admuser`;
+CREATE TABLE `t_admuser`  (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `userName` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '用户名',
+  `password` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '密码',
+  `nickName` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '昵称',
+  `email` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '邮箱地址',
+  `points` int NULL DEFAULT NULL COMMENT '积分',
+  `isVip` int NULL DEFAULT NULL COMMENT '是否VIP',
+  `isOff` int NULL DEFAULT NULL COMMENT '是否封禁',
+  `roleName` varchar(8) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '角色名称',
+  `registerDate` datetime NULL DEFAULT NULL COMMENT '注册时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of t_admuser
+-- ----------------------------
+INSERT INTO `t_admuser` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', 10013, 1, 0, '管理员', '2024-01-03 23:16:40');
+INSERT INTO `t_admuser` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', 138, 1, 0, '管理员', '2024-05-12 13:24:48');
+INSERT INTO `t_admuser` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com', 100, 1, 0, '管理员', '2024-05-12 15:22:58');
+INSERT INTO `t_admuser` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', 1002, 1, 0, '管理员', '2024-05-12 15:58:22');
 
 -- ----------------------------
 -- Table structure for t_article
@@ -45,17 +71,17 @@ CREATE TABLE `t_article`  (
   INDEX `userId`(`userId` ASC) USING BTREE,
   INDEX `name`(`name` ASC) USING BTREE,
   CONSTRAINT `t_article_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 233 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 235 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_article
 -- ----------------------------
-INSERT INTO `t_article` VALUES (1, 'Java技术全解', '2024-03-29 19:26:21', 14, 1, 1, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;\n', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-24 21:52:11', 0, 39, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (2, 'MySQL数据库', '2024-04-11 05:21:42', 14, 2, 6, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-04-29 17:06:50', 1, 6, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (3, 'SQLServer数据库', '2024-04-01 07:25:19', 14, 2, 4, '数据库\n', '<p><img alt=\"\" src=\"/static/images/articleImage/20240516170806.jpg\" />数据库</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-24 21:52:17', 1, 16, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (4, 'Java基础入门', '2024-04-10 01:47:46', 6, 1, 5, 'Java基础知识概览', 'Java基础入门内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 19, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (1, 'Java技术全解', '2024-03-29 19:26:21', 14, 1, 1, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;\n', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。&nbsp;</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-29 09:47:12', 0, 41, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (2, 'MySQL数据库', '2024-04-11 05:21:42', 14, 2, 6, '本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。', '<p>本指南介绍了使用方法、常用功能和实际案例，适合开发者学习。</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-29 10:08:49', 1, 9, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (3, 'SQLServer数据库', '2024-04-01 07:25:19', 14, 2, 4, '数据库\n', '<p><img alt=\"\" src=\"/static/images/articleImage/20240516170806.jpg\" />数据库</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-29 09:47:28', 1, 18, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (4, 'Java基础入门', '2024-04-10 01:47:46', 6, 1, 5, 'Java基础知识概览', 'Java基础入门内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 20, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (5, 'Java高级编程', '2024-04-05 02:53:04', 7, 1, 8, '深入了解Java高级特性', 'Java高级编程内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 12, '');
-INSERT INTO `t_article` VALUES (6, 'Java并发编程', '2024-04-06 13:29:33', 8, 1, 7, '学习Java并发编程', 'Java并发编程内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 29, '');
+INSERT INTO `t_article` VALUES (6, 'Java并发编程', '2024-04-06 13:29:33', 8, 1, 7, '学习Java并发编程', 'Java并发编程内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 31, '');
 INSERT INTO `t_article` VALUES (7, 'Java设计模式', '2024-03-31 04:10:42', 9, 1, 6, '深入理解常用的Java设计模式', 'Java设计模式内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 15, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (8, 'Spring框架入门', '2024-04-01 15:00:52', 10, 5, 7, '学习Spring框架的基础知识', 'Spring框架入门内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 22, '');
 INSERT INTO `t_article` VALUES (9, 'Hibernate框架入门', '2024-03-16 19:19:16', 14, 5, 7, '学习Hibernate框架的基础知识', 'Hibernate框架入门内容……', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 30, './src/main/webapp/static/files/20240529102904.mp3');
@@ -75,7 +101,7 @@ INSERT INTO `t_article` VALUES (22, 'JavaEE Servlets', '2024-04-11 08:18:15', 1,
 INSERT INTO `t_article` VALUES (23, 'JavaScript基础教程', '2024-03-25 03:07:23', 3, 8, 2, '适合初学者的JavaScript基础教程', '本教程详细介绍了JavaScript的基本语法和常用功能，适合初学者学习。', 'https://pan.baidu.com/s/xxx', '123456', 1, 2, NULL, '2024-05-21 13:49:33', 1, 111, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (24, 'JavaScript进阶指南', '2024-04-16 22:57:09', 4, 8, 3, '深入学习JavaScript进阶知识和技巧', '本指南介绍了JavaScript的一些进阶用法和技巧，适合有一定基础的开发者阅读。', 'https://pan.baidu.com/s/yyy', 'abcdef', 0, 0, NULL, '2024-05-11 09:10:50', 1, 120, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (25, '拳皇版超级玛丽13可执行文件', '2024-03-25 11:46:41', 6, 1, 4, '拳皇版超级玛丽13可执行文件\n', '<p>拳皇版超级玛丽13可执行文件</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 12, './src/main/webapp/static/files/20240529102904.mp3');
-INSERT INTO `t_article` VALUES (26, '2024年java常见笔试面试题汇总(附答案)', '2024-03-27 01:05:43', 6, 1, 5, '2024年java常见笔试面试题汇总(附答案)\n', '<p>2024年java常见笔试面试题汇总(附答案)</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-05-21 13:15:35', 1, 28, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (26, '2024年java常见笔试面试题汇总(附答案)', '2024-03-27 01:05:43', 6, 1, 5, '2024年java常见笔试面试题汇总(附答案)\n', '<p>2024年java常见笔试面试题汇总(附答案)</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-06-29 10:29:13', 1, 32, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (27, '常用日期函数', '2024-04-12 13:30:06', 6, 2, 5, '常用日期函数\n', '<p>常用日期函数</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-04-30 07:17:22', 1, 15, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (28, '王二暖Oracle视频教程 下载', '2024-03-24 00:10:51', 6, 2, 3, '王二暖Oracle视频教程 下载\n', '<p>王二暖Oracle视频教程 下载</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, NULL, NULL, 1, 22, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (29, 'Mysql从入门到精通视频教程（共29集）下载', '2024-03-17 12:08:48', 6, 2, 5, 'Mysql从入门到精通视频教程（共29集）下载\n', '<p>Mysql从入门到精通视频教程（共29集）下载</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 2, '无', '2024-05-10 11:45:29', 1, 30, './src/main/webapp/static/files/20240529102904.mp3');
@@ -282,6 +308,9 @@ INSERT INTO `t_article` VALUES (229, 'C++项目管理与团队协作指南', '20
 INSERT INTO `t_article` VALUES (230, 'Swift基础教程', '2024-03-05 12:41:22', 18, 8, 4, '适合初学者的Swift基础教程', '本教程详细介绍了Swift的基本语法和常用功能，适合初学者学习。', 'https://pan.baidu.com/s/jkl', 'security', 1, 2, NULL, '2024-05-13 03:37:13', 1, 130, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (231, 'Swift进阶指南', '2024-04-10 17:07:47', 1, 8, 3, '深入学习Swift进阶知识和技巧', '本指南介绍了Swift的一些进阶用法和技巧，适合有一定基础的开发者阅读。', 'https://pan.baidu.com/s/mno', 'webperf', 0, 2, NULL, '2024-04-29 17:41:28', 1, 95, './src/main/webapp/static/files/20240529102904.mp3');
 INSERT INTO `t_article` VALUES (232, 'Swift并发编程实战', '2024-03-03 14:22:56', 2, 8, 2, '学习Swift并发编程的实践经验和技巧', '本指南介绍了Swift并发编程的基本概念、常见问题和解决方案，适合开发者学习。', 'https://pan.baidu.com/s/pqr', 'password', 0, 2, NULL, '2024-05-11 20:15:49', 1, 85, './src/main/webapp/static/files/20240529102904.mp3');
+INSERT INTO `t_article` VALUES (233, 'Java', '2024-06-29 09:40:50', 14, 1, 3, 'Java\n', '<p>Java</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 1, NULL, NULL, 1, 0, './src/main/webapp/static/files/20240629094050.mp4');
+INSERT INTO `t_article` VALUES (234, 'JAVA语言', '2024-06-29 09:48:20', 14, 1, 3, 'Java语言\n', '<p>Java语言</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1234', 0, 1, NULL, NULL, 1, 0, './src/main/webapp/static/files/20240629094820.mp4');
+INSERT INTO `t_article` VALUES (235, 'JavaEE技术介绍', '2024-06-29 10:10:07', 14, 4, 4, 'JavaEE技术介绍\n', '<p>JavaEE技术介绍</p>\r\n', 'https://pan.baidu.com/s/1xyjEHhI9NGidf6crR5NYOg?pwd=', '1123', 0, 1, NULL, NULL, 1, 0, './src/main/webapp/static/files/20240629101007.mp4');
 
 -- ----------------------------
 -- Table structure for t_article_type
@@ -293,7 +322,7 @@ CREATE TABLE `t_article_type`  (
   `remark` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '描述',
   `sortNum` int NULL DEFAULT NULL COMMENT '排列顺序',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article_type' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article_type' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_article_type
@@ -325,7 +354,7 @@ CREATE TABLE `t_comment`  (
   INDEX `articleId`(`articleId` ASC) USING BTREE,
   CONSTRAINT `t_comment_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `t_comment_ibfk_2` FOREIGN KEY (`articleId`) REFERENCES `t_article` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_comment' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_comment' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_comment
@@ -344,11 +373,11 @@ INSERT INTO `t_comment` VALUES (11, 8, 26, '不错的文章', '2024-05-25 03:27:
 INSERT INTO `t_comment` VALUES (12, 9, 27, '资源详细', '2024-05-25 06:48:47', 10, 1);
 INSERT INTO `t_comment` VALUES (13, 10, 28, '信息丰富', '2024-05-24 16:55:22', 11, 1);
 INSERT INTO `t_comment` VALUES (14, 11, 29, '值得阅读的一个资源', '2024-05-26 07:10:37', 12, 2);
-INSERT INTO `t_comment` VALUES (30, 7, 25, '非常有帮助', '2024-05-25 09:49:54', 8, 1);
-INSERT INTO `t_comment` VALUES (31, 8, 26, '不错的资源', '2024-05-27 15:15:42', 9, 1);
-INSERT INTO `t_comment` VALUES (32, 9, 27, '非常详细', '2024-05-25 09:11:51', 10, 2);
-INSERT INTO `t_comment` VALUES (33, 10, 28, '资源清晰具体', '2024-05-27 22:24:40', 11, 1);
-INSERT INTO `t_comment` VALUES (34, 11, 29, '值得使用', '2024-05-25 21:12:10', 12, 1);
+INSERT INTO `t_comment` VALUES (15, 7, 25, '非常有帮助', '2024-05-25 09:49:54', 8, 1);
+INSERT INTO `t_comment` VALUES (16, 8, 26, '不错的资源', '2024-05-27 15:15:42', 9, 1);
+INSERT INTO `t_comment` VALUES (17, 9, 27, '非常详细', '2024-05-25 09:11:51', 10, 2);
+INSERT INTO `t_comment` VALUES (18, 10, 28, '资源清晰具体', '2024-05-27 22:24:40', 11, 1);
+INSERT INTO `t_comment` VALUES (19, 11, 29, '值得使用', '2024-05-25 21:12:10', 12, 1);
 
 -- ----------------------------
 -- Table structure for t_download_message
@@ -366,7 +395,7 @@ CREATE TABLE `t_download_message`  (
   INDEX `articleId`(`articleId` ASC) USING BTREE,
   CONSTRAINT `t_download_message_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `t_download_message_ibfk_2` FOREIGN KEY (`articleId`) REFERENCES `t_article` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 138 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_download_message' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 148 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_download_message' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_download_message
@@ -441,7 +470,6 @@ INSERT INTO `t_download_message` VALUES (67, 7, 53, '下载了：Introduction to
 INSERT INTO `t_download_message` VALUES (68, 9, 145, '下载了：数据库安全防护指南', '2024-05-29 02:01:58');
 INSERT INTO `t_download_message` VALUES (69, 10, 166, '下载了：CSS3动画效果实践指南', '2024-06-03 13:33:47');
 INSERT INTO `t_download_message` VALUES (70, 2, 210, '下载了：微服务架构中的安全防护', '2024-05-29 20:30:18');
-INSERT INTO `t_download_message` VALUES (71, 2, 217, '下载了：C#服务器端开发实战', '2024-06-03 12:39:25');
 INSERT INTO `t_download_message` VALUES (72, 3, 70, '下载了：前端安全指南', '2024-06-09 10:31:43');
 INSERT INTO `t_download_message` VALUES (73, 1, 137, '下载了：Python数据分析实战', '2024-05-30 12:56:13');
 INSERT INTO `t_download_message` VALUES (74, 13, 102, '下载了：Python开发工具与环境配置指南', '2024-05-28 12:16:08');
@@ -515,6 +543,10 @@ INSERT INTO `t_download_message` VALUES (141, 14, 56, '下载了：Indexing in D
 INSERT INTO `t_download_message` VALUES (142, 14, 55, '下载了：Database Normalization', '2024-06-24 22:00:55');
 INSERT INTO `t_download_message` VALUES (143, 14, 59, '下载了：Database Security', '2024-06-24 22:01:07');
 INSERT INTO `t_download_message` VALUES (144, 14, 62, '下载了：Optimizing Database Performance', '2024-06-24 22:01:17');
+INSERT INTO `t_download_message` VALUES (145, 14, 6, '下载了：Java并发编程', '2024-06-29 09:42:03');
+INSERT INTO `t_download_message` VALUES (146, 14, 6, '下载了：Java并发编程', '2024-06-29 09:42:05');
+INSERT INTO `t_download_message` VALUES (147, 14, 3, '下载了：SQLServer数据库', '2024-06-29 09:47:20');
+INSERT INTO `t_download_message` VALUES (148, 26, 2, '下载了：MySQL数据库', '2024-06-29 10:08:40');
 
 -- ----------------------------
 -- Table structure for t_information
@@ -529,7 +561,7 @@ CREATE TABLE `t_information`  (
   INDEX `id`(`id` ASC) USING BTREE,
   INDEX `userId`(`userId` ASC) USING BTREE,
   CONSTRAINT `t_information_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 'int_formation' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 'int_formation' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_information
@@ -568,6 +600,8 @@ INSERT INTO `t_information` VALUES (31, 10, '新的系统更新', '2024-05-08 06
 INSERT INTO `t_information` VALUES (32, 11, '你的文章被收藏', '2024-04-20 06:21:51');
 INSERT INTO `t_information` VALUES (33, 12, '积分活动通知', '2024-04-16 04:42:10');
 INSERT INTO `t_information` VALUES (34, 13, '新的好友请求', '2024-05-14 04:20:19');
+INSERT INTO `t_information` VALUES (35, 8, '已添加积分', '2024-06-29 09:52:56');
+INSERT INTO `t_information` VALUES (36, 8, '已减少积分', '2024-06-29 10:17:07');
 
 -- ----------------------------
 -- Table structure for t_link
@@ -580,7 +614,7 @@ CREATE TABLE `t_link`  (
   `sortNum` int NULL DEFAULT NULL COMMENT '排列序号',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `id`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_link' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_link' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_link
@@ -603,13 +637,13 @@ CREATE TABLE `t_notice`  (
   `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '内容',
   `time` datetime NULL DEFAULT NULL COMMENT '时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_notice
 -- ----------------------------
-INSERT INTO `t_notice` VALUES (1, '系统维护通知', '系统将在本周六凌晨进行维护，预计持续时间为2小时。请各位用户提前保存工作。', '2024-06-11 01:31:26');
-INSERT INTO `t_notice` VALUES (2, '新功能上线', '我们很高兴地宣布，新版本的系统已经上线，包含以下新功能...', '2024-06-07 20:33:01');
+INSERT INTO `t_notice` VALUES (1, '系统维护的通知', '系统将在本周六凌晨进行维护，预计持续时间为2小时。请各位用户提前保存工作。', '2024-06-29 10:16:18');
+INSERT INTO `t_notice` VALUES (2, '新功能上线啦', '我们很高兴地宣布，新版本的系统已经上线，包含以下新功能...', '2024-06-29 09:52:19');
 INSERT INTO `t_notice` VALUES (3, '假期安排', '根据公司安排，节期间放假3天，放假时间为...', '2024-06-05 06:24:04');
 INSERT INTO `t_notice` VALUES (4, '重要通知', '由于政策变动，请大家尽快更新个人信息，以免影响正常使用。', '2024-05-20 20:56:10');
 INSERT INTO `t_notice` VALUES (5, '内部培训', '本月公司将组织一次内部培训，主要内容为...', '2024-05-07 04:45:33');
@@ -638,8 +672,8 @@ CREATE TABLE `t_recommended`  (
   `articleId10` int NULL DEFAULT NULL COMMENT '推荐资源ID',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userId`(`userId` ASC) USING BTREE,
-  CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 262 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE SET NULL ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 302 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_recommended
@@ -928,6 +962,24 @@ INSERT INTO `t_recommended` VALUES (281, 14, '2024-06-24 22:00:27', '[128, 1, 3,
 INSERT INTO `t_recommended` VALUES (282, 14, '2024-06-24 22:00:34', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 7, 17, 19, 100, 105, 201, 214, 218, NULL, NULL);
 INSERT INTO `t_recommended` VALUES (283, 14, '2024-06-24 22:00:37', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 14, 21, 22, 120, 198, 201, 214, 222, NULL, NULL);
 INSERT INTO `t_recommended` VALUES (284, 14, '2024-06-24 22:00:39', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 7, 19, 21, 23, 128, 137, 154, 217, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (285, 14, '2024-06-26 10:29:31', '[32, 97, 1, 34, 98, 100, 70, 198, 72, 137, 43, 172, 174, 14, 210, 214, 118, 217, 122, 154, 28, 222, 223]', '[17, 4, 1, 2, 3]', 28, 34, 72, 100, 172, 210, 217, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (286, 11, '2024-06-27 21:15:00', '[64, 1, 70, 198, 9, 137, 14, 206, 16, 17, 210, 19, 214, 86, 25, 217, 154, 219, 28, 222, 223, 34, 98, 100, 43, 110, 111, 54, 184, 123]', '[10, 6, 1, 2, 3]', 17, 19, 34, 98, 154, 210, 222, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (287, 11, '2024-06-27 21:15:02', '[64, 1, 70, 198, 9, 137, 14, 206, 16, 17, 210, 19, 214, 86, 25, 217, 154, 219, 28, 222, 223, 34, 98, 100, 43, 110, 111, 54, 184, 123]', '[10, 6, 1, 2, 3]', 16, 17, 25, 43, 98, 100, 123, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (288, NULL, '2024-06-29 09:28:35', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 17, 21, 100, 137, 182, 201, 217, 218, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (289, 11, '2024-06-29 09:28:51', '[64, 1, 70, 198, 9, 137, 14, 206, 16, 17, 210, 19, 214, 86, 25, 217, 154, 219, 28, 222, 223, 34, 98, 100, 43, 110, 111, 54, 184, 123]', '[10, 6, 1, 2, 3]', 43, 54, 86, 110, 111, 123, 198, 214, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (290, NULL, '2024-06-29 09:33:09', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 3, 105, 120, 128, 154, 182, 222, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (291, NULL, '2024-06-29 09:34:15', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 10, 22, 32, 53, 59, 137, 160, 210, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (292, NULL, '2024-06-29 09:34:29', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 14, 17, 23, 24, 43, 98, 137, 174, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (293, NULL, '2024-06-29 09:39:53', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 1, 17, 19, 22, 72, 105, 217, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (294, 14, '2024-06-29 09:40:03', '[32, 97, 1, 34, 98, 100, 70, 198, 72, 137, 43, 172, 174, 14, 210, 214, 118, 217, 122, 154, 28, 222, 223]', '[17, 4, 1, 2, 3]', 28, 100, 118, 137, 154, 174, 198, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (295, 14, '2024-06-29 09:41:56', '[32, 97, 1, 34, 98, 100, 70, 198, 72, 137, 43, 172, 174, 14, 210, 214, 118, 217, 122, 154, 28, 222, 223]', '[17, 4, 1, 2, 3]', 1, 14, 43, 70, 98, 100, 172, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (296, NULL, '2024-06-29 09:46:24', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 1, 7, 10, 23, 100, 105, 137, 201, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (297, 14, '2024-06-29 09:47:09', '[32, 97, 1, 34, 98, 100, 70, 198, 72, 137, 43, 172, 174, 14, 210, 214, 118, 217, 122, 154, 28, 222, 223]', '[17, 4, 1, 2, 3]', 1, 28, 34, 122, 198, 214, 222, 223, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (298, 14, '2024-06-29 09:47:30', '[128, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 223, 160, 32, 97, 34, 98, 105, 43, 172, 174, 53, 118, 182, 120, 122]', '[17, 4, 5, 1, 2]', 10, 14, 24, 34, 43, 72, 137, 214, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (299, 26, '2024-06-29 10:08:14', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 21, 22, 59, 98, 120, 154, 210, 218, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (300, 26, '2024-06-29 10:08:50', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 1, 22, 28, 43, 70, 137, 198, 217, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (301, 26, '2024-06-29 10:08:59', '[128, 1, 3, 70, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 222, 223, 160, 32, 34, 98, 100, 105, 43, 174, 53, 182, 120, 59]', '[1, 2, 3, 4, 5]', 17, 22, 24, 70, 128, 182, 210, 222, NULL, NULL);
+INSERT INTO `t_recommended` VALUES (302, 14, '2024-06-29 10:09:10', '[128, 198, 7, 72, 137, 201, 10, 14, 17, 210, 19, 21, 22, 214, 23, 24, 217, 154, 218, 28, 223, 160, 32, 97, 34, 98, 105, 43, 172, 174, 53, 118, 182, 120, 122]', '[17, 4, 5, 1, 2]', 28, 97, 98, 118, 120, 154, 201, 214, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for t_user
@@ -951,20 +1003,20 @@ CREATE TABLE `t_user`  (
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', '20240114225430.jpg', 10002, 1, 0, '管理员', '2024-01-03 23:16:40');
-INSERT INTO `t_user` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', '20240114225430.jpg', 138, 1, 0, '管理员', '2024-05-12 13:24:48');
-INSERT INTO `t_user` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com', '20240108235216.jpg', 100, 1, 0, '管理员', '2024-05-12 15:22:58');
-INSERT INTO `t_user` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', '20240108235216.jpg', 1002, 1, 0, '管理员', '2024-05-12 15:58:22');
-INSERT INTO `t_user` VALUES (5, '蒋宇宁', 'oOaDpbtazr', '詩涵', '3652628245@qq.com', '20240108235216.jpg', 1003, 1, 0, '管理员', '2024-05-13 09:29:12');
-INSERT INTO `t_user` VALUES (6, '戴震南', 'PLhhw5Q1m2', '子异', '1524844115@qq.com', '20240108235216.jpg', 105, 1, 0, 'VIP用户', '2024-01-07 02:06:22');
+INSERT INTO `t_user` VALUES (1, '潘涛', 'Afg7AD32V', '云叶', '12030069@qq.com', '20240114225430.jpg', 100, 0, 0, '普通用户', '2024-01-03 23:16:40');
+INSERT INTO `t_user` VALUES (2, '邱伦', 'oLP8TgOS6T', '岚叶', 'qiujhgial@gmail.com', '20240114225430.jpg', 138, 0, 0, '普通用户', '2024-05-12 13:24:48');
+INSERT INTO `t_user` VALUES (3, '李璐', 'VodXWtbckm', '风云', 'lu9bghj@outlook.com', '20240108235216.jpg', 100, 0, 0, '普通用户', '2024-05-12 15:22:58');
+INSERT INTO `t_user` VALUES (4, '颜璐', 'Xgy2zPfghRE', '子颜', 'dlujhghg@gmail.com', '20240108235216.jpg', 102, 0, 0, '普通用户', '2024-05-12 15:58:22');
+INSERT INTO `t_user` VALUES (5, '蒋宇宁', 'oOaDpbtazr', '詩涵', '3652628245@qq.com', '20240108235216.jpg', 103, 0, 0, '普通用户', '2024-05-13 09:29:12');
+INSERT INTO `t_user` VALUES (6, '戴震南', 'PLhhw5Q1m2', '子', '1524844115@qq.com', '20240108235216.jpg', 110, 0, 1, '普通用户', '2024-01-07 02:06:22');
 INSERT INTO `t_user` VALUES (7, '武詩涵', 'sGPwC0R8MP', '震南', '452471515@qq.com', '20240107021707.PNG', 100, 0, 0, '普通用户', '2024-01-07 02:17:07');
-INSERT INTO `t_user` VALUES (8, '江秀英', 'K73GBYxISv', '璐', 'jxiuyi@gmail.com', '20240109172637.jfif', 103, 0, 0, '普通用户', '2024-01-09 17:26:37');
-INSERT INTO `t_user` VALUES (9, '贾睿', 'IK3to3MW4W', '云熙', 'jia69@gmail.com', '20240111025503.jpg', 0, 0, 0, '普通用户', '2024-01-11 02:55:03');
+INSERT INTO `t_user` VALUES (8, '江秀英', 'K73GBYxISv', '璐', 'jxiuyi@gmail.com', '20240109172637.jfif', 106, 0, 0, '普通用户', '2024-01-09 17:26:37');
+INSERT INTO `t_user` VALUES (9, '贾睿', 'IK3to3MW4W', '云熙', 'jia69@gmail.com', '20240111025503.jpg', 0, 0, 1, '普通用户', '2024-01-11 02:55:03');
 INSERT INTO `t_user` VALUES (10, '龙晓明', 'cXxZ21UgaO', '致远', 'xiaoming64@outlook.com', '20240111025655.jpg', 0, 1, 0, 'VIP用户', '2024-01-11 02:56:55');
-INSERT INTO `t_user` VALUES (11, '潘睿', 'XhTHG6uA1d', '安岚', 'ruipan@gmail.com', '20240111025751.jpg', 100, 0, 0, '普通用户', '2024-01-11 02:57:51');
+INSERT INTO `t_user` VALUES (11, '潘睿', 'XhTHG6uA1d', '安岚', 'ruipan@gmail.com', '20240629092907.jpg', 100, 0, 0, '普通用户', '2024-01-11 02:57:51');
 INSERT INTO `t_user` VALUES (12, '毛宇宁', 'UtI2YTJSnb', '睿', 'yumao@gmail.com', '20240113053514.png', 50, 0, 0, '普通用户', '2024-01-13 05:35:14');
 INSERT INTO `t_user` VALUES (13, '陆云熙', 'XBZ5HnNgI1', '子韬', 'lu10@outlook.com', '20240108235216.jpg', 100, 0, 1, '普通用户', '2024-01-14 04:35:24');
-INSERT INTO `t_user` VALUES (14, '顾云熙', 'E3LmwZEnZk', '云熙', '2581593533@qq.com', '20240624210919.jpg', 45, 1, 0, 'VIP用户', '2024-05-11 08:13:35');
+INSERT INTO `t_user` VALUES (14, '顾云熙', 'E3LmwZEnZk', '云熙', '2581593533@qq.com', '20240629100920.jpg', 59, 1, 0, 'VIP用户', '2024-05-11 08:13:35');
 INSERT INTO `t_user` VALUES (15, '江睿', 'Jt2D3KXMoi', '秀英', 'rui73@gmail.com', '20240108235216.jpg', 153, 0, 0, '普通用户', '2024-05-12 15:28:23');
 INSERT INTO `t_user` VALUES (16, '贺云熙', 'blGsXiq8HK', '震南', 'hyunxi@qq.com', '20240513093313.jpg', 100, 0, 0, '普通用户', '2024-05-13 09:33:13');
 INSERT INTO `t_user` VALUES (17, '蔡詩涵', 'jmdfdKTcXq', '秀芹', 'shihan1980@outlook.com', '20240108235216.jpg', 100, 0, 0, '普通用户', '2024-05-16 16:30:34');
@@ -972,5 +1024,6 @@ INSERT INTO `t_user` VALUES (18, '严杰宏', 'CItblMVAWs', '岚', 'jiehongya@gm
 INSERT INTO `t_user` VALUES (19, '林安琪', 'IGPuVHs2lf', '安琪', '3258159151@qq.com', '20240108235216.jpg', 100, 0, 0, '普通用户', '2024-05-24 17:51:48');
 INSERT INTO `t_user` VALUES (20, '石子韬', '8A2ya1FriV', '杰宏', 'zitaoshi808@gmail.com', '20240111025655.jpg', 100, 0, 0, '普通用户', '2024-05-24 18:46:10');
 INSERT INTO `t_user` VALUES (21, '傅嘉伦', 'E2aMMq0lKo', '秀英', 'fujialun@gmail.com', NULL, 98, 0, 0, '普通用户', '2024-05-24 19:29:14');
+INSERT INTO `t_user` VALUES (22, '陈一', 'kfd123', '陈一', '3582311515@qq.com', '20240629100730.jpg', 94, 0, 0, '普通用户', '2024-06-29 10:07:30');
 
 SET FOREIGN_KEY_CHECKS = 1;

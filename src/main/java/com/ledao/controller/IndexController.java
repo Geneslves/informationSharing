@@ -2,6 +2,7 @@ package com.ledao.controller;
 
 import com.ledao.entity.*;
 import com.ledao.service.*;
+import com.ledao.service.impl.AdmUserServiceImpl;
 import com.ledao.util.PageUtil;
 import com.ledao.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,8 @@ public class IndexController implements CommandLineRunner, ServletContextListene
     private NoticeService noticeService;
     @Autowired
     private RecommendationService recommendationService;
+    @Autowired
+    private AdmUserServiceImpl admuserService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -598,7 +601,7 @@ public class IndexController implements CommandLineRunner, ServletContextListene
      */
     @RequestMapping("/login")
     public Object login(HttpSession session) {
-        User user = userService.findByUserName("admin");
+        User user = admuserService.findByUserName("admin");
         session.setAttribute("currentUserNickName", user.getNickName());
         return "/login";
     }
