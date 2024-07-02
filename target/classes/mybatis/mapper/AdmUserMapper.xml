@@ -8,8 +8,8 @@
         <result property="password" column="password"/>
         <result property="nickName" column="nickName"/>
         <result property="email" column="email"/>
-        <result property="imageName" column="imageName"/>
-        <result property="points" column="points"/>
+<!--        <result property="imageName" column="imageName"/>-->
+<!--        <result property="points" column="points"/>-->
         <result property="isVip" column="isVip"/>
         <result property="isOff" column="isOff"/>
         <result property="roleName" column="roleName"/>
@@ -18,7 +18,7 @@
 
     <select id="list" parameterType="map" resultMap="UserResult">
         select *
-        from t_user
+        from t_admuser
         <where>
             <if test="userName != null and userName != ''">
                 and userName like #{userName}
@@ -29,9 +29,9 @@
             <if test="roleName != null and roleName != ''">
                 and roleName = #{roleName}
             </if>
-            <if test="isVip != null">
-                and isVip = #{isVip}
-            </if>
+<!--            <if test="isVip != null">-->
+<!--                and isVip = #{isVip}-->
+<!--            </if>-->
             <if test="isOff != null">
                 and isOff = #{isOff}
             </if>
@@ -46,7 +46,7 @@
 
     <select id="getTotal" parameterType="map" resultType="java.lang.Long">
         select count(*)
-        from t_user
+        from t_admuser
         <where>
             <if test="userName != null and userName != ''">
                 and userName like #{userName}
@@ -70,13 +70,13 @@
     </select>
 
     <insert id="add" parameterType="User">
-        insert into t_user (userName, password, nickName, email, imageName, points, isVip, isOff, roleName,
+        insert into t_admuser (userName, password, nickName, email,   isVip, isOff, roleName,
         registerDate)
-        values (#{userName}, #{password}, #{nickName}, #{email}, #{imageName}, 1000, 1, 0, "管理员", now());
+        values (#{userName}, #{password}, #{nickName}, #{email},  1, 0, "管理员", now());
     </insert>
 
     <update id="update" parameterType="User">
-        update t_user
+        update t_admuser
         <set>
             <if test="password != null and password != ''">
                 password=#{password},
@@ -87,9 +87,9 @@
             <if test="email != null and email != ''">
                 email=#{email},
             </if>
-            <if test="imageName != null and imageName != ''">
-                imageName=#{imageName},
-            </if>
+<!--            <if test="imageName != null and imageName != ''">-->
+<!--                imageName=#{imageName},-->
+<!--            </if>-->
             <if test="isVip != null">
                 isVip=#{isVip},
             </if>
@@ -99,35 +99,35 @@
             <if test="roleName != null and roleName != ''">
                 roleName=#{roleName},
             </if>
-            <if test="points != null">
-                points=#{points},
-            </if>
+<!--            <if test="points != null">-->
+<!--                points=#{points},-->
+<!--            </if>-->
         </set>
         where id = #{id}
     </update>
 
     <delete id="deleteById" parameterType="integer">
         delete
-        from t_user
+        from t_admuser
         where id = #{id}
     </delete>
 
     <select id="findByUserName" parameterType="string" resultMap="UserResult">
         select *
-        from t_user
+        from t_admuser
         where userName = #{userName}
     </select>
 
     <select id="findById" parameterType="integer" resultMap="UserResult">
-        select * from t_user where id=#{id}
+        select * from t_admuser where id=#{id}
     </select>
 
     <select id="findByEmail" parameterType="string" resultMap="UserResult">
-        select * from t_user where email=#{email}
+        select * from t_admuser where email=#{email}
     </select>
 
     <select id="findByName" parameterType="string" resultMap="UserResult">
-        select * from t_user
+        select * from t_admuser
         <where>
             <if test="userName != null and userName != ''">
                 and userName like #{userName}

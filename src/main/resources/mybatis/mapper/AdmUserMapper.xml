@@ -9,7 +9,7 @@
         <result property="nickName" column="nickName"/>
         <result property="email" column="email"/>
 <!--        <result property="imageName" column="imageName"/>-->
-        <result property="points" column="points"/>
+<!--        <result property="points" column="points"/>-->
         <result property="isVip" column="isVip"/>
         <result property="isOff" column="isOff"/>
         <result property="roleName" column="roleName"/>
@@ -29,9 +29,9 @@
             <if test="roleName != null and roleName != ''">
                 and roleName = #{roleName}
             </if>
-            <if test="isVip != null">
-                and isVip = #{isVip}
-            </if>
+<!--            <if test="isVip != null">-->
+<!--                and isVip = #{isVip}-->
+<!--            </if>-->
             <if test="isOff != null">
                 and isOff = #{isOff}
             </if>
@@ -70,9 +70,9 @@
     </select>
 
     <insert id="add" parameterType="User">
-        insert into t_admuser (userName, password, nickName, email,  points, isVip, isOff, roleName,
+        insert into t_admuser (userName, password, nickName, email,   isVip, isOff, roleName,
         registerDate)
-        values (#{userName}, #{password}, #{nickName}, #{email}, 1000, 1, 0, "管理员", now());
+        values (#{userName}, #{password}, #{nickName}, #{email},  1, 0, "管理员", now());
     </insert>
 
     <update id="update" parameterType="User">
@@ -99,9 +99,9 @@
             <if test="roleName != null and roleName != ''">
                 roleName=#{roleName},
             </if>
-            <if test="points != null">
-                points=#{points},
-            </if>
+<!--            <if test="points != null">-->
+<!--                points=#{points},-->
+<!--            </if>-->
         </set>
         where id = #{id}
     </update>

@@ -27,7 +27,6 @@ CREATE TABLE `t_admuser`  (
   `password` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '密码',
   `nickName` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '昵称',
   `email` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '邮箱地址',
-  `points` int NULL DEFAULT NULL COMMENT '积分',
   `isVip` int NULL DEFAULT NULL COMMENT '是否VIP',
   `isOff` int NULL DEFAULT NULL COMMENT '是否封禁',
   `roleName` varchar(8) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '角色名称',
@@ -38,10 +37,10 @@ CREATE TABLE `t_admuser`  (
 -- ----------------------------
 -- Records of t_admuser
 -- ----------------------------
-INSERT INTO `t_admuser` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', 10013, 1, 0, '管理员', '2024-01-03 23:16:40');
-INSERT INTO `t_admuser` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', 138, 1, 0, '管理员', '2024-05-12 13:24:48');
-INSERT INTO `t_admuser` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com', 100, 1, 0, '管理员', '2024-05-12 15:22:58');
-INSERT INTO `t_admuser` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', 1002, 1, 0, '管理员', '2024-05-12 15:58:22');
+INSERT INTO `t_admuser` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', 1, 0, '管理员', '2024-01-03 23:16:40');
+INSERT INTO `t_admuser` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', 1, 0, '管理员', '2024-05-12 13:24:48');
+INSERT INTO `t_admuser` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com',  1, 0, '管理员', '2024-05-12 15:22:58');
+INSERT INTO `t_admuser` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', 1, 0, '管理员', '2024-05-12 15:58:22');
 
 -- ----------------------------
 -- Table structure for t_article
