@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 01/07/2024 21:30:08
+ Date: 02/07/2024 14:52:27
 */
 
 SET NAMES utf8mb4;
@@ -27,20 +27,19 @@ CREATE TABLE `t_admuser`  (
   `password` varchar(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '密码',
   `nickName` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '昵称',
   `email` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '邮箱地址',
-  `isVip` int NULL DEFAULT NULL COMMENT '是否VIP',
   `isOff` int NULL DEFAULT NULL COMMENT '是否封禁',
   `roleName` varchar(8) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '角色名称',
   `registerDate` datetime NULL DEFAULT NULL COMMENT '注册时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_admuser
 -- ----------------------------
-INSERT INTO `t_admuser` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', 1, 0, '管理员', '2024-01-03 23:16:40');
-INSERT INTO `t_admuser` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', 1, 0, '管理员', '2024-05-12 13:24:48');
-INSERT INTO `t_admuser` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com',  1, 0, '管理员', '2024-05-12 15:22:58');
-INSERT INTO `t_admuser` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', 1, 0, '管理员', '2024-05-12 15:58:22');
+INSERT INTO `t_admuser` VALUES (1, 'admin', 'Pg7AD32V', '银叶', '1203007469@qq.com', 0, '管理员', '2024-01-03 23:16:40');
+INSERT INTO `t_admuser` VALUES (2, '邱嘉伦', 'oLP8tjOS6T', '岚风', 'qiujial@gmail.com', 0, '管理员', '2024-05-12 13:24:48');
+INSERT INTO `t_admuser` VALUES (3, '范璐', 'VodXWWJykm', '云风', 'lu9bj@outlook.com', 0, '管理员', '2024-05-12 15:22:58');
+INSERT INTO `t_admuser` VALUES (4, '董璐', 'Xgy2zPIXsK', '子异', 'dlujhg@gmail.com', 0, '管理员', '2024-05-12 15:58:22');
 
 -- ----------------------------
 -- Table structure for t_article
@@ -70,7 +69,7 @@ CREATE TABLE `t_article`  (
   INDEX `userId`(`userId` ASC) USING BTREE,
   INDEX `name`(`name` ASC) USING BTREE,
   CONSTRAINT `t_article_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 235 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 236 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_article
@@ -321,7 +320,7 @@ CREATE TABLE `t_article_type`  (
   `remark` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '描述',
   `sortNum` int NULL DEFAULT NULL COMMENT '排列顺序',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article_type' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_article_type' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_article_type
@@ -353,7 +352,7 @@ CREATE TABLE `t_comment`  (
   INDEX `articleId`(`articleId` ASC) USING BTREE,
   CONSTRAINT `t_comment_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `t_comment_ibfk_2` FOREIGN KEY (`articleId`) REFERENCES `t_article` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_comment' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_comment' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_comment
@@ -394,7 +393,7 @@ CREATE TABLE `t_download_message`  (
   INDEX `articleId`(`articleId` ASC) USING BTREE,
   CONSTRAINT `t_download_message_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
   CONSTRAINT `t_download_message_ibfk_2` FOREIGN KEY (`articleId`) REFERENCES `t_article` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 148 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_download_message' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 149 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_download_message' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_download_message
@@ -560,7 +559,7 @@ CREATE TABLE `t_information`  (
   INDEX `id`(`id` ASC) USING BTREE,
   INDEX `userId`(`userId` ASC) USING BTREE,
   CONSTRAINT `t_information_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 'int_formation' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 37 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 'int_formation' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_information
@@ -613,7 +612,7 @@ CREATE TABLE `t_link`  (
   `sortNum` int NULL DEFAULT NULL COMMENT '排列序号',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `id`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_link' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = 't_link' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_link
@@ -636,7 +635,7 @@ CREATE TABLE `t_notice`  (
   `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '内容',
   `time` datetime NULL DEFAULT NULL COMMENT '时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_notice
@@ -672,7 +671,7 @@ CREATE TABLE `t_recommended`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userId`(`userId` ASC) USING BTREE,
   CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `t_user` (`id`) ON DELETE SET NULL ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 302 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 303 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_recommended
@@ -997,7 +996,7 @@ CREATE TABLE `t_user`  (
   `roleName` varchar(8) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '角色名称',
   `registerDate` datetime NULL DEFAULT NULL COMMENT '注册时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user

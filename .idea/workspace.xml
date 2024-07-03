@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="更新管理员数据库">
+    <list default="true" id="bd6cae00-dc56-41da-8106-ca973cfaa3ba" name="更改" comment="更新数据库">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySQL/db_informationshare.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/db_informationshare.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledao/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdmUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AdmUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admuserManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ledao/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/AdmUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/AdmUserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,14 +192,10 @@
       <workItem from="1719624245659" duration="1577000" />
       <workItem from="1719834918455" duration="5022000" />
       <workItem from="1719896377675" duration="1586000" />
-    </task>
-    <task id="LOCAL-00005" summary="初始化">
-      <option name="closed" value="true" />
-      <created>1715489465865</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715489465865</updated>
+      <workItem from="1719902669711" duration="617000" />
+      <workItem from="1719907749936" duration="1641000" />
+      <workItem from="1719925289870" duration="159000" />
+      <workItem from="1719992798836" duration="345000" />
     </task>
     <task id="LOCAL-00006" summary="初始化">
       <option name="closed" value="true" />
@@ -584,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719840866244</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="更新数据库">
+      <option name="closed" value="true" />
+      <created>1719902727404</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1719902727404</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -632,9 +637,9 @@
     <MESSAGE value="推荐用户资源数量" />
     <MESSAGE value="管理员资源数量" />
     <MESSAGE value="更改logo" />
-    <MESSAGE value="更新数据库" />
     <MESSAGE value="更新管理员数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新管理员数据库" />
+    <MESSAGE value="更新数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新数据库" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -246,7 +246,7 @@ public class UserController {
         //收件人
         message.setTo(email);
         // 主题
-        message.setSubject("电子资源分享平台");
+        message.setSubject("电子资源推荐交流平台");
         //内容
         message.setText("您的验证码为：" + mailCode);
         javaMailSender.send(message);
